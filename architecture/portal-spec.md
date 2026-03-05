@@ -92,16 +92,20 @@ Raw artifacts (evidence uploads, transcripts, generated reports) are stored sepa
 | **Manager** | Client functional managers | Submit Manager Audit (02), view own submission status |
 | **Engineer** | Client field engineers | Submit Engineer Mini-Audit (03), minimal UI — survey only |
 
-### Auth Flow (Microsoft Azure SSO)
+### Auth Flow (SSO)
+
+> **Full auth documentation:** [auth/](../auth/) — SSO strategy, login page design, test accounts, role model, decisions log.
 
 ```
 User visits nano.limitlessmodus.com
-  → Redirected to Microsoft Entra ID login
-  → Authenticates with their Microsoft account (corporate SSO)
+  → Login page shows SSO buttons (Microsoft / Google)
+  → Redirected to identity provider
+  → Authenticates with their corporate account
   → Redirected back with OAuth2 authorization code
-  → Go backend exchanges code for tokens
+  → Go backend exchanges code for tokens, parses email
+  → Looks up email in participants → users table
   → JWT issued for session management
-  → Role determined by engagement membership + role assignment
+  → Role determined by database record
 ```
 
 ---

@@ -41,7 +41,7 @@ See [2026-03-04 progress update](../../working/updates/2026-03-04-2400-company-a
 
 | Area | Status | Gap |
 |------|--------|-----|
-| **Azure SSO** | Implemented | Callback handler exchanges authorization code, extracts email from id_token, looks up participant/user, issues JWT. **Not yet tested with real Microsoft accounts** — dev-mode bypass used so far |
+| **Azure SSO** | Implemented | Callback handler exchanges authorization code, extracts email from id_token, looks up participant/user, issues JWT. **Not yet tested with real Microsoft accounts** — 6 tumai.cc test accounts created, see [auth/microsoft-sso.md](../auth/microsoft-sso.md) |
 | **Engagement creation** | Handler exists | Returns a placeholder message — no actual DB insert |
 | **S3 client** | Service file exists (`services/s3.go`) | No upload handler endpoints in the router, no presign flow |
 | **Interviews page** | Route exists | Placeholder text only — no UI or API integration |
@@ -159,7 +159,7 @@ Enable the consultant (Greg) to manage engagements and invite client users.
 | **Domain** | `nano.limitlessmodus.com` | Cloudflare DNS → HAProxy SSL → Go backend :8891 |
 | **Supabase** | Active | Project provisioned, migrations 001–003 applied, pilot data seeded |
 | **AWS S3** | Not yet provisioned | Need to create bucket, configure CORS, set IAM credentials |
-| **Azure SSO** | Implemented | Callback handler built — needs end-to-end testing with real Microsoft accounts |
+| **Azure SSO** | Implemented | Callback handler built — needs end-to-end testing with real Microsoft accounts. Login page redesigned: dev bypass removed, SSO-only. See [auth/](../auth/) |
 
 ---
 

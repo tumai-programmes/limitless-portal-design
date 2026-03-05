@@ -14,6 +14,7 @@ Product planning, UI design, architecture specs, and roadmap for the Limitless M
 | Path | Purpose |
 |------|---------|
 | `architecture/` | Portal architecture spec, system context, data model, API design, status tracker |
+| `auth/` | Authentication & authorisation — SSO strategy, login page design, role model, test accounts |
 | `wizard/` | Wizard UI specifications — per-instrument layout designs |
 | `wizard/images/` | Wizard screenshots, architecture diagrams, HMRC reference (66 images) |
 | `deliverables/` | Formatted outputs (PDF, DOCX) of wizard specs and plans |
@@ -21,6 +22,17 @@ Product planning, UI design, architecture specs, and roadmap for the Limitless M
 | `config/` | Domain configuration |
 
 ---
+
+## Authentication
+
+See [auth/README.md](auth/README.md) for the authentication design:
+
+- SSO-only strategy (Microsoft + Google, no passwords)
+- Login page layout specification
+- Microsoft Entra ID integration details and test accounts
+- Google OAuth2 plan (future)
+- Role model and access control
+- Auth decisions log
 
 ## Architecture
 
