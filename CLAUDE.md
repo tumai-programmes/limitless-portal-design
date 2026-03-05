@@ -13,6 +13,18 @@ Primary instructions and context for Claude when working in this repository.
 **SQL operations:** [tumai-hq/sql-hub/limitless-portal](https://github.com/tumai-hq/sql-hub) (monitoring, diagnostics, reports)
 **Live URL:** https://nano.limitlessmodus.com/
 
+## Limitless Portal Triad
+
+The Limitless Modus portal is developed across three dedicated repositories, each with a distinct role:
+
+| Repo | Role | What belongs here |
+|------|------|-------------------|
+| [`limitless`](https://github.com/tumai-programmes/limitless) | **Programme** — business strategy, methodology, engagements | Greg's operational methodology, partnership terms, market research, brand identity, client engagement materials, commercial service definition |
+| **`limitless-portal-design`** (this repo) | **Design** — product design, UI/UX, architecture, style system | Figma references, wizard UI layouts, component specs, design tokens (fonts, colours, spacing), architecture decisions, roadmap |
+| [`limitless-portal`](https://github.com/tumai-programmes/limitless-portal) | **Code** — implementation, deployment-ready artefacts | Pure code written primarily by AI (Claude Code); Go backend, Vue frontend, CI/CD, Docker, migrations — minimal manual human touch |
+
+**Boundary rule:** If it is about *what the business does* → `limitless`. If it is about *how the product looks and is planned* → `limitless-portal-design`. If it is *deployable code* → `limitless-portal`.
+
 ## Shared Resources
 
 | Resource | Location |
@@ -37,6 +49,10 @@ Primary instructions and context for Claude when working in this repository.
 | `architecture/` | Portal architecture spec, system context, data model, API design, status tracker |
 | `architecture/portal-spec.md` | Full architecture specification |
 | `architecture/status.md` | Current development status and action plan |
+| `design-tokens/` | **Design system source of truth** — colour palette, typography, spacing, radii, shadows |
+| `design-tokens/colours.md` | Brand palette, semantic colours, neutral scale, surfaces & borders |
+| `design-tokens/typography.md` | Font family, type scale, font weights |
+| `design-tokens/spacing.md` | Spacing scale, layout constants, border radii, box shadows |
 | `wizard/` | Wizard UI specifications — per-instrument layout designs |
 | `wizard/images/` | Wizard screenshots, architecture diagrams, HMRC reference (66 images) |
 | `deliverables/` | Formatted outputs (PDF, DOCX) of wizard specs and plans |
@@ -70,10 +86,10 @@ Each audit instrument (01–03) has been designed as a multi-step wizard with De
 
 ## Boundary Rules
 
-- **"Is it about what Greg diagnoses?"** — goes in `limitless/methodology/`
-- **"Is it about how the portal looks, works, or is architected?"** — goes here (`limitless-portal-design/`)
-- **"Is it code, migrations, or deploy config?"** — goes in `limitless-portal/`
-- **"Is it a SQL query for monitoring or analysis?"** — goes in `sql-hub/limitless-portal/`
+- **"Is it about what the business does — methodology, partnerships, research?"** → `limitless/`
+- **"Is it about how the portal looks, works, or is architected?"** → here (`limitless-portal-design/`)
+- **"Is it deployable code, migrations, or deploy config?"** → `limitless-portal/`
+- **"Is it a SQL query for monitoring or analysis?"** → `sql-hub/limitless-portal/`
 
 ## Available Skills
 
@@ -129,9 +145,9 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `kseniia-website` | kseniia.co.uk (Nuxt + Tailwind) |
 | `kseniia-academy` | Kseniia Academy programme (strategy + content) |
 | `kseniia-academy-webapp` | Academy webapp (Nuxt + Go) |
-| `limitless` | AI-Native Enterprise Transformation programme |
-| `limitless-portal-design` | This repo — Portal product design and planning |
-| `limitless-portal` | Portal code (Go + Vue), migrations, deployment |
+| `limitless` | Programme: business strategy, methodology, engagements |
+| `limitless-portal-design` | This repo — Design: product design, UI/UX, architecture, style system |
+| `limitless-portal` | Code: implementation (AI-written), deployment-ready artefacts |
 | `limitless-website` | Limitless public website (Nuxt SSG) at limitlessmodus.com |
 | `stationroadclinic-co-uk` | Station Road Clinic programme |
 | `stationroadclinic-co-uk-portal` | Clinic patient portal |
