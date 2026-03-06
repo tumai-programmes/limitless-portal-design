@@ -6,8 +6,8 @@ Design and planning documentation for the Limitless Portal authentication system
 
 The portal uses **SSO-only authentication** — no passwords stored or managed by the portal. Users sign in via their organisation's identity provider:
 
-1. **Microsoft Entra ID** (Azure AD) — primary, implemented
-2. **Google OAuth2** — planned (Phase 2)
+1. **Microsoft Entra ID** (Azure AD) — implemented
+2. **Google OAuth2** — implemented
 
 Role and access are determined by the user record in the database, not by the login method. The SSO flow identifies the user by email; the backend looks up their role and engagement membership.
 
@@ -17,7 +17,8 @@ Role and access are determined by the user record in the database, not by the lo
 |------|---------|
 | [login-page.md](login-page.md) | Login page layout spec — two SSO buttons, error states, loading states |
 | [microsoft-sso.md](microsoft-sso.md) | Microsoft Entra ID integration — config, test accounts, callback flow |
-| [google-sso.md](google-sso.md) | Google OAuth2 integration plan (future) |
+| [google-sso.md](google-sso.md) | Google OAuth2 integration — config, test accounts, callback flow |
+| [test-accounts.md](test-accounts.md) | Complete inventory of all test accounts across both SSO providers |
 | [role-model.md](role-model.md) | User roles, lookup logic, access control |
 | [decisions-log.md](decisions-log.md) | Auth-related design decisions |
 
