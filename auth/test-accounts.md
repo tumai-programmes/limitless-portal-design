@@ -42,12 +42,12 @@ These simulate Nano Fibre UK client employees. All should be in the `participant
 
 | # | Email | Name | Role Title | Password | Department | Group | Status |
 |--:|-------|------|-----------|----------|------------|-------|--------|
-| 6 | `mark.director@tumai.cc` | Mark Director | Director | Kaxa172305 | Leadership | leadership | **Wrong table** — currently in `users`, should be `participants` |
-| 7 | `adam.finance@tumai.cc` | Adam Finance | Finance Manager | Joto995535 | Finance | finance | **Wrong table** — currently in `users`, should be `participants` |
-| 8 | `kevin.operations@tumai.cc` | Kevin Operations | Operations Manager | Bado798597 | Operations | operations | **Wrong table** — currently in `users`, should be `participants` |
-| 9 | `damon.operations@tumai.cc` | Damon Operations | Operations Supervisor | Xaqo596036 | Operations | operations | Correct (`participants`) |
-| 10 | `nicholas.field@tumai.cc` | Nicholas Field | Field Engineer | Xobo878227 | Field Engineering | engineering | Correct (`participants`) |
-| 11 | `mathew.field@tumai.cc` | Mathew Field | Field Engineer | Mucu340428 | Field Engineering | engineering | Correct (`participants`) |
+| 6 | `mark.director@tumai.cc` | Mark Director | Director | Kaxa172305 | Leadership | leadership | OK |
+| 7 | `adam.finance@tumai.cc` | Adam Finance | Finance Manager | Joto995535 | Finance | finance | OK |
+| 8 | `kevin.operations@tumai.cc` | Kevin Operations | Operations Manager | Bado798597 | Operations | operations | OK |
+| 9 | `damon.operations@tumai.cc` | Damon Operations | Operations Supervisor | Xaqo596036 | Operations | operations | OK |
+| 10 | `nicholas.field@tumai.cc` | Nicholas Field | Field Engineer | Xobo878227 | Field Engineering | engineering | OK |
+| 11 | `mathew.field@tumai.cc` | Mathew Field | Field Engineer | Mucu340428 | Field Engineering | engineering | OK |
 
 ## Client Test Accounts — Google SSO (credo-group.co.uk)
 
@@ -57,12 +57,12 @@ Shared password for all `credo-group.co.uk` accounts: `CdqXDZSKDVAr2qG`
 
 | # | Email | Name | Role Title | Department | Group | Status |
 |--:|-------|------|-----------|------------|-------|--------|
-| 12 | `mark.director@credo-group.co.uk` | Mark Director | Director | Leadership | leadership | **Wrong table** — currently in `users`, should be `participants` |
-| 13 | `adam.finance@credo-group.co.uk` | Adam Finance | Finance Manager | Finance | finance | **Wrong table** — currently in `users`, should be `participants` |
-| 14 | `kevin.operations@credo-group.co.uk` | Kevin Operations | Operations Manager | Operations | operations | **Wrong table** — currently in `users`, should be `participants` |
-| 15 | `damon.operations@credo-group.co.uk` | Damon Operations | Operations Supervisor | Operations | operations | Correct (`participants`) |
-| 16 | `nicholas.field@credo-group.co.uk` | Nicholas Field | Field Engineer | Field Engineering | engineering | Correct (`participants`) |
-| 17 | `mathew.field@credo-group.co.uk` | Mathew Field | Field Engineer | Field Engineering | engineering | Correct (`participants`) |
+| 12 | `mark.director@credo-group.co.uk` | Mark Director | Director | Leadership | leadership | OK |
+| 13 | `adam.finance@credo-group.co.uk` | Adam Finance | Finance Manager | Finance | finance | OK |
+| 14 | `kevin.operations@credo-group.co.uk` | Kevin Operations | Operations Manager | Operations | operations | OK |
+| 15 | `damon.operations@credo-group.co.uk` | Damon Operations | Operations Supervisor | Operations | operations | OK |
+| 16 | `nicholas.field@credo-group.co.uk` | Nicholas Field | Field Engineer | Field Engineering | engineering | OK |
+| 17 | `mathew.field@credo-group.co.uk` | Mathew Field | Field Engineer | Field Engineering | engineering | OK |
 
 ---
 
@@ -72,13 +72,13 @@ Shared password for all `credo-group.co.uk` accounts: `CdqXDZSKDVAr2qG`
 |----------|-------|--------|
 | **Consultants (active)** | 3 | 2 in DB, 1 missing (Greg) |
 | **Consultants (planned)** | 2 | Future — `@limitlessmodus.com` |
-| **Client test accounts (Microsoft)** | 6 | 3 in wrong table, 3 correct |
-| **Client test accounts (Google)** | 6 | 3 in wrong table, 3 correct |
+| **Client test accounts (Microsoft)** | 6 | All in `participants` |
+| **Client test accounts (Google)** | 6 | All in `participants` |
 | **Total unique people** | 8 | Fedor, Greg, + 6 test personas |
 
-## Issues to Fix
+## Remaining Issues
 
-1. **6 records in wrong table** — `mark.director`, `adam.finance`, `kevin.operations` (both `@tumai.cc` and `@credo-group.co.uk`) are in `users` but should be in `participants`. They currently land on the consultant dashboard instead of the participant dashboard.
+1. ~~6 records in wrong table~~ — **Fixed 2026-03-06.** Moved mark.director, adam.finance, kevin.operations from `users` to `participants`.
 2. **Greg not in DB** — `greg.kurnikov@odexpert.co.uk` needs to be added to the `users` table as a consultant.
 3. **Seed engagement cleanup** — duplicate `fedor.vasilyev@tumai.cc` record in `users` tied to the "Nano Fibre (Pilot)" seed engagement (`a0000000-...`).
 
