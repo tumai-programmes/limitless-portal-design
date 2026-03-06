@@ -1,50 +1,58 @@
 # Google OAuth2 SSO
 
-Google SSO is the second authentication method planned for the Limitless Portal, supporting clients whose organisations use Google Workspace rather than Microsoft 365.
+Google SSO is the second authentication method for the Limitless Portal, supporting clients whose organisations use Google Workspace rather than Microsoft 365.
 
-## Status: Planned (Phase 2)
+## Status: Implemented (2026-03-06)
 
-Not yet implemented. The Microsoft SSO flow is the template — Google follows the same OAuth2 authorization code pattern.
+Fully implemented and deployed alongside Microsoft SSO. Both providers use the same shared `completeSSO` logic for role lookup and JWT issuance.
 
-## Test Accounts Plan
+## Google Cloud Project
+
+| Property | Value |
+|----------|-------|
+| Project | Limitless Modus (dedicated GCP project) |
+| OAuth App | Limitless Portal (Web application) |
+| Client ID | `760513599819-h3rdackqi02sfnhqfil1lvnobtg5qo42.apps.googleusercontent.com` |
+| Redirect URI | `https://nano.limitlessmodus.com/auth/google/callback` |
+| Consent screen | External, app name "Limitless Modus" |
+| User support email | `fedor.vasilyev@tumai.com` |
+| Branded email | `hello@limitlessmodus.com` (Google Workspace, secondary domain) |
+
+## Test Accounts
 
 Google Workspace domain for testing: **credo-group.co.uk** (Fedor's Google Workspace).
 
 Fedor's primary Google identity: `fedor.vasilyev@tumai.com`
 
-Test accounts to create in credo-group.co.uk (mirroring tumai.cc Microsoft accounts):
+| # | Account | Role mapping | Department | DB Table |
+|-:|---------|-------------|-----------|----------|
+| 1 | `fedor.vasilyev@tumai.com` | Consultant | System | `users` |
+| 2 | `mark.director@credo-group.co.uk` | Director | Leadership | `users` |
+| 3 | `adam.finance@credo-group.co.uk` | Manager | Finance | `users` |
+| 4 | `kevin.operations@credo-group.co.uk` | Manager | Operations | `users` |
+| 5 | `damon.operations@credo-group.co.uk` | Participant (Operations Supervisor) | Operations | `participants` |
+| 6 | `nicholas.field@credo-group.co.uk` | Participant (Field Engineer) | Field Engineering | `participants` |
+| 7 | `mathew.field@credo-group.co.uk` | Participant (Field Engineer) | Field Engineering | `participants` |
 
-| # | Account | Role mapping | Department |
-|-:|---------|-------------|-----------|
-| 1 | `fedor.vasilyev@tumai.com` | Consultant | System |
-| 2 | `mark.director@credo-group.co.uk` | Director | Leadership |
-| 3 | `adam.finance@credo-group.co.uk` | Manager | Finance |
-| 4 | `kevin.operations@credo-group.co.uk` | Manager | Operations |
-| 5 | `damon.operations@credo-group.co.uk` | Participant (Operations Supervisor) | Operations |
-| 6 | `nicholas.field@credo-group.co.uk` | Participant (Field Engineer) | Field Engineering |
-| 7 | `mathew.field@credo-group.co.uk` | Participant (Field Engineer) | Field Engineering |
+All accounts seeded in Supabase (Nano Fibre UK engagement: `72ed7515-f133-469e-9e4e-ab2e5d6c9171`).
 
-After creating the accounts, matching records must be inserted into Supabase (same pattern as the tumai.cc accounts in [microsoft-sso.md](microsoft-sso.md)).
+## Implementation Checklist
 
-## Concrete Next Steps
-
-1. **Fedor** — create the Google Cloud OAuth2 app:
-   - Go to [console.cloud.google.com](https://console.cloud.google.com)
-   - Create project or reuse existing Tumai project
-   - APIs & Services → OAuth consent screen → External → app name "Limitless Modus"
-   - APIs & Services → Credentials → Create Credentials → OAuth Client ID → Web application
-   - Set Authorized redirect URI: `https://nano.limitlessmodus.com/auth/google/callback`
-   - Copy **Client ID** and **Client Secret**
-
-2. **Fedor** — create test accounts in credo-group.co.uk (see table above)
-
-3. **AI** — implement backend handlers, routes, config (mirrors Microsoft flow)
-
-4. **AI** — seed matching records in Supabase for Google test accounts
-
-5. **AI** — enable the Google button in LoginPage.vue (currently disabled with "Coming soon")
-
-6. **Deploy + test** end-to-end with `fedor.vasilyev@tumai.com`
+- [x] Google Cloud project created (Limitless Modus)
+- [x] OAuth consent screen configured (External)
+- [x] OAuth Client ID and Secret generated
+- [x] `limitlessmodus.com` added as secondary domain in Google Workspace
+- [x] `hello@limitlessmodus.com` email account created
+- [x] DNS records configured (MX, SPF, DMARC) for `limitlessmodus.com`
+- [x] Backend: `config.go` — Google config fields added
+- [x] Backend: `auth.go` — `GoogleLoginRedirect` and `GoogleCallback` handlers
+- [x] Backend: `auth.go` — shared `completeSSO` method (refactored from Azure-only)
+- [x] Backend: `router.go` — `/auth/google/login` and `/auth/google/callback` routes
+- [x] Frontend: `LoginPage.vue` — Google button enabled (was disabled with "Coming soon")
+- [x] Frontend: `auth.ts` — `loginWithGoogle()` function added
+- [x] Server `.env` on `bcl-limapp-10` — Google env vars added
+- [x] Supabase — Google test accounts seeded (4 users + 3 participants)
+- [ ] End-to-end test with `fedor.vasilyev@tumai.com`
 
 ## Implementation Plan
 
@@ -113,9 +121,9 @@ Browser → /auth/google/login → Google OAuth consent screen
 
 The backend callback handler uses the same `parseIDTokenClaims()` function — Google and Microsoft both return standard OIDC `id_token` JWTs with `email` and `name` claims.
 
-## Priority
+## Multi-Tenant Note
 
-Google SSO will be implemented when a client requires it. The Microsoft flow is sufficient for the first engagement (Nano Fibre).
+The current redirect URI is bound to `nano.limitlessmodus.com`. When moving to a multi-tenant portal, additional redirect URIs can be added in the Google Cloud Console (e.g., `https://app.limitlessmodus.com/auth/google/callback`). The backend `GOOGLE_REDIRECT_URI` env var would be updated accordingly.
 
 ---
 
