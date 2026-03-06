@@ -49,6 +49,7 @@ The Limitless Modus portal is developed across three dedicated repositories, eac
 | `architecture/` | Portal architecture spec, system context, data model, API design, status tracker |
 | `architecture/portal-spec.md` | Full architecture specification |
 | `architecture/status.md` | Current development status and action plan |
+| `architecture/notifications.md` | Email notification design spec (AWS SES, templates, API) |
 | `design-tokens/` | **Design system source of truth** — colour palette, typography, spacing, radii, shadows |
 | `design-tokens/colours.md` | Brand palette, semantic colours, neutral scale, surfaces & borders |
 | `design-tokens/typography.md` | Font family, type scale, font weights |

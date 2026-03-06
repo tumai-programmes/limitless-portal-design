@@ -56,7 +56,7 @@ See [2026-03-04 progress update](../../working/updates/2026-03-04-2400-company-a
 | **File upload flow** | S3 presign endpoints, browser direct upload, confirm metadata |
 | **Interview workflow** | Scheduling, transcript capture, marker tagging |
 | **AI synthesis pipeline** | Anthropic API integration, findings generation |
-| **Email notifications** | Invitation, reminder, submission complete |
+| **Email notifications** | Backend service + API endpoints done (AWS SES). See [notifications.md](notifications.md). UI wiring pending (Phase 1C/2) |
 | **Report generation** | PDF/Word export of diagnostic findings |
 | **Evidence library** | Browse/search uploaded files per engagement |
 
@@ -117,7 +117,7 @@ Enable the consultant (Greg) to manage engagements and invite client users.
 | 2.1 | **Manager Audit wizard (02)** — 13 sections with department-conditional routing (Section 5) | Large | 1.8 pattern established |
 | 2.2 | **Engineer Mini-Audit wizard (03)** — 10 sections with job-type module selection (Section 5) | Medium | 1.8 pattern established |
 | 2.3 | **Reality Test rating grid** — reusable component for Section E2 (Company) and Section 10 (Manager) | Small | 2.1 |
-| 2.4 | **Email notifications** — invitation, reminder, submission complete | Medium | 1.13 |
+| 2.4 | **Email notifications** — backend done (AWS SES); wire invitation UI to API, auto-send on submission | Small | 1.13 |
 
 ### Phase 3 — Interview Workflow
 
