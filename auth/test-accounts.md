@@ -53,6 +53,8 @@ These simulate Nano Fibre UK client employees. All should be in the `participant
 
 Mirror of the Microsoft set. All should be in the `participants` table.
 
+Shared password for all `credo-group.co.uk` accounts: `CdqXDZSKDVAr2qG`
+
 | # | Email | Name | Role Title | Department | Group | Status |
 |--:|-------|------|-----------|------------|-------|--------|
 | 12 | `mark.director@credo-group.co.uk` | Mark Director | Director | Leadership | leadership | **Wrong table** — currently in `users`, should be `participants` |
@@ -61,8 +63,6 @@ Mirror of the Microsoft set. All should be in the `participants` table.
 | 15 | `damon.operations@credo-group.co.uk` | Damon Operations | Operations Supervisor | Operations | operations | Correct (`participants`) |
 | 16 | `nicholas.field@credo-group.co.uk` | Nicholas Field | Field Engineer | Field Engineering | engineering | Correct (`participants`) |
 | 17 | `mathew.field@credo-group.co.uk` | Mathew Field | Field Engineer | Field Engineering | engineering | Correct (`participants`) |
-
-> Passwords for `credo-group.co.uk` accounts are managed in Google Workspace Admin, not stored here.
 
 ---
 
