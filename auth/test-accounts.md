@@ -1,80 +1,86 @@
 # Test Accounts — Complete Inventory
 
-All test accounts registered in the Limitless Portal database (Supabase), mapped to SSO providers.
+All accounts for the Limitless Portal, mapped to SSO providers and database tables.
 
 **Engagement:** Nano Fibre UK (`72ed7515-f133-469e-9e4e-ab2e5d6c9171`)
 
-> A second seed engagement "Nano Fibre (Pilot)" (`a0000000-...`) exists with one duplicate `fedor.vasilyev@tumai.cc` consultant record — legacy from initial scaffolding.
+## Two Tables, Two Dashboards
 
-## Consultant / Admin Accounts
+| Table | Who | Dashboard | Purpose |
+|-------|-----|-----------|---------|
+| `users` | **Limitless Modus consultants** (Fedor, Greg) | Consultant dashboard (`/dashboard`) | Manage engagements, view all audits, findings, interviews |
+| `participants` | **Client company employees** (directors, managers, engineers) | Participant dashboard (`/participant-dashboard`) | Fill in audit forms and surveys |
 
-These are in the `users` table and land on the **consultant dashboard** after login.
+The SSO callback checks `participants` first, then `users`. If found in neither, the user sees "not registered".
 
-| # | Email | Name | Role | SSO Provider | Domain | Last Login |
-|--:|-------|------|------|-------------|--------|------------|
-| 1 | `fedor.vasilyev@tumai.cc` | Fedor Vasilyev | consultant | Microsoft | tumai.cc | 2026-03-05 |
-| 2 | `fedor.vasilyev@tumai.com` | Fedor Vasilyev | consultant | Google | tumai.com | 2026-03-06 |
+---
 
-## Microsoft SSO Test Accounts (tumai.cc)
+## Consultants (`users` table)
 
-### In `users` table (land on consultant/internal dashboard)
+These are Limitless Modus internal team members who deliver the service.
 
-| # | Email | Name | Role | Password | Department |
-|--:|-------|------|------|----------|------------|
-| 3 | `mark.director@tumai.cc` | Mark Director | director | Kaxa172305 | Leadership |
-| 4 | `adam.finance@tumai.cc` | Adam Finance | manager | Joto995535 | Finance |
-| 5 | `kevin.operations@tumai.cc` | Kevin Operations | manager | Bado798597 | Operations |
+### Active
 
-### In `participants` table (land on participant dashboard)
+| # | Email | Name | Role | SSO Provider | Status |
+|--:|-------|------|------|-------------|--------|
+| 1 | `fedor.vasilyev@tumai.cc` | Fedor Vasilyev | consultant | Microsoft (tumai.cc) | In DB, tested |
+| 2 | `fedor.vasilyev@tumai.com` | Fedor Vasilyev | consultant | Google (tumai.com) | In DB, tested |
+| 3 | `greg.kurnikov@odexpert.co.uk` | Greg Kurnikov | consultant | Microsoft (odexpert.co.uk) | **Not in DB yet** |
 
-| # | Email | Name | Role Title | Password | Department | Group |
-|--:|-------|------|-----------|----------|------------|-------|
-| 6 | `damon.operations@tumai.cc` | Damon Operations | Operations Supervisor | Xaqo596036 | Operations | operations |
-| 7 | `nicholas.field@tumai.cc` | Nicholas Field | Field Engineer | Xobo878227 | Field Engineering | engineering |
-| 8 | `mathew.field@tumai.cc` | Mathew Field | Field Engineer | Mucu340428 | Field Engineering | engineering |
+### Planned (future)
 
-## Google SSO Test Accounts (credo-group.co.uk)
+| # | Email | Name | Role | SSO Provider | Status |
+|--:|-------|------|------|-------------|--------|
+| 4 | `fedor@limitlessmodus.com` | Fedor Vasilyev | consultant | Google (limitlessmodus.com) | Not created yet |
+| 5 | `greg@limitlessmodus.com` | Greg Kurnikov | consultant | Google (limitlessmodus.com) | Not created yet |
 
-### In `users` table (land on consultant/internal dashboard)
+---
 
-| # | Email | Name | Role | Department |
-|--:|-------|------|------|------------|
-| 9 | `mark.director@credo-group.co.uk` | Mark Director | director | Leadership |
-| 10 | `adam.finance@credo-group.co.uk` | Adam Finance | manager | Finance |
-| 11 | `kevin.operations@credo-group.co.uk` | Kevin Operations | manager | Operations |
+## Client Test Accounts — Microsoft SSO (tumai.cc)
 
-### In `participants` table (land on participant dashboard)
+These simulate Nano Fibre UK client employees. All should be in the `participants` table.
 
-| # | Email | Name | Role Title | Department | Group |
-|--:|-------|------|-----------|------------|-------|
-| 12 | `damon.operations@credo-group.co.uk` | Damon Operations | Operations Supervisor | Operations | operations |
-| 13 | `nicholas.field@credo-group.co.uk` | Nicholas Field | Field Engineer | Field Engineering | engineering |
-| 14 | `mathew.field@credo-group.co.uk` | Mathew Field | Field Engineer | Field Engineering | engineering |
+| # | Email | Name | Role Title | Password | Department | Group | Status |
+|--:|-------|------|-----------|----------|------------|-------|--------|
+| 6 | `mark.director@tumai.cc` | Mark Director | Director | Kaxa172305 | Leadership | leadership | **Wrong table** — currently in `users`, should be `participants` |
+| 7 | `adam.finance@tumai.cc` | Adam Finance | Finance Manager | Joto995535 | Finance | finance | **Wrong table** — currently in `users`, should be `participants` |
+| 8 | `kevin.operations@tumai.cc` | Kevin Operations | Operations Manager | Bado798597 | Operations | operations | **Wrong table** — currently in `users`, should be `participants` |
+| 9 | `damon.operations@tumai.cc` | Damon Operations | Operations Supervisor | Xaqo596036 | Operations | operations | Correct (`participants`) |
+| 10 | `nicholas.field@tumai.cc` | Nicholas Field | Field Engineer | Xobo878227 | Field Engineering | engineering | Correct (`participants`) |
+| 11 | `mathew.field@tumai.cc` | Mathew Field | Field Engineer | Mucu340428 | Field Engineering | engineering | Correct (`participants`) |
+
+## Client Test Accounts — Google SSO (credo-group.co.uk)
+
+Mirror of the Microsoft set. All should be in the `participants` table.
+
+| # | Email | Name | Role Title | Department | Group | Status |
+|--:|-------|------|-----------|------------|-------|--------|
+| 12 | `mark.director@credo-group.co.uk` | Mark Director | Director | Leadership | leadership | **Wrong table** — currently in `users`, should be `participants` |
+| 13 | `adam.finance@credo-group.co.uk` | Adam Finance | Finance Manager | Finance | finance | **Wrong table** — currently in `users`, should be `participants` |
+| 14 | `kevin.operations@credo-group.co.uk` | Kevin Operations | Operations Manager | Operations | operations | **Wrong table** — currently in `users`, should be `participants` |
+| 15 | `damon.operations@credo-group.co.uk` | Damon Operations | Operations Supervisor | Operations | operations | Correct (`participants`) |
+| 16 | `nicholas.field@credo-group.co.uk` | Nicholas Field | Field Engineer | Field Engineering | engineering | Correct (`participants`) |
+| 17 | `mathew.field@credo-group.co.uk` | Mathew Field | Field Engineer | Field Engineering | engineering | Correct (`participants`) |
+
+> Passwords for `credo-group.co.uk` accounts are managed in Google Workspace Admin, not stored here.
+
+---
 
 ## Summary
 
-| Metric | Count |
-|--------|-------|
-| **Total DB records** | 15 (9 users + 6 participants) |
-| **Unique people** | 7 (Fedor + 6 test personas) |
-| **Microsoft SSO (tumai.cc)** | 7 accounts (1 consultant + 3 users + 3 participants) |
-| **Google SSO (credo-group.co.uk)** | 6 accounts (3 users + 3 participants) |
-| **Google SSO (tumai.com)** | 1 account (Fedor — consultant) |
-| **Engagements** | 2 (Nano Fibre UK + Nano Fibre Pilot seed) |
+| Category | Count | Status |
+|----------|-------|--------|
+| **Consultants (active)** | 3 | 2 in DB, 1 missing (Greg) |
+| **Consultants (planned)** | 2 | Future — `@limitlessmodus.com` |
+| **Client test accounts (Microsoft)** | 6 | 3 in wrong table, 3 correct |
+| **Client test accounts (Google)** | 6 | 3 in wrong table, 3 correct |
+| **Total unique people** | 8 | Fedor, Greg, + 6 test personas |
 
-## How Roles Work
+## Issues to Fix
 
-The SSO callback (`completeSSO` in `auth.go`) checks tables in this order:
-
-1. **`participants`** table first — if found, user lands on the **participant dashboard** with their `role_title`
-2. **`users`** table second — if found, user lands on the **consultant dashboard** with their `role` (consultant, director, manager, engineer)
-3. **Neither** — user sees "not registered" error on the login page
-
-## Notes
-
-- Passwords are only listed for Microsoft accounts (Azure AD requires them). Google accounts use the user's existing Google password.
-- The `credo-group.co.uk` Google Workspace passwords are managed in Google Admin and not stored here.
-- The `fedor.vasilyev@tumai.cc` account appears twice in the `users` table — once for the real engagement and once for the Pilot seed engagement. The SSO flow picks the first match.
+1. **6 records in wrong table** — `mark.director`, `adam.finance`, `kevin.operations` (both `@tumai.cc` and `@credo-group.co.uk`) are in `users` but should be in `participants`. They currently land on the consultant dashboard instead of the participant dashboard.
+2. **Greg not in DB** — `greg.kurnikov@odexpert.co.uk` needs to be added to the `users` table as a consultant.
+3. **Seed engagement cleanup** — duplicate `fedor.vasilyev@tumai.cc` record in `users` tied to the "Nano Fibre (Pilot)" seed engagement (`a0000000-...`).
 
 ---
 
