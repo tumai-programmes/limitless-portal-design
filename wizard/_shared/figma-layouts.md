@@ -3,7 +3,7 @@
 **Date:** 2 March 2026
 **Figma file:** Open in Figma Desktop → Page "Wizard — Audit Self-submission"
 **Status:** Complete wireframe coverage — all three wizard flows drafted, ready for refinement and DevExtreme component integration
-**Based on:** [wizard-specification.md](wizard-specification.md), [wizard-ui-takeaways-hmrc.md](wizard-ui-takeaways-hmrc.md)
+**Based on:** [specification.md](specification.md), [ui-takeaways-hmrc.md](ui-takeaways-hmrc.md)
 
 ## Overview
 
@@ -28,7 +28,7 @@ All layouts use:
 
 ## Layout 1 — Wizard Shell (Desktop 1440)
 
-![Layout 1 — Wizard Shell](images/wizard-layout-1-shell.png)
+![Layout 1 — Wizard Shell](../images/wizard-layout-1-shell.png)
 
 **Purpose:** Establishes the core wizard chrome that wraps every question step.
 
@@ -65,7 +65,7 @@ All layouts use:
 
 ## Layout 2 — Consent Step (Step 0)
 
-![Layout 2 — Consent Step](images/wizard-layout-2-consent.png)
+![Layout 2 — Consent Step](../images/wizard-layout-2-consent.png)
 
 **Purpose:** The gated entry point. The participant must read and accept before any questions appear.
 
@@ -90,7 +90,7 @@ All layouts use:
 
 ## Layout 3 — Profile Step (Section 1: About You)
 
-![Layout 3 — Profile Step](images/wizard-layout-3-profile.png)
+![Layout 3 — Profile Step](../images/wizard-layout-3-profile.png)
 
 **Purpose:** Demonstrates a typical question page with mixed input types, including the critical routing question that determines Section 5 content.
 
@@ -125,7 +125,7 @@ Field Ops — Installations, Field Ops — Service Calls/Repair, Field Ops — P
 
 ## Layout 4 — Review & Submit
 
-![Layout 4 — Review & Submit](images/wizard-layout-4-review.png)
+![Layout 4 — Review & Submit](../images/wizard-layout-4-review.png)
 
 **Purpose:** The final step before submission. Shows all answers in a structured summary with edit capability.
 
@@ -168,7 +168,7 @@ In the real implementation, all 8 sections (plus Consent) would be shown. The la
 
 ## Layout 5 — Participant Dashboard
 
-![Layout 5 — Participant Dashboard](images/wizard-layout-5-dashboard.png)
+![Layout 5 — Participant Dashboard](../images/wizard-layout-5-dashboard.png)
 
 **Purpose:** The landing page after SSO login. Shows all assigned audit instruments and their status.
 
@@ -220,7 +220,7 @@ All pattern cards are in Figma Section "Question Type Patterns" (`2008:2`).
 
 14 layouts covering the full Company Audit flow (Consent through Review & Submit). This is the largest instrument with the most complex question types.
 
-![01 Company Audit — Step 6: Process & Reality Test](images/wizard-01-step6-process-reality.png)
+![01 Company Audit — Step 6: Process & Reality Test](../images/wizard-01-step6-process-reality.png)
 
 *Representative layout: Step 6 (E — Process & Reality Test) showing the RatingScaleWithEvidence pattern — the most visually complex question type across all instruments.*
 
@@ -258,7 +258,7 @@ All layouts are in Figma Section "01 — Company Audit" (`2008:3`).
 
 17 layout frames covering 24 conceptual step layouts (15 base steps + 9 conditional Section 5 variants). The conditional variants use a representative layout approach: one template covers the 7 structurally similar variants, plus 2 unique layouts for Dispatch and Stores.
 
-![02 Manager Audit — Step 5.5: Dispatch (unique variant)](images/wizard-02-step5-dispatch.png)
+![02 Manager Audit — Step 5.5: Dispatch (unique variant)](../images/wizard-02-step5-dispatch.png)
 
 *Representative layout: Step 5.5 (Dispatch) — the unique conditional variant showing MultiSelect with per-option detail fields, a pattern not used elsewhere.*
 
@@ -305,7 +305,7 @@ All layouts are in Figma Section "02 — Manager Audit" (`2008:4`).
 
 12 layout frames covering 16 conceptual step layouts (12 base steps + 4 conditional Section 5 modules). All 4 modules are structurally similar, so one representative layout covers them all.
 
-![03 Engineer Mini-Audit — Step 4: Systems & Portals](images/wizard-03-step4-systems.png)
+![03 Engineer Mini-Audit — Step 4: Systems & Portals](../images/wizard-03-step4-systems.png)
 
 *Representative layout: Step 4 (Systems & Portals) — the most complex step in the Mini-Audit, with 7 questions across MultiSelect, FreeText, SingleSelect, and FileUpload types.*
 
@@ -391,6 +391,6 @@ Across all three instruments, the following question types are used:
 
 | File | Purpose |
 |------|---------|
-| [wizard-specification.md](wizard-specification.md) | Full functional specification (instruments, questions, routing, data model, API) |
-| [wizard-specification-plan.md](wizard-specification-plan.md) | Specification scope and structure plan |
-| [wizard-ui-takeaways-hmrc.md](wizard-ui-takeaways-hmrc.md) | 12 UI patterns extracted from HMRC Company Accounts wizard |
+| [specification.md](specification.md) | Full functional specification (instruments, questions, routing, data model, API) |
+| [../specification-plan.md](../specification-plan.md) | Specification scope and structure plan |
+| [ui-takeaways-hmrc.md](ui-takeaways-hmrc.md) | 12 UI patterns extracted from HMRC Company Accounts wizard |

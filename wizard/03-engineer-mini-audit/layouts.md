@@ -12,7 +12,7 @@ https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 # Step 0 — Confidentiality & Consent
 
-![Step 0 — Consent](images/wizard-03-step00-consent.png)
+![Step 0 — Consent](../images/wizard-03-step00-consent.png)
 
 | Property | Value |
 |----------|-------|
@@ -39,7 +39,7 @@ https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 # Step 1 — Section 1: About You
 
-![Step 1 — About You](images/wizard-03-step01-about-you.png)
+![Step 1 — About You](../images/wizard-03-step01-about-you.png)
 
 | Property | Value |
 |----------|-------|
@@ -68,7 +68,7 @@ https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 # Step 2 — Section 2: What You Do & What "Good" Looks Like
 
-![Step 2 — What You Do](images/wizard-03-step02-what-you-do.png)
+![Step 2 — What You Do](../images/wizard-03-step02-what-you-do.png)
 
 | Property | Value |
 |----------|-------|
@@ -95,7 +95,7 @@ https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 # Step 3 — Section 3: Non-Productive Time
 
-![Step 3 — Non-Productive Time](images/wizard-03-step03-non-productive-time.png)
+![Step 3 — Non-Productive Time](../images/wizard-03-step03-non-productive-time.png)
 
 | Property | Value |
 |----------|-------|
@@ -122,7 +122,7 @@ https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 # Step 4 — Section 4: Systems & Portals Friction
 
-![Step 4 — Systems](images/wizard-03-step04-systems.png)
+![Step 4 — Systems](../images/wizard-03-step04-systems.png)
 
 | Property | Value |
 |----------|-------|
@@ -158,7 +158,7 @@ Section 5 routes by the role type selected in Step 1 (question 1.2). There are 4
 
 ## Step 5 — Module 5A: Installations
 
-![Step 5 — Job Type Module](images/wizard-03-step05-job-type-module.png)
+![Step 5 — Job Type Module](../images/wizard-03-step05-job-type-module.png)
 
 | Property | Value |
 |----------|-------|
@@ -226,7 +226,7 @@ When "Multi-skilled" is selected in question 1.2:
 
 # Step 6 — Section 6: Materials, Inventory & Free-Issue
 
-![Step 6 — Materials](images/wizard-03-step06-materials.png)
+![Step 6 — Materials](../images/wizard-03-step06-materials.png)
 
 | Property | Value |
 |----------|-------|
@@ -255,7 +255,7 @@ When "Multi-skilled" is selected in question 1.2:
 
 # Step 7 — Section 7: Quality & Safety
 
-![Step 7 — Quality & Safety](images/wizard-03-step07-quality-safety.png)
+![Step 7 — Quality & Safety](../images/wizard-03-step07-quality-safety.png)
 
 | Property | Value |
 |----------|-------|
@@ -283,7 +283,7 @@ When "Multi-skilled" is selected in question 1.2:
 
 # Step 8 — Section 8: Cost Leakage & Chargebacks
 
-![Step 8 — Cost Leakage](images/wizard-03-step08-cost-leakage.png)
+![Step 8 — Cost Leakage](../images/wizard-03-step08-cost-leakage.png)
 
 | Property | Value |
 |----------|-------|
@@ -310,7 +310,7 @@ When "Multi-skilled" is selected in question 1.2:
 
 # Step 9 — Section 9: What Would You Change?
 
-![Step 9 — What Would You Change](images/wizard-03-step09-what-would-you-change.png)
+![Step 9 — What Would You Change](../images/wizard-03-step09-what-would-you-change.png)
 
 | Property | Value |
 |----------|-------|
@@ -337,7 +337,7 @@ When "Multi-skilled" is selected in question 1.2:
 
 # Step 10 — Section 10: Optional Evidence
 
-![Step 10 — Evidence](images/wizard-03-step10-evidence.png)
+![Step 10 — Evidence](../images/wizard-03-step10-evidence.png)
 
 | Property | Value |
 |----------|-------|
@@ -362,7 +362,7 @@ When "Multi-skilled" is selected in question 1.2:
 
 # Step 11 — Review & Submit
 
-![Step 11 — Review](images/wizard-03-step11-review.png)
+![Step 11 — Review](../images/wizard-03-step11-review.png)
 
 | Property | Value |
 |----------|-------|
@@ -437,6 +437,6 @@ The Engineer Mini-Audit is optimised for mobile completion:
 
 ## Related Files
 
-- **Specification:** [wizard-specification.md](wizard-specification.md)
-- **Figma layouts overview:** [wizard-figma-layouts.md](wizard-figma-layouts.md)
+- **Specification:** [../_shared/specification.md](../_shared/specification.md)
+- **Figma layouts overview:** [../_shared/figma-layouts.md](../_shared/figma-layouts.md)
 - **Figma project:** Limitless Modus Portal → Wizard — Audit Self-submission → 03 Engineer Mini-Audit section

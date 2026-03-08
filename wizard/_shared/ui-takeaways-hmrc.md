@@ -8,7 +8,7 @@
 
 ## 1. Persistent Context Banner
 
-![HMRC context banner](images/image-20250131-121623.png)
+![HMRC context banner](../images/image-20250131-121623.png)
 
 Every step shows a **persistent identity bar** at the top of the content area:
 
@@ -29,7 +29,7 @@ Participant: John Smith | Instrument: 02 Manager Audit | Engagement: Nano Fibre 
 
 ## 2. Left-hand Section Navigation (Task List Pattern)
 
-![HMRC left navigation](images/image-20250131-122617.png)
+![HMRC left navigation](../images/image-20250131-122617.png)
 
 HMRC uses a **left sidebar with a vertical list of sections**, where:
 - The current phase is **bold** (e.g. "Start computations")
@@ -51,7 +51,7 @@ HMRC uses a **left sidebar with a vertical list of sections**, where:
 
 ## 3. One Question per Page
 
-![HMRC single question](images/image-20250131-122454.png)
+![HMRC single question](../images/image-20250131-122454.png)
 
 HMRC follows the GDS (Government Digital Service) principle of **one thing per page** — each screen asks a single question or collects a single piece of information. Even when the question is trivially simple (e.g. "Does your company have any off balance sheet arrangements? Yes / No"), it gets its own full page.
 
@@ -63,7 +63,7 @@ HMRC follows the GDS (Government Digital Service) principle of **one thing per p
 
 ## 4. "Save and Continue" as the Primary Action
 
-![HMRC save and continue](images/image-20250131-121917.png)
+![HMRC save and continue](../images/image-20250131-121917.png)
 
 Every page has a single **green "Save and continue" button** as the primary CTA. There is no "Next" without saving — the action explicitly tells the user their data is being saved. The only other navigation is the "Back" link at the top.
 
@@ -75,7 +75,7 @@ Every page has a single **green "Save and continue" button** as the primary CTA.
 
 ## 5. Summary/Review Pages with Edit Links
 
-![HMRC accounts summary](images/image-20250131-122544.png)
+![HMRC accounts summary](../images/image-20250131-122544.png)
 
 After completing a group of questions, HMRC shows a **summary page** listing all sub-sections with their completion status and an "Edit" link for each. The pattern is:
 
@@ -97,7 +97,7 @@ Clicking "Edit" takes the user back to that specific sub-section.
 
 ## 6. Answer Confirmation Pages
 
-![HMRC directors report confirmation](images/image-20250131-121649.png)
+![HMRC directors report confirmation](../images/image-20250131-121649.png)
 
 After answering a question, HMRC sometimes shows a **confirmation page** that displays the saved answer (e.g. "Directors' report prepared: No") with an "Edit" link, before the user proceeds. This is distinct from the final summary — it appears mid-flow.
 
@@ -109,7 +109,7 @@ After answering a question, HMRC sometimes shows a **confirmation page** that di
 
 ## 7. Structured Data Grids (TableGrid Pattern)
 
-![HMRC balance sheet grid](images/image-20250131-122254.png)
+![HMRC balance sheet grid](../images/image-20250131-122254.png)
 
 The balance sheet page shows a **structured grid** with:
 - Row labels on the left (expandable with ▶)
@@ -126,7 +126,7 @@ The balance sheet page shows a **structured grid** with:
 
 ## 8. Mandatory vs Optional Visual Distinction
 
-![HMRC footnotes with mandatory/optional labels](images/image-20250131-122357.png)
+![HMRC footnotes with mandatory/optional labels](../images/image-20250131-122357.png)
 
 The Footnotes page shows a checklist where items are explicitly labelled **(mandatory)** or **(optional)**. Mandatory items appear to have a slightly different visual treatment (the checkbox area has a different background shade).
 
@@ -136,7 +136,7 @@ The Footnotes page shows a checklist where items are explicitly labelled **(mand
 
 ## 9. Contextual Help (Expandable)
 
-![HMRC get help link](images/image-20250131-121556.png)
+![HMRC get help link](../images/image-20250131-121556.png)
 
 Every page includes a persistent **"Get help using this service (opens in a new tab)"** link at the bottom, collapsed behind a ▶ disclosure triangle. Individual questions also have contextual help text (e.g. the AC8023 description explaining what a directors' report is).
 
@@ -151,7 +151,7 @@ Every page includes a persistent **"Get help using this service (opens in a new 
 
 ## 10. Phase Transition Screens
 
-![HMRC phase transition](images/image-20250131-121556.png)
+![HMRC phase transition](../images/image-20250131-121556.png)
 
 Before starting a new major phase, HMRC shows a **briefing screen** that explains:
 - What the user is about to do ("Your filing will be made up of...")
@@ -171,7 +171,7 @@ This reduces the "wall of questions" feeling and gives participants mental bookm
 
 ## 11. "Track Your Submissions" Link
 
-![HMRC track submissions](images/image-20250131-122544.png)
+![HMRC track submissions](../images/image-20250131-122544.png)
 
 HMRC provides a persistent **"Track your submissions"** link in the header area, allowing users to view previously submitted filings alongside the current in-progress one.
 

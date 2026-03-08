@@ -12,7 +12,7 @@
 
 # Step 0 — Confidentiality & Consent
 
-![Step 0 — Consent](images/wizard-01-step00-consent.png)
+![Step 0 — Consent](../images/wizard-01-step00-consent.png)
 
 | Property | Value |
 |----------|-------|
@@ -41,7 +41,7 @@
 
 # Step 1 — Company Context
 
-![Step 1 — Company Context](images/wizard-01-step01-company-context.png)
+![Step 1 — Company Context](../images/wizard-01-step01-company-context.png)
 
 | Property | Value |
 |----------|-------|
@@ -75,7 +75,7 @@
 
 # Step 2 — A. Organisational Foundation
 
-![Step 2 — Org Foundation](images/wizard-01-step02-org-foundation.png)
+![Step 2 — Org Foundation](../images/wizard-01-step02-org-foundation.png)
 
 | Property | Value |
 |----------|-------|
@@ -117,7 +117,7 @@
 
 # Step 3 — B. Organisation Structure
 
-![Step 3 — Org Structure](images/wizard-01-step03-org-structure.png)
+![Step 3 — Org Structure](../images/wizard-01-step03-org-structure.png)
 
 | Property | Value |
 |----------|-------|
@@ -151,7 +151,7 @@
 
 # Step 4 — C. Workforce & Capability
 
-![Step 4 — Workforce](images/wizard-01-step04-workforce.png)
+![Step 4 — Workforce](../images/wizard-01-step04-workforce.png)
 
 | Property | Value |
 |----------|-------|
@@ -195,7 +195,7 @@
 
 # Step 5 — D. Strategy & Planning
 
-![Step 5 — Strategy](images/wizard-01-step05-strategy.png)
+![Step 5 — Strategy](../images/wizard-01-step05-strategy.png)
 
 | Property | Value |
 |----------|-------|
@@ -233,7 +233,7 @@
 
 # Step 6 — E. Process & Reality Tests
 
-![Step 6 — Process Reality](images/wizard-01-step06-process-reality.png)
+![Step 6 — Process Reality](../images/wizard-01-step06-process-reality.png)
 
 | Property | Value |
 |----------|-------|
@@ -272,7 +272,7 @@
 
 # Step 7 — F. Operating Cadence
 
-![Step 7 — Cadence](images/wizard-01-step07-cadence.png)
+![Step 7 — Cadence](../images/wizard-01-step07-cadence.png)
 
 | Property | Value |
 |----------|-------|
@@ -299,7 +299,7 @@
 
 # Step 8 — G. External System
 
-![Step 8 — External](images/wizard-01-step08-external.png)
+![Step 8 — External](../images/wizard-01-step08-external.png)
 
 | Property | Value |
 |----------|-------|
@@ -328,7 +328,7 @@
 
 # Step 9 — H. Finance & Full Cost Audit
 
-![Step 9 — Finance](images/wizard-01-step09-finance.png)
+![Step 9 — Finance](../images/wizard-01-step09-finance.png)
 
 | Property | Value |
 |----------|-------|
@@ -385,7 +385,7 @@
 
 # Step 10 — I. Operations Deep Dive
 
-![Step 10 — Operations](images/wizard-01-step10-operations.png)
+![Step 10 — Operations](../images/wizard-01-step10-operations.png)
 
 | Property | Value |
 |----------|-------|
@@ -455,7 +455,7 @@
 
 # Step 11 — J. Leadership System Signals
 
-![Step 11 — Leadership](images/wizard-01-step11-leadership.png)
+![Step 11 — Leadership](../images/wizard-01-step11-leadership.png)
 
 | Property | Value |
 |----------|-------|
@@ -486,7 +486,7 @@
 
 # Step 12 — K. Evidence Register
 
-![Step 12 — Evidence](images/wizard-01-step12-evidence.png)
+![Step 12 — Evidence](../images/wizard-01-step12-evidence.png)
 
 | Property | Value |
 |----------|-------|
@@ -515,7 +515,7 @@
 
 # Step 13 — Review & Submit
 
-![Step 13 — Review](images/wizard-01-step13-review.png)
+![Step 13 — Review](../images/wizard-01-step13-review.png)
 
 | Property | Value |
 |----------|-------|
@@ -573,6 +573,6 @@
 
 ## Related Files
 
-- **Specification:** [wizard-specification.md](wizard-specification.md)
-- **Figma layouts overview:** [wizard-figma-layouts.md](wizard-figma-layouts.md)
+- **Specification:** [../_shared/specification.md](../_shared/specification.md)
+- **Figma layouts overview:** [../_shared/figma-layouts.md](../_shared/figma-layouts.md)
 - **Figma project:** Limitless Modus Portal → Wizard — Audit Self-submission → 01 Company Audit section

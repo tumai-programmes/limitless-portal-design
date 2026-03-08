@@ -11,7 +11,8 @@ Primary instructions and context for Claude when working in this repository.
 **Code repo:** `../limitless-portal/` — [tumai-programmes/limitless-portal](https://github.com/tumai-programmes/limitless-portal) (Go + Vue implementation)
 **Programme repo:** `../limitless/` — [tumai-programmes/limitless](https://github.com/tumai-programmes/limitless) (business strategy, methodology, engagements)
 **SQL operations:** [tumai-hq/sql-hub/limitless-portal](https://github.com/tumai-hq/sql-hub) (monitoring, diagnostics, reports)
-**Live URL:** https://nano.limitlessmodus.com/
+**Live URL:** https://portal.limitlessmodus.com/
+**Dev URL:** https://dev-portal.limitlessmodus.com/
 
 ## Limitless Portal Triad
 

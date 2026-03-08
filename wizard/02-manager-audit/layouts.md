@@ -12,7 +12,7 @@
 
 # Step 0 — Confidentiality & Consent
 
-![Step 0 — Consent](images/wizard-02-step00-consent.png)
+![Step 0 — Consent](../images/wizard-02-step00-consent.png)
 
 | Property | Value |
 |----------|-------|
@@ -38,7 +38,7 @@
 
 # Step 1 — Section 1: About You
 
-![Step 1 — About You](images/wizard-02-step01-about-you.png)
+![Step 1 — About You](../images/wizard-02-step01-about-you.png)
 
 | Property | Value |
 |----------|-------|
@@ -71,7 +71,7 @@
 
 # Step 2 — Section 2: Role Purpose
 
-![Step 2 — Role Purpose](images/wizard-02-step02-role-purpose.png)
+![Step 2 — Role Purpose](../images/wizard-02-step02-role-purpose.png)
 
 | Property | Value |
 |----------|-------|
@@ -99,7 +99,7 @@
 
 # Step 3 — Section 3: Regular Duties & Cadence
 
-![Step 3 — Regular Duties](images/wizard-02-step03-regular-duties.png)
+![Step 3 — Regular Duties](../images/wizard-02-step03-regular-duties.png)
 
 | Property | Value |
 |----------|-------|
@@ -127,7 +127,7 @@
 
 # Step 4 — Section 4: Day-in-the-Life
 
-![Step 4 — Day-in-the-Life](images/wizard-02-step04-day-in-the-life.png)
+![Step 4 — Day-in-the-Life](../images/wizard-02-step04-day-in-the-life.png)
 
 | Property | Value |
 |----------|-------|
@@ -177,7 +177,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ## Step 5 — Variant 5.1: Field Ops — Installations
 
-![Step 5 — Representative Layout](images/wizard-02-step05-sec5-representative.png)
+![Step 5 — Representative Layout](../images/wizard-02-step05-sec5-representative.png)
 
 | Property | Value |
 |----------|-------|
@@ -241,7 +241,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ## Step 5 — Variant 5.5: Dispatch / Scheduling
 
-![Step 5 — Dispatch](images/wizard-02-step05-dispatch.png)
+![Step 5 — Dispatch](../images/wizard-02-step05-dispatch.png)
 
 | Property | Value |
 |----------|-------|
@@ -270,7 +270,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ## Step 5 — Variant 5.6: Stores / Materials
 
-![Step 5 — Stores](images/wizard-02-step05-stores.png)
+![Step 5 — Stores](../images/wizard-02-step05-stores.png)
 
 | Property | Value |
 |----------|-------|
@@ -361,7 +361,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 # Step 6 — Section 6: Non-Productive Time
 
-![Step 6 — Non-Productive Time](images/wizard-02-step06-non-productive-time.png)
+![Step 6 — Non-Productive Time](../images/wizard-02-step06-non-productive-time.png)
 
 | Property | Value |
 |----------|-------|
@@ -386,7 +386,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 # Step 7 — Section 7: Cost Leakage
 
-![Step 7 — Cost Leakage](images/wizard-02-step07-cost-leakage.png)
+![Step 7 — Cost Leakage](../images/wizard-02-step07-cost-leakage.png)
 
 | Property | Value |
 |----------|-------|
@@ -409,7 +409,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 # Step 8 — Section 8: People Management
 
-![Step 8 — People Management](images/wizard-02-step08-people-management.png)
+![Step 8 — People Management](../images/wizard-02-step08-people-management.png)
 
 | Property | Value |
 |----------|-------|
@@ -436,7 +436,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 # Step 9 — Section 9: Interfaces & Handoffs
 
-![Step 9 — Interfaces](images/wizard-02-step09-interfaces.png)
+![Step 9 — Interfaces](../images/wizard-02-step09-interfaces.png)
 
 | Property | Value |
 |----------|-------|
@@ -464,7 +464,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 # Step 10 — Section 10: Reality Test
 
-![Step 10 — Reality Test](images/wizard-02-step10-reality-test.png)
+![Step 10 — Reality Test](../images/wizard-02-step10-reality-test.png)
 
 | Property | Value |
 |----------|-------|
@@ -490,7 +490,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 # Step 11 — Section 11: Risks & Changes
 
-![Step 11 — Risks & Changes](images/wizard-02-step11-risks-changes.png)
+![Step 11 — Risks & Changes](../images/wizard-02-step11-risks-changes.png)
 
 | Property | Value |
 |----------|-------|
@@ -512,7 +512,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 # Step 12 — Section 12: Evidence Register
 
-![Step 12 — Evidence](images/wizard-02-step12-evidence.png)
+![Step 12 — Evidence](../images/wizard-02-step12-evidence.png)
 
 | Property | Value |
 |----------|-------|
@@ -536,7 +536,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 # Step 13 — Section 13: Final Catch-All
 
-![Step 13 — Final Catch-All](images/wizard-02-step13-final-catch-all.png)
+![Step 13 — Final Catch-All](../images/wizard-02-step13-final-catch-all.png)
 
 | Property | Value |
 |----------|-------|
@@ -561,7 +561,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 # Step 14 — Review & Submit
 
-![Step 14 — Review](images/wizard-02-step14-review.png)
+![Step 14 — Review](../images/wizard-02-step14-review.png)
 
 | Property | Value |
 |----------|-------|
@@ -633,6 +633,6 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ## Related Files
 
-- **Specification:** [wizard-specification.md](wizard-specification.md)
-- **Figma layouts overview:** [wizard-figma-layouts.md](wizard-figma-layouts.md)
+- **Specification:** [../_shared/specification.md](../_shared/specification.md)
+- **Figma layouts overview:** [../_shared/figma-layouts.md](../_shared/figma-layouts.md)
 - **Figma project:** Limitless Modus Portal → Wizard — Audit Self-submission → 02 Manager Audit section
