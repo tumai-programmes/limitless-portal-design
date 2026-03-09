@@ -1,8 +1,8 @@
-https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
+# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 > **Instrument:** Invincibility Blueprint — Engineer Mini-Audit
 > **Audience:** Field engineers (all streams)
-> **Total steps:** 12 (Consent + Sections 1–10 + Review)
+> **Total steps:** 13 (Introduction + Consent + Sections 1–10 + Review)
 > **Estimated time:** 10–12 minutes
 > **Conditional logic:** Section 5 routes by job type (selected in Section 1); multi-skilled engineers answer up to 2 modules
 > **Figma section:** "03 — Engineer Mini-Audit" in Wizard — Audit Self-submission page
@@ -10,13 +10,31 @@ https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 ---
 
-# Step 0 — Confidentiality & Consent
+# Step 0 — Introduction
+
+| Property | Value |
+|----------|-------|
+| Step number | 0 of 12 |
+| Section | Introduction |
+| Questions | 3 (all display-only) |
+| Question types | Display only |
+| Gate | None — "Save and continue" enabled immediately |
+
+### Design Notes
+
+- Shortest intro of the three instruments — engineers are on phones between jobs. See [introduction.md](introduction.md) for full content specification.
+- The progress sidebar shows "Introduction" as the first item, highlighted as active.
+- On return visits, the wizard may skip directly to the last incomplete section.
+
+---
+
+# Step 1 — Confidentiality & Consent
 
 ![Step 0 — Consent](../images/wizard-03-step00-consent.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 0 of 11 |
+| Step number | 1 of 12 |
 | Section | Consent |
 | Questions | 2 (1 display + 1 interactive) |
 | Question types | ConsentCheckbox |
@@ -37,13 +55,13 @@ https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 ---
 
-# Step 1 — Section 1: About You
+# Step 2 — Section 1: About You
 
 ![Step 1 — About You](../images/wizard-03-step01-about-you.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 1 of 11 |
+| Step number | 2 of 12 |
 | Section | 1 — About You |
 | Questions | 4 |
 | Question types | FreeText (2), SingleSelect (2) |
@@ -66,13 +84,13 @@ https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 ---
 
-# Step 2 — Section 2: What You Do & What "Good" Looks Like
+# Step 3 — Section 2: What You Do & What "Good" Looks Like
 
 ![Step 2 — What You Do](../images/wizard-03-step02-what-you-do.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 2 of 11 |
+| Step number | 3 of 12 |
 | Section | 2 — What You Do & What "Good" Looks Like |
 | Questions | 3 |
 | Question types | FreeText (2), FreeTextLong (1) |
@@ -93,13 +111,13 @@ https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 ---
 
-# Step 3 — Section 3: Non-Productive Time
+# Step 4 — Section 3: Non-Productive Time
 
 ![Step 3 — Non-Productive Time](../images/wizard-03-step03-non-productive-time.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 3 of 11 |
+| Step number | 4 of 12 |
 | Section | 3 — Non-Productive Time |
 | Questions | 3 |
 | Question types | TableGrid (1), MultiSelectCapped (1), FreeTextLong (1) |
@@ -120,13 +138,13 @@ https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 ---
 
-# Step 4 — Section 4: Systems & Portals Friction
+# Step 5 — Section 4: Systems & Portals Friction
 
 ![Step 4 — Systems](../images/wizard-03-step04-systems.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 4 of 11 |
+| Step number | 5 of 12 |
 | Section | 4 — Systems & Portals Friction |
 | Questions | 7 |
 | Question types | MultiSelect (2), FreeText (1), FreeTextLong (2), SingleSelect (1), FileUpload (1) |
@@ -152,11 +170,11 @@ https://nano.limitlessmodus.com/# 03 Engineer Mini-Audit — Wizard UI Layouts
 
 ---
 
-# Step 5 — Section 5: Job Type Modules (Conditional)
+# Step 6 — Section 5: Job Type Modules (Conditional)
 
-Section 5 routes by the role type selected in Step 1 (question 1.2). There are 4 modules, and multi-skilled engineers see up to 2. All 4 modules share the same Figma layout structure — the representative frame is used for all.
+Section 5 routes by the role type selected in Step 2 (question 1.2). There are 4 modules, and multi-skilled engineers see up to 2. All 4 modules share the same Figma layout structure — the representative frame is used for all.
 
-## Step 5 — Module 5A: Installations
+## Step 6 — Module 5A: Installations
 
 ![Step 5 — Job Type Module](../images/wizard-03-step05-job-type-module.png)
 
@@ -178,7 +196,7 @@ Section 5 routes by the role type selected in Step 1 (question 1.2). There are 4
 
 > **Figma note:** This frame represents all 4 job-type modules. The layout structure is identical — only question labels, option lists, and counts differ per module.
 
-## Step 5 — Module 5B: Service Calls / Fault
+## Step 6 — Module 5B: Service Calls / Fault
 
 *Uses the same Figma layout as 5A.*
 
@@ -190,7 +208,7 @@ Section 5 routes by the role type selected in Step 1 (question 1.2). There are 4
 | 5B.4 | What would reduce repeat faults fastest | FreeTextLong | Yes |
 | 5B.5 | Throughput check: done-but-not-paid | FreeTextLong | Yes |
 
-## Step 5 — Module 5C: Pre-Enablement
+## Step 6 — Module 5C: Pre-Enablement
 
 *Uses the same Figma layout as 5A.*
 
@@ -202,7 +220,7 @@ Section 5 routes by the role type selected in Step 1 (question 1.2). There are 4
 | 5C.4 | Where pre-enablement reduces/creates waste | FreeTextLong | Yes |
 | 5C.5 | Throughput check: done-but-not-paid | FreeTextLong | Yes |
 
-## Step 5 — Module 5D: Enablement Works
+## Step 6 — Module 5D: Enablement Works
 
 *Uses the same Figma layout as 5A.*
 
@@ -219,18 +237,18 @@ Section 5 routes by the role type selected in Step 1 (question 1.2). There are 4
 When "Multi-skilled" is selected in question 1.2:
 1. A secondary picker appears: "Which two work types represent most of your week? (select 2)"
 2. Options: Installations / Service / Pre-Enablement / Enablement
-3. The two selected modules appear in sequence as Step 5a and Step 5b.
+3. The two selected modules appear in sequence as Step 6a and Step 6b.
 4. If only one is selected, just that module appears.
 
 ---
 
-# Step 6 — Section 6: Materials, Inventory & Free-Issue
+# Step 7 — Section 6: Materials, Inventory & Free-Issue
 
 ![Step 6 — Materials](../images/wizard-03-step06-materials.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 6 of 11 |
+| Step number | 7 of 12 |
 | Section | 6 — Materials, Inventory & Free-Issue |
 | Questions | 6 |
 | Question types | SingleSelect (1), MultiSelectCapped (1), FreeTextLong (4) |
@@ -253,13 +271,13 @@ When "Multi-skilled" is selected in question 1.2:
 
 ---
 
-# Step 7 — Section 7: Quality & Safety
+# Step 8 — Section 7: Quality & Safety
 
 ![Step 7 — Quality & Safety](../images/wizard-03-step07-quality-safety.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 7 of 11 |
+| Step number | 8 of 12 |
 | Section | 7 — Quality & Safety |
 | Questions | 4 |
 | Question types | SingleSelect (2), MultiSelectCapped (1), FreeTextLong (1) |
@@ -281,13 +299,13 @@ When "Multi-skilled" is selected in question 1.2:
 
 ---
 
-# Step 8 — Section 8: Cost Leakage & Chargebacks
+# Step 9 — Section 8: Cost Leakage & Chargebacks
 
 ![Step 8 — Cost Leakage](../images/wizard-03-step08-cost-leakage.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 8 of 11 |
+| Step number | 9 of 12 |
 | Section | 8 — Cost Leakage & Chargebacks |
 | Questions | 3 |
 | Question types | FreeTextLong (2), MultiSelect (1) |
@@ -308,13 +326,13 @@ When "Multi-skilled" is selected in question 1.2:
 
 ---
 
-# Step 9 — Section 9: What Would You Change?
+# Step 10 — Section 9: What Would You Change?
 
 ![Step 9 — What Would You Change](../images/wizard-03-step09-what-would-you-change.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 9 of 11 |
+| Step number | 10 of 12 |
 | Section | 9 — What Would You Change? |
 | Questions | 3 |
 | Question types | FreeTextLong (3) |
@@ -335,13 +353,13 @@ When "Multi-skilled" is selected in question 1.2:
 
 ---
 
-# Step 10 — Section 10: Optional Evidence
+# Step 11 — Section 10: Optional Evidence
 
 ![Step 10 — Evidence](../images/wizard-03-step10-evidence.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 10 of 11 |
+| Step number | 11 of 12 |
 | Section | 10 — Optional Evidence |
 | Questions | 1 |
 | Question types | SingleSelect + FileUpload (1) |
@@ -360,13 +378,13 @@ When "Multi-skilled" is selected in question 1.2:
 
 ---
 
-# Step 11 — Review & Submit
+# Step 12 — Review & Submit
 
 ![Step 11 — Review](../images/wizard-03-step11-review.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 11 of 11 |
+| Step number | 12 of 12 |
 | Section | Review & Submit |
 | Questions | 0 (summary view) |
 
@@ -394,31 +412,33 @@ When "Multi-skilled" is selected in question 1.2:
 
 | Type | Count | Steps Used In |
 |------|-------|---------------|
-| FreeTextLong | ~18 (base) + variable (Sec 5) | Steps 2–9 |
-| FreeText | 4 | Steps 1, 2 |
-| SingleSelect | 5 | Steps 1, 4, 6, 7, 10 |
-| MultiSelect | 2 | Steps 4, 8 |
-| MultiSelectCapped | ~4 (base) + variable (Sec 5) | Steps 3, 5, 6, 7 |
-| TableGrid | 1 | Step 3 |
-| FileUpload | 2 | Steps 4, 10 |
-| ConsentCheckbox | 1 | Step 0 |
+| Display only | 3 | Step 0 |
+| FreeTextLong | ~18 (base) + variable (Sec 5) | Steps 3–10 |
+| FreeText | 4 | Steps 2, 3 |
+| SingleSelect | 5 | Steps 2, 5, 7, 8, 11 |
+| MultiSelect | 2 | Steps 5, 9 |
+| MultiSelectCapped | ~4 (base) + variable (Sec 5) | Steps 4, 6, 7, 8 |
+| TableGrid | 1 | Step 4 |
+| FileUpload | 2 | Steps 5, 11 |
+| ConsentCheckbox | 1 | Step 1 |
 
 ## Appendix — Figma Node Reference
 
 | Step | Frame Name | Node ID |
 |------|-----------|---------|
-| 0 | 03-Step0 Consent | `2012:3564` |
-| 1 | 03-Step1 About You | `2012:3634` |
-| 2 | 03-Step2 What You Do | `2012:3720` |
-| 3 | 03-Step3 Non-Productive Time | `2012:3792` |
-| 4 | 03-Step4 Systems | `2012:3862` |
-| 5 | 03-Step5 Job Type Module | `2012:3966` |
-| 6 | 03-Step6 Materials | `2012:4044` |
-| 7 | 03-Step7 Quality Safety | `2012:4128` |
-| 8 | 03-Step8 Cost Leakage | `2012:4198` |
-| 9 | 03-Step9 What Would You Change | `2012:4266` |
-| 10 | 03-Step10 Evidence | `2012:4338` |
-| 11 | 03-Review Review & Submit | `2012:4418` |
+| 0 | 03-Step0 Introduction | — |
+| 1 | 03-Step0 Consent | `2012:3564` |
+| 2 | 03-Step1 About You | `2012:3634` |
+| 3 | 03-Step2 What You Do | `2012:3720` |
+| 4 | 03-Step3 Non-Productive Time | `2012:3792` |
+| 5 | 03-Step4 Systems | `2012:3862` |
+| 6 | 03-Step5 Job Type Module | `2012:3966` |
+| 7 | 03-Step6 Materials | `2012:4044` |
+| 8 | 03-Step7 Quality Safety | `2012:4128` |
+| 9 | 03-Step8 Cost Leakage | `2012:4198` |
+| 10 | 03-Step9 What Would You Change | `2012:4266` |
+| 11 | 03-Step10 Evidence | `2012:4338` |
+| 12 | 03-Review Review & Submit | `2012:4418` |
 
 ## Appendix — Mobile Design Considerations
 

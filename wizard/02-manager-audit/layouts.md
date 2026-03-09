@@ -2,7 +2,7 @@
 
 > **Instrument:** Invincibility Blueprint — Manager Audit
 > **Audience:** Functional managers (all departments)
-> **Total steps:** 15 (Consent + Sections 1–13 + Review)
+> **Total steps:** 16 (Introduction + Consent + Sections 1–13 + Review)
 > **Estimated time:** 30–45 minutes
 > **Conditional logic:** Section 5 branches by department (selected in Section 1)
 > **Figma section:** "02 — Manager Audit" in Wizard — Audit Self-submission page
@@ -10,13 +10,31 @@
 
 ---
 
-# Step 0 — Confidentiality & Consent
+# Step 0 — Introduction
+
+| Property | Value |
+|----------|-------|
+| Step number | 0 of 15 |
+| Section | Introduction |
+| Questions | 4 (all display-only) |
+| Question types | Display only |
+| Gate | None — "Save and continue" enabled immediately |
+
+### Design Notes
+
+- Purely informational landing step with no interactive elements. See [introduction.md](introduction.md) for full content specification.
+- The progress sidebar shows "Introduction" as the first item, highlighted as active.
+- On return visits, the wizard may skip directly to the last incomplete section.
+
+---
+
+# Step 1 — Confidentiality & Consent
 
 ![Step 0 — Consent](../images/wizard-02-step00-consent.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 0 of 14 |
+| Step number | 1 of 15 |
 | Section | Consent |
 | Questions | 2 (1 display + 1 interactive) |
 | Question types | ConsentCheckbox |
@@ -36,13 +54,13 @@
 
 ---
 
-# Step 1 — Section 1: About You
+# Step 2 — Section 1: About You
 
 ![Step 1 — About You](../images/wizard-02-step01-about-you.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 1 of 14 |
+| Step number | 2 of 15 |
 | Section | 1 — About You |
 | Questions | 8 |
 | Question types | FreeText (5), SingleSelect (2), FreeText conditional (1) |
@@ -69,13 +87,13 @@
 
 ---
 
-# Step 2 — Section 2: Role Purpose
+# Step 3 — Section 2: Role Purpose
 
 ![Step 2 — Role Purpose](../images/wizard-02-step02-role-purpose.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 2 of 14 |
+| Step number | 3 of 15 |
 | Section | 2 — Role Purpose & What "Good" Looks Like |
 | Questions | 5 |
 | Question types | FreeTextLong (4), ResponseMode (1) |
@@ -97,13 +115,13 @@
 
 ---
 
-# Step 3 — Section 3: Regular Duties & Cadence
+# Step 4 — Section 3: Regular Duties & Cadence
 
 ![Step 3 — Regular Duties](../images/wizard-02-step03-regular-duties.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 3 of 14 |
+| Step number | 4 of 15 |
 | Section | 3 — Regular Duties & Cadence |
 | Questions | 3 |
 | Question types | ResponseMode (1), TableGrid (1), FreeTextLong (1) |
@@ -125,13 +143,13 @@
 
 ---
 
-# Step 4 — Section 4: Day-in-the-Life
+# Step 5 — Section 4: Day-in-the-Life
 
 ![Step 4 — Day-in-the-Life](../images/wizard-02-step04-day-in-the-life.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 4 of 14 |
+| Step number | 5 of 15 |
 | Section | 4 — Day-in-the-Life & Time Sinks |
 | Questions | 17 |
 | Question types | FreeTextLong (10), MultiSelect (2), FreeText (1), ResponseMode (1), FreeTextLong + conditional (3) |
@@ -167,15 +185,15 @@
 
 ---
 
-# Step 5 — Section 5: Operational Reality (Conditional)
+# Step 6 — Section 5: Operational Reality (Conditional)
 
-Section 5 routes by the department selected in Step 1 (question 1.3). There are 9 possible variants. Three unique Figma layouts cover all variants:
+Section 5 routes by the department selected in Step 2 (question 1.3). There are 9 possible variants. Three unique Figma layouts cover all variants:
 
 1. **Representative layout** — covers 5.1 (Installations), 5.2 (Service), 5.3 (Pre-Enablement), 5.4 (Enablement), 5.7 (QA), 5.8 (HSEQ), 5.9 (HR)
 2. **Dispatch layout** — covers 5.5 (Dispatch/Scheduling)
 3. **Stores layout** — covers 5.6 (Stores/Materials) + 5.6B (Inventory Value) + 5.6C (Free-Issue)
 
-## Step 5 — Variant 5.1: Field Ops — Installations
+## Step 6 — Variant 5.1: Field Ops — Installations
 
 ![Step 5 — Representative Layout](../images/wizard-02-step05-sec5-representative.png)
 
@@ -200,7 +218,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 > **Figma note:** This uses the representative Figma frame. The layout structure is identical for variants 5.1–5.4, 5.7–5.9 — only question labels and counts differ.
 
-## Step 5 — Variant 5.2: Field Ops — Service Calls
+## Step 6 — Variant 5.2: Field Ops — Service Calls
 
 *Uses the same representative Figma layout as 5.1.*
 
@@ -213,7 +231,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 | 5.2.5 | Throughput check: done-but-not-paid in service | FreeTextLong | Yes |
 | 5.2.6 | Service uploads | ResponseMode | No |
 
-## Step 5 — Variant 5.3: Field Ops — Pre-Enablement
+## Step 6 — Variant 5.3: Field Ops — Pre-Enablement
 
 *Uses the same representative Figma layout as 5.1.*
 
@@ -226,7 +244,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 | 5.3.5 | Throughput check: done-but-not-paid | FreeTextLong | Yes |
 | 5.3.6 | Pre-enablement uploads | ResponseMode | No |
 
-## Step 5 — Variant 5.4: Field Ops — Enablement Works
+## Step 6 — Variant 5.4: Field Ops — Enablement Works
 
 *Uses the same representative Figma layout as 5.1.*
 
@@ -239,7 +257,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 | 5.4.5 | Throughput check: done-but-not-paid | FreeTextLong | Yes |
 | 5.4.6 | Enablement uploads | ResponseMode | No |
 
-## Step 5 — Variant 5.5: Dispatch / Scheduling
+## Step 6 — Variant 5.5: Dispatch / Scheduling
 
 ![Step 5 — Dispatch](../images/wizard-02-step05-dispatch.png)
 
@@ -268,7 +286,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 - Unique layout: compound MultiSelect + FreeTextLong questions (5.5.2, 5.5.4) expand a text area per selected option.
 - This is a distinct Figma frame because the compound question pattern differs from the representative layout.
 
-## Step 5 — Variant 5.6: Stores / Materials
+## Step 6 — Variant 5.6: Stores / Materials
 
 ![Step 5 — Stores](../images/wizard-02-step05-stores.png)
 
@@ -320,7 +338,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 - Stores managers always see all three sub-sections (5.6, 5.6B, 5.6C) as a single continuous step.
 - Unique Figma frame due to the extended length and three visual sub-groups.
 
-## Step 5 — Variant 5.7: QA / Quality
+## Step 6 — Variant 5.7: QA / Quality
 
 *Uses the same representative Figma layout as 5.1.*
 
@@ -333,7 +351,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 | 5.7.5 | Throughput check: where quality creates done-but-not-paid | FreeTextLong | Yes |
 | 5.7.6 | QA uploads | ResponseMode | No |
 
-## Step 5 — Variant 5.8: HSEQ
+## Step 6 — Variant 5.8: HSEQ
 
 *Uses the same representative Figma layout as 5.1.*
 
@@ -345,7 +363,7 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 | 5.8.4 | Top 5 HSEQ risks | FreeTextLong | Yes |
 | 5.8.5 | HSEQ uploads | ResponseMode | No |
 
-## Step 5 — Variant 5.9: HR
+## Step 6 — Variant 5.9: HR
 
 *Uses the same representative Figma layout as 5.1.*
 
@@ -359,13 +377,13 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ---
 
-# Step 6 — Section 6: Non-Productive Time
+# Step 7 — Section 6: Non-Productive Time
 
 ![Step 6 — Non-Productive Time](../images/wizard-02-step06-non-productive-time.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 6 of 14 |
+| Step number | 7 of 15 |
 | Section | 6 — Non-Productive Time |
 | Questions | 2 |
 | Question types | TableGrid (1), ResponseMode (1) |
@@ -384,13 +402,13 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ---
 
-# Step 7 — Section 7: Cost Leakage
+# Step 8 — Section 7: Cost Leakage
 
 ![Step 7 — Cost Leakage](../images/wizard-02-step07-cost-leakage.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 7 of 14 |
+| Step number | 8 of 15 |
 | Section | 7 — Cost Leakage |
 | Questions | 5 |
 | Question types | FreeTextLong (4), ResponseMode (1) |
@@ -407,13 +425,13 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ---
 
-# Step 8 — Section 8: People Management
+# Step 9 — Section 8: People Management
 
 ![Step 8 — People Management](../images/wizard-02-step08-people-management.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 8 of 14 |
+| Step number | 9 of 15 |
 | Section | 8 — People Management & Disciplinaries |
 | Questions | 4 |
 | Question types | NumberInput (1), FreeTextLong (3) |
@@ -434,13 +452,13 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ---
 
-# Step 9 — Section 9: Interfaces & Handoffs
+# Step 10 — Section 9: Interfaces & Handoffs
 
 ![Step 9 — Interfaces](../images/wizard-02-step09-interfaces.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 9 of 14 |
+| Step number | 10 of 15 |
 | Section | 9 — Interfaces, Handoffs & Conflicts |
 | Questions | 5 |
 | Question types | FreeTextLong (5) |
@@ -462,13 +480,13 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ---
 
-# Step 10 — Section 10: Reality Test
+# Step 11 — Section 10: Reality Test
 
 ![Step 10 — Reality Test](../images/wizard-02-step10-reality-test.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 10 of 14 |
+| Step number | 11 of 15 |
 | Section | 10 — Reality Test |
 | Questions | 2 |
 | Question types | RatingScaleWithEvidence (2) |
@@ -488,13 +506,13 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ---
 
-# Step 11 — Section 11: Risks & Changes
+# Step 12 — Section 11: Risks & Changes
 
 ![Step 11 — Risks & Changes](../images/wizard-02-step11-risks-changes.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 11 of 14 |
+| Step number | 12 of 15 |
 | Section | 11 — Risks, Constraints & What You Would Change |
 | Questions | 4 |
 | Question types | FreeTextLong (4) |
@@ -510,13 +528,13 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ---
 
-# Step 12 — Section 12: Evidence Register
+# Step 13 — Section 12: Evidence Register
 
 ![Step 12 — Evidence](../images/wizard-02-step12-evidence.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 12 of 14 |
+| Step number | 13 of 15 |
 | Section | 12 — Evidence Uploads |
 | Questions | 1 |
 | Question types | ChecklistUpload (1) |
@@ -534,13 +552,13 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ---
 
-# Step 13 — Section 13: Final Catch-All
+# Step 14 — Section 13: Final Catch-All
 
 ![Step 13 — Final Catch-All](../images/wizard-02-step13-final-catch-all.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 13 of 14 |
+| Step number | 14 of 15 |
 | Section | 13 — Final Catch-All |
 | Questions | 2 |
 | Question types | FreeTextLong (2) |
@@ -559,13 +577,13 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 ---
 
-# Step 14 — Review & Submit
+# Step 15 — Review & Submit
 
 ![Step 14 — Review](../images/wizard-02-step14-review.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 14 of 14 |
+| Step number | 15 of 15 |
 | Section | Review & Submit |
 | Questions | 0 (summary view) |
 
@@ -597,39 +615,41 @@ Section 5 routes by the department selected in Step 1 (question 1.3). There are 
 
 | Type | Count | Steps Used In |
 |------|-------|---------------|
-| FreeTextLong | ~65 (base) + variable (Sec 5) | Steps 2–13 |
-| ResponseMode | ~10 | Steps 2–7, 12 |
-| MultiSelect + FreeTextLong | 2 | Step 5 (Dispatch) |
-| MultiSelect | 2 | Step 4 |
-| SingleSelect | 3 | Steps 1, 5 (Stores) |
-| RatingScaleWithEvidence | 2 | Step 10 |
-| TableGrid | 2 | Steps 3, 6 |
-| ChecklistUpload | 1 | Step 12 |
-| NumberInput | 1 | Step 8 |
-| FreeText | 6 | Step 1 |
-| ConsentCheckbox | 1 | Step 0 |
+| Display only | 4 | Step 0 |
+| FreeTextLong | ~65 (base) + variable (Sec 5) | Steps 3–14 |
+| ResponseMode | ~10 | Steps 3–8, 13 |
+| MultiSelect + FreeTextLong | 2 | Step 6 (Dispatch) |
+| MultiSelect | 2 | Step 5 |
+| SingleSelect | 3 | Steps 2, 6 (Stores) |
+| RatingScaleWithEvidence | 2 | Step 11 |
+| TableGrid | 2 | Steps 4, 7 |
+| ChecklistUpload | 1 | Step 13 |
+| NumberInput | 1 | Step 9 |
+| FreeText | 6 | Step 2 |
+| ConsentCheckbox | 1 | Step 1 |
 
 ## Appendix — Figma Node Reference
 
 | Step | Frame Name | Node ID |
 |------|-----------|---------|
-| 0 | 02-Step0 Consent | `2010:2078` |
-| 1 | 02-Step1 About You | `2010:2134` |
-| 2 | 02-Step2 Role Purpose | `2010:2210` |
-| 3 | 02-Step3 Regular Duties | `2010:2282` |
-| 4 | 02-Step4 Day-in-the-Life | `2010:2355` |
-| 5 (rep) | 02-Step5 Sec5 Representative (Installations) | `2011:2493` |
-| 5 (dispatch) | 02-Step5.5 Dispatch (unique variant) | `2011:2584` |
-| 5 (stores) | 02-Step5.6 Stores/Materials (unique variant) | `2011:2696` |
-| 6 | 02-Step6 Non-Productive Time | `2011:2861` |
-| 7 | 02-Step7 Cost Leakage | `2011:2985` |
-| 8 | 02-Step8 People Management | `2011:3057` |
-| 9 | 02-Step9 Interfaces | `2011:3132` |
-| 10 | 02-Step10 Reality Test | `2011:3209` |
-| 11 | 02-Step11 Risks & Changes | `2011:3281` |
-| 12 | 02-Step12 Evidence Register | `2011:3353` |
-| 13 | 02-Step13 Final Catch-All | `2011:3440` |
-| 14 | 02-Review Review & Submit | `2011:3502` |
+| 0 | 02-Step0 Introduction | (TBD) |
+| 1 | 02-Step0 Consent | `2010:2078` |
+| 2 | 02-Step1 About You | `2010:2134` |
+| 3 | 02-Step2 Role Purpose | `2010:2210` |
+| 4 | 02-Step3 Regular Duties | `2010:2282` |
+| 5 | 02-Step4 Day-in-the-Life | `2010:2355` |
+| 6 (rep) | 02-Step5 Sec5 Representative (Installations) | `2011:2493` |
+| 6 (dispatch) | 02-Step5.5 Dispatch (unique variant) | `2011:2584` |
+| 6 (stores) | 02-Step5.6 Stores/Materials (unique variant) | `2011:2696` |
+| 7 | 02-Step6 Non-Productive Time | `2011:2861` |
+| 8 | 02-Step7 Cost Leakage | `2011:2985` |
+| 9 | 02-Step8 People Management | `2011:3057` |
+| 10 | 02-Step9 Interfaces | `2011:3132` |
+| 11 | 02-Step10 Reality Test | `2011:3209` |
+| 12 | 02-Step11 Risks & Changes | `2011:3281` |
+| 13 | 02-Step12 Evidence Register | `2011:3353` |
+| 14 | 02-Step13 Final Catch-All | `2011:3440` |
+| 15 | 02-Review Review & Submit | `2011:3502` |
 
 ## Related Files
 

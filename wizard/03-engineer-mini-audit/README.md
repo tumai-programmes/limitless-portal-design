@@ -2,7 +2,7 @@
 
 > **Instrument:** Invincibility Blueprint — Engineer Mini-Audit
 > **Audience:** Field engineers (all streams)
-> **Steps:** 12 (Consent + Sections 1–10 + Review)
+> **Steps:** 13 (Introduction + Consent + Sections 1–10 + Review)
 > **Time:** 10–12 minutes
 > **Conditional logic:** Section 5 routes by job type (Q1.2); multi-skilled engineers answer up to 2 modules
 
@@ -22,18 +22,19 @@
 
 | Step | Section | Questions | Key Types | Notes |
 |------|---------|-----------|-----------|-------|
-| 0 | Consent | 2 | ConsentCheckbox | |
-| 1 | About You | 4 | FreeText, SingleSelect | **Routing trigger** (Q1.2) |
-| 2 | What You Do | 3 | FreeText, FreeTextLong | |
-| 3 | Non-Productive Time | 3 | TableGrid, MultiSelectCapped | |
-| 4 | Systems & Portals | 7 | MultiSelect, SingleSelect, FileUpload | |
-| 5 | Job Type Module | Variable | MultiSelectCapped, FreeTextLong | **CONDITIONAL** — 4 modules |
-| 6 | Materials & Inventory | 6 | SingleSelect, MultiSelectCapped, FreeTextLong | |
-| 7 | Quality & Safety | 4 | SingleSelect, MultiSelectCapped | |
-| 8 | Cost Leakage | 3 | FreeTextLong, MultiSelect | |
-| 9 | What Would You Change | 3 | FreeTextLong | |
-| 10 | Optional Evidence | 1 | SingleSelect + FileUpload | |
-| 11 | Review & Submit | 0 | Summary view | |
+| 0 | Introduction | 3 | Display only | |
+| 1 | Consent | 2 | ConsentCheckbox | |
+| 2 | About You | 4 | FreeText, SingleSelect | **Routing trigger** (Q1.2) |
+| 3 | What You Do | 3 | FreeText, FreeTextLong | |
+| 4 | Non-Productive Time | 3 | TableGrid, MultiSelectCapped | |
+| 5 | Systems & Portals | 7 | MultiSelect, SingleSelect, FileUpload | |
+| 6 | Job Type Module | Variable | MultiSelectCapped, FreeTextLong | **CONDITIONAL** — 4 modules |
+| 7 | Materials & Inventory | 6 | SingleSelect, MultiSelectCapped, FreeTextLong | |
+| 8 | Quality & Safety | 4 | SingleSelect, MultiSelectCapped | |
+| 9 | Cost Leakage | 3 | FreeTextLong, MultiSelect | |
+| 10 | What Would You Change | 3 | FreeTextLong | |
+| 11 | Optional Evidence | 1 | SingleSelect + FileUpload | |
+| 12 | Review & Submit | 0 | Summary view | |
 
 ## Section 5 Routing
 
@@ -49,6 +50,7 @@
 
 | File | Purpose |
 |------|---------|
+| [introduction.md](introduction.md) | Introduction step content specification |
 | [layouts.md](layouts.md) | Per-step Figma wireframe reference with question inventories |
 | [testing-log.md](testing-log.md) | Step-by-step test results and session notes |
 | [issues.md](issues.md) | Open bugs and improvements |

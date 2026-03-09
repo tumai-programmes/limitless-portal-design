@@ -2,7 +2,7 @@
 
 > **Instrument:** Invincibility Blueprint — Company Audit
 > **Audience:** Director / MD / CEO
-> **Total steps:** 14 (Consent + Company Context + Sections A–K + Evidence + Review)
+> **Total steps:** 15 (Introduction + Consent + Company Context + Sections A–K + Evidence + Review)
 > **Estimated time:** 60–90 minutes
 > **Conditional logic:** None — all sections required
 > **Figma section:** "01 — Company Audit" in Wizard — Audit Self-submission page
@@ -10,13 +10,31 @@
 
 ---
 
-# Step 0 — Confidentiality & Consent
+# Step 0 — Introduction
+
+| Property | Value |
+|----------|-------|
+| Step number | 0 of 14 |
+| Section | Introduction |
+| Questions | 5 (all display-only) |
+| Question types | Display only |
+| Gate | None — "Save and continue" enabled immediately |
+
+### Design Notes
+
+- Purely informational landing step with no interactive elements. See [introduction.md](introduction.md) for full content specification.
+- The progress sidebar shows "Introduction" as the first item, highlighted as active.
+- On return visits, the wizard may skip directly to the last incomplete section.
+
+---
+
+# Step 1 — Confidentiality & Consent
 
 ![Step 0 — Consent](../images/wizard-01-step00-consent.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 0 of 13 |
+| Step number | 1 of 14 |
 | Section | Consent |
 | Questions | 4 (3 display + 1 interactive) |
 | Question types | ConsentCheckbox |
@@ -35,17 +53,17 @@
 
 - Three guidance cards (amber/orange left border) present key messages before any data entry.
 - The consent checkbox is the only interactive element; it gates the "Save and continue" button.
-- Progress sidebar shows all 13 sections with "Not Started" status.
+- Progress sidebar shows all 14 sections with "Not Started" status.
 
 ---
 
-# Step 1 — Company Context
+# Step 2 — Company Context
 
 ![Step 1 — Company Context](../images/wizard-01-step01-company-context.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 1 of 13 |
+| Step number | 2 of 14 |
 | Section | Company Context |
 | Questions | 9 |
 | Question types | FreeText, MultiSelect, FreeTextLong, TableGrid, ResponseMode |
@@ -73,13 +91,13 @@
 
 ---
 
-# Step 2 — A. Organisational Foundation
+# Step 3 — A. Organisational Foundation
 
 ![Step 2 — Org Foundation](../images/wizard-01-step02-org-foundation.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 2 of 13 |
+| Step number | 3 of 14 |
 | Section | A — Organisational Foundation |
 | Questions | 16 |
 | Question types | FreeTextLong (10), ResponseMode (4), FreeTextLong + FileUpload (1), Display (implicit sub-groups) |
@@ -115,13 +133,13 @@
 
 ---
 
-# Step 3 — B. Organisation Structure
+# Step 4 — B. Organisation Structure
 
 ![Step 3 — Org Structure](../images/wizard-01-step03-org-structure.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 3 of 13 |
+| Step number | 4 of 14 |
 | Section | B — Organisation Structure, Departments & Roles |
 | Questions | 10 |
 | Question types | ResponseMode (3), FreeTextLong (3), ChecklistUpload (1), TableGrid (1), Display (1), FreeTextLong + FileUpload (1) |
@@ -149,13 +167,13 @@
 
 ---
 
-# Step 4 — C. Workforce & Capability
+# Step 5 — C. Workforce & Capability
 
 ![Step 4 — Workforce](../images/wizard-01-step04-workforce.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 4 of 13 |
+| Step number | 5 of 14 |
 | Section | C — Workforce, Capability, Performance & Discipline |
 | Questions | 19 |
 | Question types | FreeTextLong (14), ResponseMode (4), FreeTextLong + FileUpload (1) |
@@ -193,13 +211,13 @@
 
 ---
 
-# Step 5 — D. Strategy & Planning
+# Step 6 — D. Strategy & Planning
 
 ![Step 5 — Strategy](../images/wizard-01-step05-strategy.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 5 of 13 |
+| Step number | 6 of 14 |
 | Section | D — Strategy, Planning & Execution Discipline |
 | Questions | 13 |
 | Question types | FreeTextLong (9), ResponseMode (2), SingleSelect (1), FreeTextLong + FileUpload (1) |
@@ -231,13 +249,13 @@
 
 ---
 
-# Step 6 — E. Process & Reality Tests
+# Step 7 — E. Process & Reality Tests
 
 ![Step 6 — Process Reality](../images/wizard-01-step06-process-reality.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 6 of 13 |
+| Step number | 7 of 14 |
 | Section | E — Process, Compliance & Reality Tests |
 | Questions | 12 |
 | Question types | FreeTextLong + ResponseMode (4), FreeTextLong (3), RatingScaleWithEvidence (2), ResponseMode (2), FreeTextLong + FileUpload (1) |
@@ -270,13 +288,13 @@
 
 ---
 
-# Step 7 — F. Operating Cadence
+# Step 8 — F. Operating Cadence
 
 ![Step 7 — Cadence](../images/wizard-01-step07-cadence.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 7 of 13 |
+| Step number | 8 of 14 |
 | Section | F — Operating Cadence & Control Schedules |
 | Questions | 2 |
 | Question types | ChecklistUpload (1), FreeTextLong + FileUpload (1) |
@@ -297,13 +315,13 @@
 
 ---
 
-# Step 8 — G. External System
+# Step 9 — G. External System
 
 ![Step 8 — External](../images/wizard-01-step08-external.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 8 of 13 |
+| Step number | 9 of 14 |
 | Section | G — External System |
 | Questions | 5 |
 | Question types | FreeTextLong + ResponseMode (3), FreeTextLong (1), FreeTextLong + FileUpload (1) |
@@ -326,13 +344,13 @@
 
 ---
 
-# Step 9 — H. Finance & Full Cost Audit
+# Step 10 — H. Finance & Full Cost Audit
 
 ![Step 9 — Finance](../images/wizard-01-step09-finance.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 9 of 13 |
+| Step number | 10 of 14 |
 | Section | H — Finance & Full Cost Audit |
 | Questions | 28 |
 | Question types | FreeTextLong (18), ResponseMode (6), ChecklistUpload (2), FreeTextLong + ResponseMode (1), FreeTextLong + FileUpload (1) |
@@ -383,13 +401,13 @@
 
 ---
 
-# Step 10 — I. Operations Deep Dive
+# Step 11 — I. Operations Deep Dive
 
 ![Step 10 — Operations](../images/wizard-01-step10-operations.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 10 of 13 |
+| Step number | 11 of 14 |
 | Section | I — Operations Deep Dive |
 | Questions | 40 |
 | Question types | FreeTextLong (29), ResponseMode (5), TableGrid (1), SingleSelect (1), ChecklistUpload (1), FreeTextLong + FileUpload (1) |
@@ -453,13 +471,13 @@
 
 ---
 
-# Step 11 — J. Leadership System Signals
+# Step 12 — J. Leadership System Signals
 
 ![Step 11 — Leadership](../images/wizard-01-step11-leadership.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 11 of 13 |
+| Step number | 12 of 14 |
 | Section | J — Leadership System Signals |
 | Questions | 6 |
 | Question types | FreeTextLong (5), FreeTextLong + FileUpload (1) |
@@ -484,13 +502,13 @@
 
 ---
 
-# Step 12 — K. Evidence Register
+# Step 13 — K. Evidence Register
 
 ![Step 12 — Evidence](../images/wizard-01-step12-evidence.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 12 of 13 |
+| Step number | 13 of 14 |
 | Section | K — Evidence Register |
 | Questions | 3 |
 | Question types | ResponseMode (1), TableGrid (1), FileUpload (1) |
@@ -513,13 +531,13 @@
 
 ---
 
-# Step 13 — Review & Submit
+# Step 14 — Review & Submit
 
 ![Step 13 — Review](../images/wizard-01-step13-review.png)
 
 | Property | Value |
 |----------|-------|
-| Step number | 13 of 13 |
+| Step number | 14 of 14 |
 | Section | Review & Submit |
 | Questions | 0 (summary view) |
 | Question types | — |
@@ -539,37 +557,39 @@
 
 | Type | Count | Steps Used In |
 |------|-------|---------------|
-| FreeTextLong | ~90 | Steps 1–11 |
-| ResponseMode | ~25 | Steps 1–10, 12 |
-| FreeTextLong + FileUpload | ~12 | Steps 1–11 (catch-all per section) |
-| FreeTextLong + ResponseMode | ~7 | Steps 6, 8 |
-| ChecklistUpload | 5 | Steps 3, 7, 9, 10 |
-| TableGrid | 4 | Steps 1, 3, 9, 10, 12 |
-| RatingScaleWithEvidence | 2 | Step 6 |
-| SingleSelect | 2 | Steps 5, 10 |
-| MultiSelect | 1 | Step 1 |
-| ConsentCheckbox | 1 | Step 0 |
-| FileUpload | 1 | Step 12 |
-| Display only | ~5 | Steps 0, 3 |
+| FreeTextLong | ~90 | Steps 2–12 |
+| ResponseMode | ~25 | Steps 2–11, 13 |
+| FreeTextLong + FileUpload | ~12 | Steps 2–12 (catch-all per section) |
+| FreeTextLong + ResponseMode | ~7 | Steps 7, 9 |
+| ChecklistUpload | 5 | Steps 4, 8, 10, 11 |
+| TableGrid | 4 | Steps 2, 4, 10, 11, 13 |
+| RatingScaleWithEvidence | 2 | Step 7 |
+| SingleSelect | 2 | Steps 6, 11 |
+| MultiSelect | 1 | Step 2 |
+| Display only | 5 | Step 0 |
+| ConsentCheckbox | 1 | Step 1 |
+| FileUpload | 1 | Step 13 |
+| Display only | ~5 | Steps 1, 4 |
 
 ## Appendix — Figma Node Reference
 
 | Step | Frame Name | Node ID |
 |------|-----------|---------|
-| 0 | 01-Step0 Consent | `2009:204` |
-| 1 | 01-Step1 Company Context | `2009:270` |
-| 2 | 01-Step2 A — Org Foundation | `2009:381` |
-| 3 | 01-Step3 B — Org Structure | `2009:525` |
-| 4 | 01-Step4 C — Workforce | `2009:632` |
-| 5 | 01-Step5 D — Strategy | `2009:776` |
-| 6 | 01-Step6 E — Process/Reality | `2009:885` |
-| 7 | 01-Step7 F — Cadence | `2009:1037` |
-| 8 | 01-Step8 G — External | `2009:1167` |
-| 9 | 01-Step9 H — Finance | `2009:1242` |
-| 10 | 01-Step10 I — Operations | `2009:1445` |
-| 11 | 01-Step11 J — Leadership | `2010:1759` |
-| 12 | 01-Step12 K — Evidence | `2010:1839` |
-| 13 | 01-Review Review & Submit | `2010:1962` |
+| 0 | 01-Step0 Introduction | TBD |
+| 1 | 01-Step1 Consent | `2009:204` |
+| 2 | 01-Step2 Company Context | `2009:270` |
+| 3 | 01-Step3 A — Org Foundation | `2009:381` |
+| 4 | 01-Step4 B — Org Structure | `2009:525` |
+| 5 | 01-Step5 C — Workforce | `2009:632` |
+| 6 | 01-Step6 D — Strategy | `2009:776` |
+| 7 | 01-Step7 E — Process/Reality | `2009:885` |
+| 8 | 01-Step8 F — Cadence | `2009:1037` |
+| 9 | 01-Step9 G — External | `2009:1167` |
+| 10 | 01-Step10 H — Finance | `2009:1242` |
+| 11 | 01-Step11 I — Operations | `2009:1445` |
+| 12 | 01-Step12 J — Leadership | `2010:1759` |
+| 13 | 01-Step13 K — Evidence | `2010:1839` |
+| 14 | 01-Review Review & Submit | `2010:1962` |
 
 ## Related Files
 

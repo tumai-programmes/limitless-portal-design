@@ -33,9 +33,9 @@ This document defines the interactive web-based wizard that delivers the three I
 
 | # | Instrument | Audience | Wizard Steps | Time | Conditional Logic |
 |---|-----------|----------|-------------|------|-------------------|
-| 01 | Company Audit | Director / MD | 13 (Consent + 1 + A–K) | 60–90 min | None — all sections required |
-| 02 | Manager Audit | Functional managers | 15 (Consent + 1–13) | 30–45 min | Section 5 routes by department |
-| 03 | Engineer Mini-Audit | Field engineers | 12 (Consent + 1–10) | 10–12 min | Section 5 routes by job type |
+| 01 | Company Audit | Director / MD | 14 (Introduction + Consent + 1 + A–K) | 60–90 min | None — all sections required |
+| 02 | Manager Audit | Functional managers | 16 (Introduction + Consent + 1–13) | 30–45 min | Section 5 routes by department |
+| 03 | Engineer Mini-Audit | Field engineers | 13 (Introduction + Consent + 1–10) | 10–12 min | Section 5 routes by job type |
 
 The wizard replaces Greg's current Word docs + Microsoft Forms delivery with an interactive, auto-saving, section-by-section web experience.
 
@@ -47,7 +47,7 @@ The wizard replaces Greg's current Word docs + Microsoft Forms delivery with an 
 4. **Mobile-aware** — field engineers will likely complete the Mini-Audit on phones or tablets. The wizard must be responsive.
 5. **No blame, evidence over polish** — the UI reinforces this message at every step. No red validation errors for incomplete sections — just a "complete" vs "in progress" indicator.
 6. **Draft persistence** — every field auto-saves. Participants can close and resume at any point.
-7. **Confidentiality first** — consent gate before any data entry. Upload guidance shown before every file input.
+7. **Confidentiality first** — introduction and consent gates before any data entry. Upload guidance shown before every file input.
 
 ### 1.3 Question Type Taxonomy
 
@@ -74,11 +74,15 @@ Every question across all three instruments maps to one of these input types:
 ## 2. Wizard Step Flow — 01 Company Audit
 
 **Audience:** Director / MD / CEO
-**Total steps:** 13 (Consent + Company Context + Sections A–K)
+**Total steps:** 14 (Introduction + Consent + Company Context + Sections A–K)
 **Estimated time:** 60–90 minutes
 **Conditional logic:** None — all sections required
 
-### Step 0: Consent
+### Step 0: Introduction
+
+Display-only step — see [01-company-audit/introduction.md](../01-company-audit/introduction.md) for full content specification. Five display-only content blocks: welcome, Invincibility Blueprint overview, audit scope, expectations, key principles. No interactive elements, no gate.
+
+### Step 1: Consent
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -87,9 +91,9 @@ Every question across all three instruments maps to one of these input types:
 | 0.3 | "Before You Start" guidance (read-only display) | — | Display only |
 | 0.4 | Consent checkbox: "I confirm I am authorised..." | `ConsentCheckbox` | Yes — gate |
 
-**Gate:** Cannot proceed to Step 1 until consent is checked.
+**Gate:** Cannot proceed to Step 2 until consent is checked.
 
-### Step 1: Company Context
+### Step 2: Company Context
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -106,7 +110,7 @@ Every question across all three instruments maps to one of these input types:
 | 1.8 | Company overview pack | `ResponseMode` | No |
 | 1.9 | Catch-all: what else exists (Context) | `FreeTextLong` + `FileUpload` | No |
 
-### Step 2: Section A — Organisational Foundation
+### Step 3: Section A — Organisational Foundation
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -128,7 +132,7 @@ Every question across all three instruments maps to one of these input types:
 | A4.7 | DoA matrix / decision schedule | `ResponseMode` | Yes |
 | A.catch | Catch-all (Foundation) | `FreeTextLong` + `FileUpload` | No |
 
-### Step 3: Section B — Organisation Structure, Departments & Roles
+### Step 4: Section B — Organisation Structure, Departments & Roles
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -146,7 +150,7 @@ Every question across all three instruments maps to one of these input types:
 |  | Rows: 10 pre-populated outcomes | | |
 | B.catch | Catch-all (Roles) | `FreeTextLong` + `FileUpload` | No |
 
-### Step 4: Section C — Workforce, Capability, Performance & Discipline
+### Step 5: Section C — Workforce, Capability, Performance & Discipline
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -170,7 +174,7 @@ Every question across all three instruments maps to one of these input types:
 | C6.2 | Where incentives drive wrong behaviours | `FreeTextLong` | No |
 | C.catch | Catch-all (People) | `FreeTextLong` + `FileUpload` | No |
 
-### Step 5: Section D — Strategy, Planning & Execution Discipline
+### Step 6: Section D — Strategy, Planning & Execution Discipline
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -189,7 +193,7 @@ Every question across all three instruments maps to one of these input types:
 | D3.3 | Target stage in 12–24 months and why | `FreeTextLong` | Yes |
 | D.catch | Catch-all (Strategy/Plans) | `FreeTextLong` + `FileUpload` | No |
 
-### Step 6: Section E — Process, Compliance & Reality Tests
+### Step 7: Section E — Process, Compliance & Reality Tests
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -209,7 +213,7 @@ Every question across all three instruments maps to one of these input types:
 | E3.4 | Contract extracts (redacted) | `ResponseMode` | No |
 | E.catch | Catch-all (Process/Compliance) | `FreeTextLong` + `FileUpload` | No |
 
-### Step 7: Section F — Operating Cadence & Control Schedules
+### Step 8: Section F — Operating Cadence & Control Schedules
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -218,7 +222,7 @@ Every question across all three instruments maps to one of these input types:
 |  | F1: Reporting & communications / F2: Decision-making / F3: KPI / F4: SLA / F5: Absence cover / F6: Escalation / F7: Out-of-hours / F8: Systems / F9: Reports / F10: Documentation / F11: Customer feedback | | |
 | F.catch | Catch-all (Cadence/Schedules) | `FreeTextLong` + `FileUpload` | No |
 
-### Step 8: Section G — External System
+### Step 9: Section G — External System
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -228,7 +232,7 @@ Every question across all three instruments maps to one of these input types:
 | G.4 | Top 5 market/industry forces | `FreeTextLong` | Yes |
 | G.catch | Catch-all (External) | `FreeTextLong` + `FileUpload` | No |
 
-### Step 9: Section H — Finance & Full Cost Audit
+### Step 10: Section H — Finance & Full Cost Audit
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -264,7 +268,7 @@ Every question across all three instruments maps to one of these input types:
 | H6.7 | Credits/penalties/chargebacks summary | `FreeTextLong` | Yes |
 | H6.uploads | Throughput uploads (5 items) | `ChecklistUpload` | Preferred |
 
-### Step 10: Section I — Operations Deep Dive
+### Step 11: Section I — Operations Deep Dive
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -319,7 +323,7 @@ Every question across all three instruments maps to one of these input types:
 | I8.3 | HSEQ uploads | `ResponseMode` | No |
 | I.catch | Catch-all (Operations) | `FreeTextLong` + `FileUpload` | No |
 
-### Step 11: Section J — Leadership System Signals
+### Step 12: Section J — Leadership System Signals
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -330,7 +334,7 @@ Every question across all three instruments maps to one of these input types:
 | J.5 | Where trust in management system is low | `FreeTextLong` | Yes |
 | J.catch | Catch-all (Leadership) | `FreeTextLong` + `FileUpload` | No |
 
-### Step 12: Section K — Evidence Register
+### Step 13: Section K — Evidence Register
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -344,18 +348,22 @@ Every question across all three instruments maps to one of these input types:
 ## 3. Wizard Step Flow — 02 Manager Audit
 
 **Audience:** Functional managers (all departments)
-**Total steps:** 15 (Consent + Sections 1–13)
+**Total steps:** 16 (Introduction + Consent + Sections 1–13)
 **Estimated time:** 30–45 minutes
 **Conditional logic:** Section 5 branches by department (selected in Section 1)
 
-### Step 0: Consent
+### Step 0: Introduction
+
+Display-only step — see [02-manager-audit/introduction.md](../02-manager-audit/introduction.md) for full content specification. Four display-only content blocks: welcome with Blueprint context, audit scope, expectations (including department routing note), key principles. No interactive elements, no gate.
+
+### Step 1: Consent
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
 | 0.1 | Confidentiality statement + upload guidance + "How to Use" (read-only) | — | Display |
 | 0.2 | Consent checkbox | `ConsentCheckbox` | Yes — gate |
 
-### Step 1: Section 1 — About You
+### Step 2: Section 1 — About You
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -372,7 +380,7 @@ Every question across all three instruments maps to one of these input types:
 
 **Routing trigger:** The value of question 1.3 determines which Section 5 sub-section(s) the participant sees.
 
-### Step 2: Section 2 — Role Purpose & What "Good" Looks Like
+### Step 3: Section 2 — Role Purpose & What "Good" Looks Like
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -382,7 +390,7 @@ Every question across all three instruments maps to one of these input types:
 | 2.4 | Decisions without escalation (examples) | `FreeTextLong` | Yes |
 | 2.5 | Role profile / objectives / scorecard | `ResponseMode` | No |
 
-### Step 3: Section 3 — Regular Duties & Cadence
+### Step 4: Section 3 — Regular Duties & Cadence
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -391,7 +399,7 @@ Every question across all three instruments maps to one of these input types:
 |  | Columns: Activity / Purpose / Method / Output / Trigger / Frequency / Duration / Target day / R-A | | |
 | 3.3 | Fast fallback: top 10 recurring duties | `FreeTextLong` | Fallback |
 
-### Step 4: Section 4 — Day-in-the-Life & Time Sinks
+### Step 5: Section 4 — Day-in-the-Life & Time Sinks
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -415,11 +423,11 @@ Every question across all three instruments maps to one of these input types:
 | 4C.5 | Single lever to increase jobs accepted/paid per day | `FreeTextLong` | Yes |
 | 4C.6 | Throughput uploads | `ResponseMode` | No |
 
-### Step 5: Section 5 — Operational Reality by Department (CONDITIONAL)
+### Step 6: Section 5 — Operational Reality by Department (CONDITIONAL)
 
 See **Section 3 — Conditional Routing Rules** below for the full routing logic.
 
-The participant sees only the sub-section(s) matching their department selection in Step 1.
+The participant sees only the sub-section(s) matching their department selection in Step 2.
 
 #### 5.1 Field Ops — Installations
 
@@ -538,7 +546,7 @@ The participant sees only the sub-section(s) matching their department selection
 | 5.9.4 | Top 5 people risks | `FreeTextLong` | Yes |
 | 5.9.5 | HR uploads | `ResponseMode` | No |
 
-### Step 6: Section 6 — Non-Productive Time
+### Step 7: Section 6 — Non-Productive Time
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -547,7 +555,7 @@ The participant sees only the sub-section(s) matching their department selection
 |  | Rows: Van-travel / Stores collection / Waiting access / Waiting records / Waiting permits / Rework / Admin / Portal admin / FSM mismatch / Other | | |
 | 6.2 | Time capture uploads | `ResponseMode` | No |
 
-### Step 7: Section 7 — Cost Leakage
+### Step 8: Section 7 — Cost Leakage
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -557,7 +565,7 @@ The participant sees only the sub-section(s) matching their department selection
 | 7.4 | Portal/commercial rules creating avoidable cost | `FreeTextLong` | Yes |
 | 7.5 | Cost leakage uploads | `ResponseMode` | No |
 
-### Step 8: Section 8 — People Management & Disciplinaries
+### Step 9: Section 8 — People Management & Disciplinaries
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -566,7 +574,7 @@ The participant sees only the sub-section(s) matching their department selection
 | 8.3 | Top 3 conduct/performance themes | `FreeTextLong` | Yes (if line mgr) |
 | 8.4 | What support/tools would help | `FreeTextLong` | No |
 
-### Step 9: Section 9 — Interfaces, Handoffs & Conflicts
+### Step 10: Section 9 — Interfaces, Handoffs & Conflicts
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -576,7 +584,7 @@ The participant sees only the sub-section(s) matching their department selection
 | 9.4 | One interface/handoff to fix tomorrow | `FreeTextLong` | Yes |
 | 9.5 | Where system handoffs break | `FreeTextLong` | Yes |
 
-### Step 10: Section 10 — Reality Test
+### Step 11: Section 10 — Reality Test
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -585,7 +593,7 @@ The participant sees only the sub-section(s) matching their department selection
 |  | Items: Planning & scheduling / Dispatch rules / QA gates / Repeat fault loop / Stores control / HSEQ controls / KPI reporting / FSM-portal integration / Portal closure rules | | |
 | 10.2 | Additional items (up to 5) | `RatingScaleWithEvidence` | No |
 
-### Step 11: Section 11 — Risks, Constraints & What You Would Change
+### Step 12: Section 11 — Risks, Constraints & What You Would Change
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -594,14 +602,14 @@ The participant sees only the sub-section(s) matching their department selection
 | 11.3 | One change without extra headcount | `FreeTextLong` | Yes |
 | 11.4 | One investment you would request | `FreeTextLong` | Yes |
 
-### Step 12: Section 12 — Evidence Uploads
+### Step 13: Section 12 — Evidence Uploads
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
 | 12.1 | Evidence upload checklist | `ChecklistUpload` | Encouraged |
 |  | Items (14): Local trackers / KPI packs / Rotas / Checklists-SOPs / Meeting notes / Audit results / Exception lists / Portal guides / Job pack requirements / Rejection reasons / Reconciliation trackers / Free-issue statements / Inventory reports / Other | | |
 
-### Step 13: Section 13 — Final Catch-All
+### Step 14: Section 13 — Final Catch-All
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -613,18 +621,22 @@ The participant sees only the sub-section(s) matching their department selection
 ## 4. Wizard Step Flow — 03 Engineer Mini-Audit
 
 **Audience:** Field engineers (all streams)
-**Total steps:** 12 (Consent + Sections 1–10)
+**Total steps:** 13 (Introduction + Consent + Sections 1–10)
 **Estimated time:** 10–12 minutes
 **Conditional logic:** Section 5 routes by job type (selected in Section 1); multi-skilled engineers answer up to 2 modules
 
-### Step 0: Consent
+### Step 0: Introduction
+
+Display-only step — see [03-engineer-mini-audit/introduction.md](../03-engineer-mini-audit/introduction.md) for full content specification. Three display-only content blocks: welcome, expectations, key principles. Shortest intro of the three instruments — mobile-optimised. No interactive elements, no gate.
+
+### Step 1: Consent
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
 | 0.1 | Confidentiality + purpose statement (read-only) | — | Display |
 | 0.2 | Consent checkbox | `ConsentCheckbox` | Yes — gate |
 
-### Step 1: Section 1 — About You
+### Step 2: Section 1 — About You
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -637,7 +649,7 @@ The participant sees only the sub-section(s) matching their department selection
 
 **Routing trigger:** Question 1.2 determines which Section 5 module(s) appear.
 
-### Step 2: Section 2 — What You Do & What "Good" Looks Like
+### Step 3: Section 2 — What You Do & What "Good" Looks Like
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -645,7 +657,7 @@ The participant sees only the sub-section(s) matching their department selection
 | 2.2 | What a "good day" looks like (1–2 bullets) | `FreeTextLong` | Yes |
 | 2.3 | #1 thing that stops a good day | `FreeText` | Yes |
 
-### Step 3: Section 3 — Non-Productive Time
+### Step 4: Section 3 — Non-Productive Time
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -655,7 +667,7 @@ The participant sees only the sub-section(s) matching their department selection
 | 3.2 | Top 2 categories that hurt productivity most | `MultiSelectCapped` (max 2) | Yes |
 | 3.3 | One time sink to remove tomorrow and why | `FreeTextLong` | Yes |
 
-### Step 4: Section 4 — Systems & Portals Friction
+### Step 5: Section 4 — Systems & Portals Friction
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -670,7 +682,7 @@ The participant sees only the sub-section(s) matching their department selection
 | 4.6 | What happens after rejected closure | `FreeTextLong` | Yes |
 | 4.7 | Screenshot of common rejection | `FileUpload` | No |
 
-### Step 5: Section 5 — Job Type Modules (CONDITIONAL)
+### Step 6: Section 5 — Job Type Modules (CONDITIONAL)
 
 See **Section 3 — Conditional Routing Rules** below.
 
@@ -717,7 +729,7 @@ See **Section 3 — Conditional Routing Rules** below.
 | 5D.4 | One change to reduce cycle time | `FreeTextLong` | Yes |
 | 5D.5 | Throughput check: done-but-not-paid | `FreeTextLong` | Yes |
 
-### Step 6: Section 6 — Materials, Inventory & Free-Issue
+### Step 7: Section 6 — Materials, Inventory & Free-Issue
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -730,7 +742,7 @@ See **Section 3 — Conditional Routing Rules** below.
 | 6.5 | Free-issue usage recording and where it goes wrong | `FreeTextLong` | Yes |
 | 6.6 | Most common reason kit not returned/credited | `FreeTextLong` | Yes |
 
-### Step 7: Section 7 — Quality & Safety
+### Step 8: Section 7 — Quality & Safety
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -742,7 +754,7 @@ See **Section 3 — Conditional Routing Rules** below.
 |  | Options: Yes always / Yes usually / Sometimes / No | | |
 | 7.4 | Biggest safety risk seen most often | `FreeTextLong` | Yes |
 
-### Step 8: Section 8 — Cost Leakage & Chargebacks
+### Step 9: Section 8 — Cost Leakage & Chargebacks
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -751,7 +763,7 @@ See **Section 3 — Conditional Routing Rules** below.
 |  | Options: Evidence requirements / SLA clocks / Closure codes / Repeat visit definitions / No fault found handling / Other | | |
 | 8.3 | One change to reduce chargebacks fastest | `FreeTextLong` | Yes |
 
-### Step 9: Section 9 — What Would You Change?
+### Step 10: Section 9 — What Would You Change?
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -759,7 +771,7 @@ See **Section 3 — Conditional Routing Rules** below.
 | 9.2 | One investment request and why | `FreeTextLong` | Yes |
 | 9.3 | Anything we should not misunderstand | `FreeTextLong` | No |
 
-### Step 10: Section 10 — Optional Evidence
+### Step 11: Section 10 — Optional Evidence
 
 | # | Question | Type | Required |
 |---|----------|------|----------|
@@ -1065,8 +1077,8 @@ The dashboard shows:
 
 ### 8.3 Wizard Experience
 
-1. **Step 0 (Consent)** — must be completed first. Cannot proceed without consent.
-2. **Steps 1..N** — one section per step. Can navigate forward/back. Auto-saves on navigate away.
+1. **Step 0 (Introduction)** — informational landing page, no gate. **Step 1 (Consent)** — must be completed before data entry.
+2. **Steps 2..N** — one section per step. Can navigate forward/back. Auto-saves on navigate away.
 3. **Progress indicator** — top of page shows: step X of Y, section name, progress bar.
 4. **Section status** — each section shows: "Not started" / "In progress" / "Complete" in the sidebar navigator.
 5. **ResponseMode** — wherever evidence is requested, the four-mode radio group appears. Selecting "Upload" expands a file drop zone. Selecting "Will send later" expands an ETA text field.

@@ -2,7 +2,7 @@
 
 > **Instrument:** Invincibility Blueprint — Manager Audit
 > **Audience:** Functional managers (all departments)
-> **Steps:** 15 (Consent + Sections 1–13 + Review)
+> **Steps:** 16 (Introduction + Consent + Sections 1–13 + Review)
 > **Time:** 30–45 minutes
 > **Conditional logic:** Section 5 branches by department (selected in Section 1)
 
@@ -22,21 +22,22 @@
 
 | Step | Section | Questions | Key Types | Notes |
 |------|---------|-----------|-----------|-------|
-| 0 | Consent | 2 | ConsentCheckbox | |
-| 1 | About You | 8 | FreeText, SingleSelect | **Routing trigger** (Q1.3) |
-| 2 | Role Purpose | 5 | FreeTextLong, ResponseMode | |
-| 3 | Regular Duties | 3 | ResponseMode, TableGrid | 3-tier capture |
-| 4 | Day-in-the-Life | 17 | FreeTextLong, MultiSelect | 3 sub-groups |
-| 5 | Operational Reality | Variable | Variable | **CONDITIONAL** — 9 variants |
-| 6 | Non-Productive Time | 2 | TableGrid, ResponseMode | |
-| 7 | Cost Leakage | 5 | FreeTextLong, ResponseMode | |
-| 8 | People Management | 4 | NumberInput, FreeTextLong | Conditional on line mgr |
-| 9 | Interfaces | 5 | FreeTextLong | |
-| 10 | Reality Test | 2 | RatingScaleWithEvidence | 9 items, 9-point scale |
-| 11 | Risks & Changes | 4 | FreeTextLong | |
-| 12 | Evidence Register | 1 | ChecklistUpload (14 items) | |
-| 13 | Final Catch-All | 2 | FreeTextLong | |
-| 14 | Review & Submit | 0 | Summary view | |
+| 0 | Introduction | 4 | Display only | |
+| 1 | Consent | 2 | ConsentCheckbox | |
+| 2 | About You | 8 | FreeText, SingleSelect | **Routing trigger** (Q1.3) |
+| 3 | Role Purpose | 5 | FreeTextLong, ResponseMode | |
+| 4 | Regular Duties | 3 | ResponseMode, TableGrid | 3-tier capture |
+| 5 | Day-in-the-Life | 17 | FreeTextLong, MultiSelect | 3 sub-groups |
+| 6 | Operational Reality | Variable | Variable | **CONDITIONAL** — 9 variants |
+| 7 | Non-Productive Time | 2 | TableGrid, ResponseMode | |
+| 8 | Cost Leakage | 5 | FreeTextLong, ResponseMode | |
+| 9 | People Management | 4 | NumberInput, FreeTextLong | Conditional on line mgr |
+| 10 | Interfaces | 5 | FreeTextLong | |
+| 11 | Reality Test | 2 | RatingScaleWithEvidence | 9 items, 9-point scale |
+| 12 | Risks & Changes | 4 | FreeTextLong | |
+| 13 | Evidence Register | 1 | ChecklistUpload (14 items) | |
+| 14 | Final Catch-All | 2 | FreeTextLong | |
+| 15 | Review & Submit | 0 | Summary view | |
 
 ## Section 5 Routing
 
@@ -57,6 +58,7 @@
 
 | File | Purpose |
 |------|---------|
+| [introduction.md](introduction.md) | Introduction step content specification |
 | [layouts.md](layouts.md) | Per-step Figma wireframe reference with question inventories |
 | [testing-log.md](testing-log.md) | Step-by-step test results and session notes |
 | [issues.md](issues.md) | Open bugs and improvements |
