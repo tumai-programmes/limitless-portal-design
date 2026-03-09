@@ -1,6 +1,7 @@
 # Email Notifications — Design Spec
 
 *Created: 2026-03-06*
+*Updated: 2026-03-08 — added instrument-specific templates from Greg, gap analysis*
 *Provider: AWS SES*
 *Status: Implemented (backend), not yet connected to UI*
 
@@ -9,6 +10,8 @@
 ## Overview
 
 The portal sends transactional emails to participants and consultants at key moments in the engagement lifecycle. All emails are sent via AWS SES from `portal@limitlessmodus.com`.
+
+**Email copy and content:** See [`../emails/`](../emails/) for Greg's instrument-specific email templates (Director, Manager, Engineer invitations + universal reminder).
 
 ## Email Types
 
@@ -89,11 +92,18 @@ Both endpoints accept JSON body and return `{ "status": "sent", "to": "...", "me
 
 ## Email Design
 
-- **Brand colour:** `#1a1a2e` (dark navy header)
-- **CTA button:** `#4f46e5` (indigo)
+- **Header background:** `#1a237e` (primary, per `design-tokens/colours.md`)
+- **CTA button:** `#1a237e` (primary) or `#1565c0` (secondary)
+- **Body text:** `#333333` (`--lm-color-text`)
+- **Secondary text:** `#666666` (`--lm-color-text-secondary`)
+- **Info box background:** `#f8f9fb` (`--lm-color-bg-page`)
+- **Border:** `#e0e0e0` (`--lm-color-border`)
+- **Font:** Inter / system stack (per `design-tokens/typography.md`)
 - **Layout:** Single-column, 600px max width, responsive
 - **Footer:** "Limitless Modus — AI-Native Enterprise Transformation"
 - **Templates:** Stored in `skills/email-send/templates/` and compiled into Go binary
+
+> **Note:** Previous spec used `#1a1a2e` (header) and `#4f46e5` (CTA). Updated 2026-03-08 to align with the design token system.
 
 ## Configuration
 
@@ -122,12 +132,37 @@ See: `it-hub/integrations/services/aws-ses.md` for full setup steps.
 | Cloudflare DNS records | Via cloudflare skill |
 | AWS IAM `ses:SendEmail` permission | Shared with S3 IAM user |
 
+## Gap Analysis — Greg's Templates vs Current Implementation
+
+*Added 2026-03-08 after receiving Greg's instrument-specific email drafts.*
+
+| Gap | Current state | What Greg's drafts require | Action |
+|-----|--------------|---------------------------|--------|
+| **Generic invitation only** | Single "you've been invited" template | 3 instrument-specific templates with role-tailored tone and instructions | Add `instrument_type` field to invite request; select template variant |
+| **No submission instructions** | CTA button only | Numbered "How to submit" steps per role (5 steps for Director/Manager, 4 for Engineer) | Embed step lists into HTML templates |
+| **No confidentiality block** | Not present | GDPR/data-handling paragraph with `[Supplier]` placeholder | Add to all invitation templates |
+| **No "Before you start" guidance** | Not present | Reassurance bullets ("Incomplete is OK", "Don't rewrite documents") | Add content block before submission steps |
+| **No estimated time** | Not present | Director: 45–60 min, Manager: 30–45 min, Engineer: 10–12 min | Add to info box |
+| **Subject lines lack instrument context** | `"You're invited to {engagement_name}"` | Instrument-specific subjects with Invincibility Blueprint® branding | Update subject line generation |
+| **Colour mismatch** | `#1a1a2e` header, `#4f46e5` CTA | Design tokens: `#1a237e` primary | Align HTML templates to design tokens |
+| **No sender contact details** | Not present | Greg's phone and email in sign-off | Add `sender_phone`, `sender_email` variables |
+
+### Priority actions
+
+1. Extend invitation API to accept `instrument_type` (01, 02, 03) and route to the correct template
+2. Create 3 HTML template variants for instrument-specific invitations
+3. Add confidentiality paragraph block and submission instructions to templates
+4. Align colours to design tokens (`#1a237e` primary)
+5. Add sender contact details to sign-off
+
 ## Phasing
 
 | Phase | What | Status |
 |-------|------|--------|
 | **Now** | Go email service + handler + API endpoints | Done |
+| **Now** | Email copy from Greg (4 templates) | Done — see [`../emails/`](../emails/) |
 | **1C** | Wire invitation to user management UI (task 1.13) | Pending |
+| **1C** | Extend templates with instrument-specific content | Pending |
 | **2** | Wire reminder to engagement dashboard; auto-send on submission (task 2.4) | Pending |
 | **3+** | Notification log table, scheduled reminders, delivery tracking | Future |
 
