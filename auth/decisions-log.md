@@ -11,6 +11,8 @@
 | A7 | User pre-registration | Required | Users must exist in the database before they can log in. Prevents unauthorized access. Users are invited by the consultant when setting up an engagement. | 2026-03-05 |
 | A8 | Session management | JWT (access + refresh tokens) | Stateless session management. Access token expires in 24h, refresh token in 30 days. Tokens stored in localStorage. | 2026-03-02 |
 | A9 | Token delivery | URL query parameters on redirect | After SSO callback, the backend redirects to the SPA with tokens in the URL. The Vue router guard strips them immediately and stores in localStorage. Simple, works with SPA architecture. | 2026-03-02 |
+| A10 | Identity model | Two-table (`users` + `participants`) | Consultants need system-wide accounts; participants need per-engagement scoped records with rich metadata. A single table would force bad compromises. See [identity-model.md](identity-model.md). | 2026-03-08 |
+| A11 | Lookup order | `users` first, then `participants` | Ensures consultants/admins resolve immediately. Participants fall through to the engagement-aware path. Critical: participant emails must NOT exist in `users` or the picker is bypassed. | 2026-03-08 |
 
 ---
 

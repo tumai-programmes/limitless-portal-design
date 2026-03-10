@@ -1,9 +1,9 @@
 # Email Notifications — Design Spec
 
 *Created: 2026-03-06*
-*Updated: 2026-03-08 — added instrument-specific templates from Greg, gap analysis*
+*Updated: 2026-03-09 — added email engagement tracking (open/click)*
 *Provider: AWS SES*
-*Status: Implemented (backend), not yet connected to UI*
+*Status: Implemented — backend, email tracking, Communications UI*
 
 ---
 
@@ -155,16 +155,79 @@ See: `it-hub/integrations/services/aws-ses.md` for full setup steps.
 4. Align colours to design tokens (`#1a237e` primary)
 5. Add sender contact details to sign-off
 
+## Email Engagement Tracking
+
+*Added 2026-03-09*
+
+### Architecture
+
+Every outbound email is assigned a unique `tracking_token` (UUID) stored in `notification_log`. Two public endpoints record engagement events into the `email_events` table:
+
+| Endpoint | Method | Auth | Purpose |
+|----------|--------|------|---------|
+| `/t/c/{token}?url={encoded_url}` | GET | None | Click tracking — records event, redirects to destination |
+| `/t/o/{token}.png` | GET | None | Open tracking — records event, returns 1x1 transparent PNG |
+
+### Database Schema
+
+```
+notification_log
+  + tracking_token UUID UNIQUE DEFAULT uuid_generate_v4()
+
+email_events
+  id              UUID PK
+  tracking_token  UUID FK → notification_log(tracking_token) ON DELETE CASCADE
+  event_type      TEXT (open, click, delivery, bounce)
+  ip_address      TEXT
+  user_agent      TEXT
+  url_clicked     TEXT (click events only)
+  metadata        JSONB
+  created_at      TIMESTAMPTZ
+```
+
+Migration: `010_email_tracking.up.sql`
+
+### How It Works
+
+1. **Pre-send:** A `notification_log` entry is created with status "pending"; the database generates the `tracking_token`.
+2. **Template rendering:** The `EmailService.renderTemplate()` function wraps `{{portal_url}}` and `{{website_url}}` placeholders with click-tracking redirects, and injects a 1x1 pixel `<img>` before `</body>`.
+3. **Post-send:** The `notification_log` status is updated to "sent" or "failed".
+4. **Click event:** When a recipient clicks a tracked link, `/t/c/{token}` records the click and redirects to the original URL.
+5. **Open event:** When the email client loads the pixel, `/t/o/{token}.png` records the open and serves a 1x1 transparent PNG.
+
+### Open Tracking Caveat (Apple Mail Privacy Protection)
+
+Apple Mail Privacy Protection (MPP), enabled by default since iOS 15 / macOS Monterey, pre-fetches all remote images through Apple's proxy servers. This means:
+- Open events may be recorded for emails that the user never actually read
+- The UI labels open events as **"Likely Opened"** (not "Opened") to reflect this uncertainty
+- Open data is treated as an approximate signal, not a definitive metric
+
+Click tracking is unaffected by MPP and remains reliable.
+
+### Frontend Display
+
+The Communications page shows two additional columns:
+
+| Column | Label | When shown | Colour |
+|--------|-------|------------|--------|
+| Opened | "Likely" badge | Any open event recorded | Amber `#f57f17` |
+| Clicked | "Yes" badge | Any click event recorded | Green `#2e7d32` |
+
+Summary cards include "Likely Opened" and "Clicked" aggregate counts.
+
+The participant history popup shows tracking events alongside communication events, with distinct icons and the "tracking" channel label.
+
 ## Phasing
 
 | Phase | What | Status |
 |-------|------|--------|
 | **Now** | Go email service + handler + API endpoints | Done |
 | **Now** | Email copy from Greg (4 templates) | Done — see [`../emails/`](../emails/) |
+| **Now** | Email engagement tracking (open/click) | Done — migration 010, tracking endpoints, UI columns |
 | **1C** | Wire invitation to user management UI (task 1.13) | Pending |
 | **1C** | Extend templates with instrument-specific content | Pending |
 | **2** | Wire reminder to engagement dashboard; auto-send on submission (task 2.4) | Pending |
-| **3+** | Notification log table, scheduled reminders, delivery tracking | Future |
+| **3+** | Scheduled reminders, AWS SES webhook integration (delivery/bounce events) | Future |
 
 ---
 

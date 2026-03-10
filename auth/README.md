@@ -15,11 +15,12 @@ Role and access are determined by the user record in the database, not by the lo
 
 | File | Purpose |
 |------|---------|
+| [identity-model.md](identity-model.md) | Two-table identity architecture — `users` vs `participants`, SSO flow, multi-engagement handling |
+| [role-model.md](role-model.md) | User roles, lookup logic, access control |
 | [login-page.md](login-page.md) | Login page layout spec — two SSO buttons, error states, loading states |
 | [microsoft-sso.md](microsoft-sso.md) | Microsoft Entra ID integration — config, test accounts, callback flow |
 | [google-sso.md](google-sso.md) | Google OAuth2 integration — config, test accounts, callback flow |
 | [test-accounts.md](test-accounts.md) | Complete inventory of all test accounts across both SSO providers |
-| [role-model.md](role-model.md) | User roles, lookup logic, access control |
 | [decisions-log.md](decisions-log.md) | Auth-related design decisions |
 
 ## Auth Flow

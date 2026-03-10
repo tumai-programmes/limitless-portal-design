@@ -12,6 +12,9 @@ Shared password for all `credo-group.co.uk` accounts: `CdqXDZSKDVAr2qG`
 | 15 | `damon.operations@credo-group.co.uk` | Damon Operations | Operations Supervisor | Operations | operations | **Fedor** | OK |
 | 16 | `nicholas.field@credo-group.co.uk` | Nicholas Field | Field Engineer | Field Engineering | engineering | **Greg** | OK |
 | 17 | `mathew.field@credo-group.co.uk` | Mathew Field | Field Engineer | Field Engineering | engineering | **Fedor** | OK |
+| 18 | `paul.director@credo-group.co.uk` | Paul Director | Director | Leadership | leadership | **Both** | OK |
+| 19 | `nick.operations@credo-group.co.uk` | Nick Operations | Operations Manager | Operations | operations | **Both** | OK |
+| 20 | `simon.field@credo-group.co.uk` | Simon Field | Field Engineer | Field Engineering | engineering | **Both** | OK |
 
 ### Split Summary
 
@@ -19,6 +22,7 @@ Shared password for all `credo-group.co.uk` accounts: `CdqXDZSKDVAr2qG`
 |--------|----------|
 | **Greg** | Mark Director, Kevin Operations, Nicholas Field (3) |
 | **Fedor** | Adam Finance, Damon Operations, Mathew Field (3) |
+| **Both** | Paul Director, Nick Operations, Simon Field (3) |
 
 ---
 
