@@ -30,7 +30,7 @@ The Limitless Modus portal is developed across three dedicated repositories, eac
 
 | Resource | Location |
 |----------|----------|
-| Skills (58) | `../../tumai-hq/skills/` — [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (65) | `../../tumai-hq/skills/` — [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/.mindatlas/config/` |
 | Domain Config | `./config/domain.yaml` |
@@ -102,13 +102,13 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | **Documents** | pdf, docx, pptx, pptx-to-pdf, xlsx, book-to-markdown, note-to-pdf, note-to-word |
 | **Research** | article-reflection, source-digest |
 | **Finance** | xero, airtable, rent-invoice, rent-invoice-approve |
-| **Infrastructure** | cloudflare, statuscake, deploy, haproxy, network, postgres, proxmox, server, ssl, unifi, vm-decommission |
+| **Infrastructure** | cloudflare, statuscake, csv-inject, gpkg-inject, gpkg-export, gis-geometry, gis-outlier-detect, deploy, haproxy, network, postgres, proxmox, server, ssl, unifi, vm-decommission |
 | **Media** | elevenlabs, fal-lipsync, remotion-presentation, video-convert, voice-to-text, html-to-video |
 | **Google** | gmail, gcalendar, gdocs, gsheets, gdrive-sync, youtube, youtube-notes |
 | **Atlassian** | atlassian-goals, atlassian-projects, confluence-sync, confluence-scan, confluence-summarise, confluence-publisher, confluence-manager, confluence-pull |
-| **Utilities** | diagram-generator, export-images, skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, integrate-repo |
+| **Utilities** | diagram-generator, email-send, export-images, skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, integrate-repo |
 | **Development** | webapp-creator, website-deploy |
-| **System** | check-integrations, enrich-twin |
+| **System** | check-integrations, enrich-twin, submission-reset |
 
 ## Development Conventions
 
@@ -124,7 +124,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | Repository | Purpose |
 |------------|---------|
 | `mind-atlas` | HEAD — Research, orchestration |
-| `skills` | Shared AI skills (58) |
+| `skills` | Shared AI skills (65) |
 | `business-hub` | Business operations (Tumai group) |
 | `family-hub` | Personal/family management |
 | `beauty-hub` | Kseniia's beauty business |
