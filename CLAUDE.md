@@ -31,8 +31,8 @@ The Limitless Modus portal is developed across three dedicated repositories, eac
 | Resource | Location |
 |----------|----------|
 | Skills (68) | `../../tumai-hq/skills/` — [tumai-hq/skills](https://github.com/tumai-hq/skills) |
-| API Credentials | `~/.mindatlas/credentials/.env` (local only) |
-| Shared Config | `~/.mindatlas/config/` |
+| API Credentials | `~/repos/tumai-hq/.mindatlas/credentials/.env` (local only) |
+| Shared Config | `~/repos/tumai-hq/.mindatlas/config/` |
 | Domain Config | `./config/domain.yaml` |
 | Programme knowledge | `../limitless/` — methodology, architecture, engagements |
 | Methodology instruments | `../limitless/methodology/invincibility-blueprint/toolkit/` |
@@ -115,7 +115,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 - Use conventional commit messages (`feat:`, `fix:`, `docs:`, `refactor:`)
 - Keep PRs focused and small
 - Follow the established directory structure
-- No secrets in git — credentials live in `~/.mindatlas/credentials/`
+- No secrets in git — credentials live in `~/repos/tumai-hq/.mindatlas/credentials/`
 
 ## Related Repositories
 
