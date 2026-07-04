@@ -30,7 +30,7 @@ The Limitless Modus portal is developed across three dedicated repositories, eac
 
 | Resource | Location |
 |----------|----------|
-| Skills (68) | `../../tumai-hq/skills/` — [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (100) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/repos/tumai-hq/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/repos/tumai-hq/.mindatlas/config/` |
 | Domain Config | `./config/domain.yaml` |
@@ -124,7 +124,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | Repository | Purpose |
 |------------|---------|
 | `mind-atlas` | HEAD — Research, orchestration |
-| `skills` | Shared AI skills (68) |
+| `skills` | Shared AI skills (100) |
 | `business-hub` | Business operations (Tumai group) |
 | `family-hub` | Personal/family management |
 | `beauty-hub` | Kseniia's beauty business |
