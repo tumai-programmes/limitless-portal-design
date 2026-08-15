@@ -30,7 +30,7 @@ The Limitless Modus portal is developed across three dedicated repositories, eac
 
 | Resource | Location |
 |----------|----------|
-| Skills (100) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (115) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/repos/tumai-hq/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/repos/tumai-hq/.mindatlas/config/` |
 | Domain Config | `./config/domain.yaml` |
@@ -99,16 +99,25 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 
 | Category | Skills |
 |----------|--------|
-| **Documents** | pdf, docx, pptx, pptx-to-pdf, xlsx, book-to-markdown, note-to-pdf, note-to-word |
-| **Research** | article-reflection, source-digest |
-| **Finance** | xero, airtable, rent-invoice, rent-invoice-approve |
-| **Infrastructure** | cloudflare, statuscake, csv-inject, gpkg-inject, gpkg-export, gis-geometry, gis-outlier-detect, deploy, haproxy, network, postgres, proxmox, server, ssl, unifi, vm-decommission |
-| **Media** | elevenlabs, fal-lipsync, remotion-presentation, video-convert, voice-to-text, html-to-video |
-| **Google** | gmail, gcalendar, gdocs, gsheets, gdrive-sync, youtube, youtube-notes |
-| **Atlassian** | atlassian-goals, atlassian-projects, confluence-sync, confluence-scan, confluence-summarise, confluence-publisher, confluence-manager, confluence-pull |
-| **Utilities** | diagram-generator, email-send, export-images, skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, integrate-repo |
-| **Development** | webapp-creator, website-deploy, frontend-design, figma-design, figma-to-code |
-| **System** | check-integrations, enrich-twin, submission-reset |
+| **Documents** | pdf, pdf-form-filler, docx, pptx, pptx-to-pdf, xlsx, book-to-markdown, ch-accounts-to-markdown, report-to-markdown, note-to-pdf, note-to-word, export-images |
+| **Research** | article-reflection, source-digest, linkedin, twitter |
+| **Finance** | xero, xero-ap-invoice, rent-invoice, rent-invoice-approve, hmrc, tinytax, tumai-management-payroll-close, invoice-pdf, vat-invoice-request, n8n-ap-registry, edgematics-invoice, edgematics-agreement, cleaning-bill-ref |
+| **Airtable** | airtable |
+| **Atlassian** | jira, atlassian-discovery, atlassian-goals, atlassian-projects |
+| **Confluence** | confluence-sync, confluence-scan, confluence-summarise, confluence-publisher, confluence-manager, confluence-pull, confluence-email-scan |
+| **Google** | gmail, gcalendar, gdocs, gsheets, gdrive-sync, gworkspace-admin, google-ads, google-analytics, youtube, youtube-notes |
+| **SEO** | bing-webmaster |
+| **Infrastructure** | cloudflare, statuscake, godaddy, deploy, haproxy, nginx-proxy, network, postgres, proxmox, server, ssl, unifi, vm-decommission, website-deploy, domain-audit, domain-diagnose, mobaxterm-sessions |
+| **GIS** | geojson-inject, gis-geometry, gis-outlier-detect, gis-spatial-tag, gpkg-export, gpkg-inject, csv-inject, postcodes-io |
+| **Media** | elevenlabs, audio-check, video-convert, html-to-video, fal-lipsync, voice-to-text, remotion-presentation, youtube-capture |
+| **Design** | diagram-generator, figma-design, figma-to-code, frontend-design |
+| **Companies House** | companies-house, companies-house-cs-preflight, companies-house-cs-postfiling, companies-house-status |
+| **Comms** | email-send |
+| **Utilities** | skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, integrate-repo, check-integrations, enrich-twin, session-close, webapp-creator, submission-reset, snagit, cityfibre-bitbucket-refresh, mept-fixtures-prep |
+| **Banking** | barclays-inbox |
+| **Booking** | acuity |
+| **External** | respond-io-ingest, respond-io-media-capture, web-capture-site, hubspot-academy-extract |
+| **UK** | uk-vehicles |
 
 ## Development Conventions
 
@@ -124,7 +133,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | Repository | Purpose |
 |------------|---------|
 | `mind-atlas` | HEAD — Research, orchestration |
-| `skills` | Shared AI skills (100) |
+| `skills` | Shared AI skills (115) |
 | `business-hub` | Business operations (Tumai group) |
 | `family-hub` | Personal/family management |
 | `beauty-hub` | Kseniia's beauty business |
