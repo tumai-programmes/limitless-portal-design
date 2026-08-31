@@ -121,7 +121,7 @@ Before sending, the domain must be verified in AWS SES with:
 - DKIM records (3 CNAME records from SES console)
 - DMARC record (TXT, `_dmarc.limitlessmodus.com`)
 
-See: `it-hub/integrations/services/aws-ses/README.md` for full setup steps.
+See: `integrations-hub/services/aws-ses/README.md` for full setup steps.
 
 ## Dependencies
 
