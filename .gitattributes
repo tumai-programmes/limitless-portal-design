@@ -1,0 +1,38 @@
+# Windows/Linux parity: pin text files to LF on every platform.
+#
+# Without this, git on Windows (core.autocrlf=true) converts text to CRLF on
+# checkout, so the working copy differs byte-for-byte from what is committed
+# and from what a Linux CI runner or teammate sees, and commits emit
+# "LF will be replaced by CRLF" warnings.
+#
+# text=auto lets git detect text vs binary, so no file type is missed.
+# This changes no committed content - verified per repo with
+# `git add --renormalize .` before this file was committed.
+
+* text=auto eol=lf
+
+# Windows-native tooling - CRLF is correct for these.
+*.ps1     text eol=crlf
+*.bat     text eol=crlf
+*.cmd     text eol=crlf
+
+# Binary - never rewrite these bytes.
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ico     binary
+*.pdf     binary
+*.zip     binary
+*.gz      binary
+*.xlsx    binary
+*.docx    binary
+*.pptx    binary
+*.mp4     binary
+*.mp3     binary
+*.wav     binary
+*.woff    binary
+*.woff2   binary
+*.ttf     binary
+*.exe     binary
+*.dll     binary
