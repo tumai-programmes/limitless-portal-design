@@ -1,4 +1,4 @@
-*Last updated: 2026-08-31 22:47 (UK)*
+*Last updated: 2026-09-04 22:00 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -103,19 +103,19 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 |----------|--------|
 | **Documents** | pdf, pdf-form-filler, docx, pptx, pptx-to-pdf, xlsx, book-to-markdown, ch-accounts-to-markdown, report-to-markdown, note-to-pdf, note-to-word, export-images |
 | **Research** | article-reflection, source-digest, linkedin, twitter |
-| **Finance** | xero, xero-ap-invoice, rent-invoice, rent-invoice-approve, hmrc, tinytax, tumai-management-payroll-close, invoice-pdf, vat-invoice-request, n8n-ap-registry, edgematics-invoice, edgematics-agreement, cleaning-bill-ref |
+| **Finance** | xero, xero-ap-invoice, rent-invoice, rent-invoice-approve, hmrc, tinytax, tumai-management-payroll-close, invoice-pdf, vat-invoice-request, fportal-prompt, n8n-ap-registry, edgematics-invoice, edgematics-agreement, cleaning-bill-ref |
 | **Airtable** | airtable |
 | **Atlassian** | jira, atlassian-discovery, atlassian-goals, atlassian-projects |
 | **Confluence** | confluence-sync, confluence-scan, confluence-summarise, confluence-publisher, confluence-manager, confluence-pull, confluence-email-scan |
 | **Google** | gmail, gcalendar, gdocs, gsheets, gdrive-sync, gworkspace-admin, google-ads, google-analytics, youtube, youtube-notes |
 | **SEO** | bing-webmaster |
-| **Infrastructure** | cloudflare, statuscake, godaddy, deploy, haproxy, nginx-proxy, network, postgres, proxmox, server, ssl, unifi, vm-decommission, website-deploy, domain-audit, domain-diagnose, mobaxterm-sessions |
+| **Infrastructure** | cloudflare, statuscake, godaddy, deploy, haproxy, nginx-proxy, network, postgres, proxmox, server, ssl, unifi, vm-decommission, website-deploy, domain-audit, domain-diagnose, mobaxterm-sessions, fleet-audit |
 | **GIS** | geojson-inject, gis-geometry, gis-outlier-detect, gis-spatial-tag, gpkg-export, gpkg-inject, csv-inject, postcodes-io |
 | **Media** | elevenlabs, audio-check, video-convert, html-to-video, fal-lipsync, voice-to-text, remotion-presentation, youtube-capture |
 | **Design** | diagram-generator, figma-design, figma-to-code, frontend-design |
 | **Companies House** | companies-house, companies-house-cs-preflight, companies-house-cs-postfiling, companies-house-status |
 | **Comms** | email-send |
-| **Utilities** | skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, integrate-repo, check-integrations, enrich-twin, session-close, webapp-creator, submission-reset, snagit, cityfibre-bitbucket-refresh, mept-fixtures-prep |
+| **Utilities** | skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, repo-init, integrate-repo, check-integrations, enrich-twin, session-close, webapp-creator, submission-reset, snagit, watlas, cityfibre-bitbucket-refresh, mept-fixtures-prep, pc-logs, pc-host-canary |
 | **Banking** | barclays-inbox |
 | **Booking** | acuity |
 | **External** | respond-io-ingest, respond-io-media-capture, web-capture-site, hubspot-academy-extract |
@@ -135,7 +135,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | Repository | Purpose |
 |------------|---------|
 | `mind-atlas` | HEAD, research, MIND Jira planning home |
-| `skills` | Shared AI skills (119) |
+| `skills` | Shared AI skills (121) |
 | `business-hub` | Business operations |
 | `family-hub` | Personal/family life management |
 | `beauty-hub` | Kseniia's beauty business |
