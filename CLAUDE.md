@@ -1,4 +1,4 @@
-*Last updated: 2026-09-04 22:00 (UK)*
+*Last updated: 2026-09-04 23:05 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -143,7 +143,6 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `learning-hub` | Education and training |
 | `it-hub` | IT infrastructure and operations |
 | `sql-hub` | Central SQL workspace |
-| `cloud-services` | Managed cloud services inventory |
 | `integrations-hub` | Vendor layer - per-vendor docs, vault contracts, smoke tests, tested adapters; cut-off register (Jira: INTEG) |
 
 ### Product Tier (tumai-products)
