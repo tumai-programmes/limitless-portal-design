@@ -1,4 +1,4 @@
-*Last updated: 2026-09-04 23:05 (UK)*
+*Last updated: 2026-09-22 12:27 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -32,7 +32,7 @@ The Limitless Modus portal is developed across three dedicated repositories, eac
 
 | Resource | Location |
 |----------|----------|
-| Skills (119) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (121) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/repos/tumai-hq/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/repos/tumai-hq/.mindatlas/config/` |
 | Domain Config | `./config/domain.yaml` |
@@ -134,7 +134,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 
 | Repository | Purpose |
 |------------|---------|
-| `mind-atlas` | HEAD, research, MIND Jira planning home |
+| `mind-atlas` | This repo - HEAD, research, MIND Jira planning home |
 | `skills` | Shared AI skills (121) |
 | `business-hub` | Business operations |
 | `family-hub` | Personal/family life management |
@@ -163,6 +163,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `codex` | Product (Jira: CODEX) |
 | `work-atlas` | Product (Jira: WATLAS) |
 | `buildsmart-portal` | Buildsmart portal - DepoNet dataset custody, S3-to-UNAS transfer, viewer (Jira: BSMART) |
+| `front-desk` | Front Desk (internal name) - agent-first multi-channel product: one AI agent per business on every channel, people behind the desk who supervise and take over; Oblique Beauty first tenant (Jira: FDESK) |
 
 ### Programme Tier (tumai-programmes)
 
@@ -180,7 +181,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `kseniia-client-web` | Kseniia client-facing web app (lightweight, no DevExtreme) |
 | `limitless` | Limitless programme |
 | `limitless-portal` | Limitless portal webapp |
-| `limitless-portal-design` | **This repo** - Limitless portal design assets |
+| `limitless-portal-design` (this repo) | Limitless portal design assets |
 | `limitless-website` | Limitless public website (Nuxt SSG) |
 | `stationroadclinic-co-uk` | Station Road Clinic programme |
 | `stationroadclinic-co-uk-portal` | Clinic patient portal |
@@ -205,6 +206,38 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `ime-hotspots` | IME hotspots analysis |
 | `ime-mock` | IME mock service (OpenAPI codegen + HTTP server; `-mx480` is a variant) |
 | `depotnet` | Depotnet programme (Jira: BSMART) - legacy DepoNet/VST data rescue |
+| `cf-platform-reference` | CityFibre engineering platform reference - GitHub org, CI/CD, EKS/Argo CD GitOps, ECR, Secrets Manager, RDS, SSO, guardrails; shared truth for every Tumai app inside CityFibre (Jira: CFPLAT) |
+| `kseniia-portal-app` | Kseniia Portal App - practitioner phone edition of portal.kseniia.co.uk (native Android + iOS, Jira: KPAPP) |
+| `kseniia-portal-app-design` | Kseniia Portal App design assets - Figma exports, design notes, source screenshots (Jira: KPAPP) |
+| `oblique` | Oblique Beauty programme - AI booking concierge pilot over Phorest for three South Kensington salons, Telegram first then mobile web; catalogue-as-data thesis (Jira: OBLQ) |
+
+### Integrations Tier (tumai-integrations)
+
+Runnable integration workloads - `<vendor>-sandbox` prototypes per vendor and `<vendor>-hub` / `<vendor>-gateway` shared services (org created 2026-08-31, DEC-INTEG-006, registered MIND-100). Boundary rule (DEC-INTEG-006, extends DEC-INTEG-004): vendor knowledge, vault contracts, adapters and smoke tests stay in `tumai-hq/integrations-hub`; runnable prototypes and shared gateway services live in `tumai-integrations`; a prototype graduating into a product moves to `tumai-products` deliberately, never by drift. Naming (vendor-first, decided 2026-09-01, DEC-INTEG-006 amendment): `<vendor>-<role>[-<qualifier>]` - `<vendor>` = the integrations-hub slug; `<role>` = `sandbox` (may rot and be archived; topic `sandbox`), `tenant` (registration/config repo a platform reads), `hub` / `gateway` (production treatment). First repo: `telegram-hub` (INTEG-38); next: `argo-cd-sandbox`, `argo-cd-tenant`, `argo-cd-sandbox-espresso` (Tumai twin platform).
+
+| Repository | Purpose |
+|------------|---------|
+| `telegram-hub` | Telegram bot-host - multi-bot registry, plugin handlers, admin UI; long-poll v1 (Jira: INTEG, Epic INTEG-36) |
+| `argo-cd-sandbox` | Tumai twin platform - Argo CD, ApplicationSet, Gateway API, ESO, admission policy, kind config (Jira: INTEG-43) |
+| `argo-cd-tenant` | Tumai twin platform - Argo CD registrations apps/<app>/<env>/<tenant>/config.yaml (Jira: INTEG-43) |
+| `argo-cd-sandbox-espresso` | Tumai twin platform - espresso sample app, our copy of CityFibre's cf-k8s-espresso-deployment shape (Jira: INTEG-43) |
+
+### Tumai CF Platform (tumai-cf-platform)
+
+The Tumai CF platform - a one-to-one replica of CityFibre's engineering platform org (`cityfibre-enterprise-architects`) on Tumai's side, built to rehearse and deliver IME-HOTSPOTS and later Tumai apps for CityFibre with full visibility (org created 2026-09-07, CFPLAT DEC-004, registered MIND-105; Jira: CFPLAT, epic CFPLAT-8; plan `cf-platform-reference/platform/tumai-cf-platform/README.md`). The org policy mirrors CityFibre's (Actions allow-list, read-only workflow token, owner-only repo creation, the same org secret `CICD_PRIVATE_KEY` and variable `CICD_APP_ID`). Naming: CityFibre's exact repo names, not the vendor-first INTEG convention - `ime-hotspots` and `cf-k8s-espresso-deployment` (app deployment repos), `tumai-eks-tenant` (Argo CD registrations, tenant `tumai`), `platform` (IaC, add-ons, runbook, journal). Nothing on screen says twin, sandbox or mirror. The reusable installer kit stays in `tumai-integrations/argo-cd-sandbox` (INTEG-43).
+
+| Repository | Purpose |
+|------------|---------|
+| `tumai-eks-tenant` | Argo CD registrations for the Tumai CF platform - apps/<app>/<env>/tumai/config.yaml, CityFibre's cf-enterprise-architects-eks-tenant shape (Jira: CFPLAT) |
+| `cf-k8s-espresso-deployment` | Espresso sample app for the Tumai CF platform - Go service, Dockerfile, kustomize base and overlays, rendered-branch workflows; the shape of CityFibre's cf-k8s-espresso-deployment (Jira: CFPLAT) |
+| `platform` | The Tumai CF platform itself - Argo CD project + ApplicationSet over tumai-eks-tenant, gateway, External Secrets, admission policy, namespace limits, cluster IaC, runbook and journal; the platform-team side CityFibre does not show us (Jira: CFPLAT) |
+| `me-runner` | ME-RUNNER (Migration Engine Runner) deployment repo on the Tumai CF platform - the primary line of ME-TEST for CityFibre's Kubernetes platform: code, Dockerfile, kustomize base/overlays, rendered-branch workflows; rehearsal of cityfibre-enterprise-architects/me-runner (Jira: CFPLAT E8, app side CFMEPT Track T) |
+
+### Legacy (pre-Claude Code workflow)
+
+- `fedorgithub/cheetah-document-analysis` - Cheetah FTTH programme. Migration to `tumai-programmes` pending; delivery takes priority.
+- `fedorgithub/cf-cheetah-migration-sql` - already a separate repo.
+- `qoobo`, `tumaicoding` - to be reviewed over time.
 
 > **Note:** `web-portal` and `frontend-shared` have been retired. See `it-hub` for frontend patterns and component references.
 
