@@ -1,4 +1,4 @@
-*Last updated: 2026-09-26 13:42 (UK)*
+*Last updated: 2026-09-26 13:54 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -135,7 +135,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | Repository | Purpose |
 |------------|---------|
 | `mind-atlas` | This repo - HEAD, research, MIND Jira planning home |
-| `skills` | Shared AI skills (121) |
+| `skills` | Shared AI skills (122) |
 | `business-hub` | Business operations |
 | `family-hub` | Personal/family life management |
 | `beauty-hub` | Kseniia's beauty business |
