@@ -1,4 +1,4 @@
-*Last updated: 2026-09-22 12:27 (UK)*
+*Last updated: 2026-09-26 13:42 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -32,7 +32,7 @@ The Limitless Modus portal is developed across three dedicated repositories, eac
 
 | Resource | Location |
 |----------|----------|
-| Skills (121) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (122) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/repos/tumai-hq/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/repos/tumai-hq/.mindatlas/config/` |
 | Domain Config | `./config/domain.yaml` |
@@ -115,7 +115,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | **Design** | diagram-generator, figma-design, figma-to-code, frontend-design |
 | **Companies House** | companies-house, companies-house-cs-preflight, companies-house-cs-postfiling, companies-house-status |
 | **Comms** | email-send |
-| **Utilities** | skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, repo-init, integrate-repo, check-integrations, enrich-twin, session-close, webapp-creator, submission-reset, snagit, watlas, cityfibre-bitbucket-refresh, mept-fixtures-prep, pc-logs, pc-host-canary |
+| **Utilities** | skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, repo-init, integrate-repo, check-integrations, enrich-twin, session-close, hub-session-close, webapp-creator, submission-reset, snagit, watlas, cityfibre-bitbucket-refresh, mept-fixtures-prep, pc-logs, pc-host-canary |
 | **Banking** | barclays-inbox |
 | **Booking** | acuity |
 | **External** | respond-io-ingest, respond-io-media-capture, web-capture-site, hubspot-academy-extract |
@@ -164,6 +164,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `work-atlas` | Product (Jira: WATLAS) |
 | `buildsmart-portal` | Buildsmart portal - DepoNet dataset custody, S3-to-UNAS transfer, viewer (Jira: BSMART) |
 | `front-desk` | Front Desk (internal name) - agent-first multi-channel product: one AI agent per business on every channel, people behind the desk who supervise and take over; Oblique Beauty first tenant (Jira: FDESK) |
+| `media-studio` | Media Studio - web UI over media-forge jobs: review keyframes and guide steps on a timeline, caption, export guides plus screens for Claude Code; third of the media family (Jira: MSTUDIO) |
 
 ### Programme Tier (tumai-programmes)
 
@@ -172,8 +173,8 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `kseniia` | Kseniia Brow Art programme |
 | `kseniia-website` | Renewed kseniia.co.uk (Nuxt + Tailwind, replacing Tilda) |
 | `kseniia-website-design` | Kseniia website design assets |
-| `kseniia-academy` | Kseniia Academy programme (strategy + content) |
-| `kseniia-academy-webapp` | Academy webapp (Nuxt + Go) |
+| `kseniia-academy` | Kseniia Academy programme (strategy + curriculum + content; launch-site brief) - the technique-teaching stream of the Kseniia family (umbrella Jira KBA, KACAD proposed) |
+| `kseniia-academy-webapp` | Academy webapp (Nuxt + Go); first increment is the kseniia.academy launch site in `web/` (live 2026-09-22 as a noindex draft) |
 | `kseniia-academy-webapp-design` | Academy webapp design assets |
 | `kseniia-portal-api` | Kseniia portal API |
 | `kseniia-portal-web` | Kseniia portal web frontend |
@@ -210,6 +211,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `kseniia-portal-app` | Kseniia Portal App - practitioner phone edition of portal.kseniia.co.uk (native Android + iOS, Jira: KPAPP) |
 | `kseniia-portal-app-design` | Kseniia Portal App design assets - Figma exports, design notes, source screenshots (Jira: KPAPP) |
 | `oblique` | Oblique Beauty programme - AI booking concierge pilot over Phorest for three South Kensington salons, Telegram first then mobile web; catalogue-as-data thesis (Jira: OBLQ) |
+| `kseniia-library` | Kseniia content library - L0 captured sources (HITCH 4.0, HITCH 6.0) and L1 bilingual knowledge nodes shared by Kseniia Academy, Kseniia Business and Kseniia Brow Art (KBA DEC-004) |
 
 ### Integrations Tier (tumai-integrations)
 
@@ -232,6 +234,14 @@ The Tumai CF platform - a one-to-one replica of CityFibre's engineering platform
 | `cf-k8s-espresso-deployment` | Espresso sample app for the Tumai CF platform - Go service, Dockerfile, kustomize base and overlays, rendered-branch workflows; the shape of CityFibre's cf-k8s-espresso-deployment (Jira: CFPLAT) |
 | `platform` | The Tumai CF platform itself - Argo CD project + ApplicationSet over tumai-eks-tenant, gateway, External Secrets, admission policy, namespace limits, cluster IaC, runbook and journal; the platform-team side CityFibre does not show us (Jira: CFPLAT) |
 | `me-runner` | ME-RUNNER (Migration Engine Runner) deployment repo on the Tumai CF platform - the primary line of ME-TEST for CityFibre's Kubernetes platform: code, Dockerfile, kustomize base/overlays, rendered-branch workflows; rehearsal of cityfibre-enterprise-architects/me-runner (Jira: CFPLAT E8, app side CFMEPT Track T) |
+
+### Platform Tier (tumai-platform)
+
+Build-and-run engineering - our own development tooling, Kubernetes platforms, AWS infrastructure, scaling, CI and fleet tooling: production-and-maintenance tools, not deliverables (org created 2026-09-26, Team plan; charter ASM DEC-001; Jira: ASM). The long-lasting platform domain; `tumai-cf-platform` is one client-specific direction inside it. Repo types `tool` (internal engineering tools) and `infra` (platform and infrastructure repos). Nothing here is model-specific: tools that drive an AI coding harness spawn the genuine CLI and stay on the Max subscription, never the API.
+
+| Repository | Purpose |
+|------------|---------|
+| `assembly` | Assembly - the Windows desktop app where coding sessions are produced at scale: many sessions across the orgs started, watched, messaged and closed from one place; drives the genuine Claude Code CLI over stream-json, subscription never API; .NET 9, WPF, DevExpress 26.1 (Jira: ASM) |
 
 ### Legacy (pre-Claude Code workflow)
 
