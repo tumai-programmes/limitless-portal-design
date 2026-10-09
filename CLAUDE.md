@@ -1,4 +1,4 @@
-*Last updated: 2026-09-26 13:54 (UK)*
+*Last updated: 2026-10-09 23:06 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -212,6 +212,10 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `kseniia-portal-app-design` | Kseniia Portal App design assets - Figma exports, design notes, source screenshots (Jira: KPAPP) |
 | `oblique` | Oblique Beauty programme - AI booking concierge pilot over Phorest for three South Kensington salons, Telegram first then mobile web; catalogue-as-data thesis (Jira: OBLQ) |
 | `kseniia-library` | Kseniia content library - L0 captured sources (HITCH 4.0, HITCH 6.0) and L1 bilingual knowledge nodes shared by Kseniia Academy, Kseniia Business and Kseniia Brow Art (KBA DEC-004) |
+| `kseniia-business` | Kseniia Business programme - module outline, lesson content, launch-site brief, offer and pricing (Jira: KBA) |
+| `kseniia-business-website` | kseniia.business launch site - Nuxt 4 static + Tailwind, Docker on bcl-website-10 (Jira: KBA) |
+| `tumai-com-hk` | tumai.com.hk - Tumai Procurement Service Asia Limited corporate site rebuilt off Tilda: Nuxt 4 static site in website/, content verbatim, design recreated in Paper, deployed on BCL (Jira: TUMHK) |
+| `surefibre-com` | surefibre.com - Coming Soon holding page (Nuxt static, BCL bcl-website-10), off WordPress and Tilda; Tilda rescue archive in _source/ (Jira: INTEG-116, DEC-INTEG-011) |
 
 ### Integrations Tier (tumai-integrations)
 
@@ -242,6 +246,8 @@ Build-and-run engineering - our own development tooling, Kubernetes platforms, A
 | Repository | Purpose |
 |------------|---------|
 | `assembly` | Assembly - the Windows desktop app where coding sessions are produced at scale: many sessions across the orgs started, watched, messaged and closed from one place; drives the genuine Claude Code CLI over stream-json, subscription never API; .NET 9, WPF, DevExpress 26.1 (Jira: ASM) |
+| `assembly-mobile` | Assembly Mobile - the phone edition of Assembly: the floor read from a phone over the twin the Host feeds, Android first (Kotlin, Compose), iOS later; model-neutral (Jira: ASM, Epic ASM-249) |
+| `corpus` | Corpus - the Windows desktop app that knows every file across every source: one catalog over local disks, shares, the NAS and the clouds, verified moves, viewers and an AI station on a selection through the harness kit; FSYNC retired into it (Jira: CORP) |
 
 ### Legacy (pre-Claude Code workflow)
 
