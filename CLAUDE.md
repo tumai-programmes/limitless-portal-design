@@ -1,4 +1,4 @@
-*Last updated: 2026-10-09 23:06 (UK)*
+*Last updated: 2026-10-10 22:04 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -165,6 +165,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `buildsmart-portal` | Buildsmart portal - DepoNet dataset custody, S3-to-UNAS transfer, viewer (Jira: BSMART) |
 | `front-desk` | Front Desk (internal name) - agent-first multi-channel product: one AI agent per business on every channel, people behind the desk who supervise and take over; Oblique Beauty first tenant (Jira: FDESK) |
 | `media-studio` | Media Studio - web UI over media-forge jobs: review keyframes and guide steps on a timeline, caption, export guides plus screens for Claude Code; third of the media family (Jira: MSTUDIO) |
+| `mail-atlas-desktop` | MailAtlas Desktop - the Windows 11 edition of MailAtlas: the Gmail mirror on the machine with a local Postgres shipped with the Host and the Go engine driven as a CLI child, an on-premises twin and S3 backups behind it, an AI station through Tumai.Harness; .NET, WPF, DevExpress 26.1 (Jira: MATLAS, DEC-013) |
 
 ### Programme Tier (tumai-programmes)
 
