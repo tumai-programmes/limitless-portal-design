@@ -1,4 +1,4 @@
-*Last updated: 2026-10-10 22:04 (UK)*
+*Last updated: 2026-10-18 13:33 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -32,7 +32,7 @@ The Limitless Modus portal is developed across three dedicated repositories, eac
 
 | Resource | Location |
 |----------|----------|
-| Skills (122) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (125) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/repos/tumai-hq/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/repos/tumai-hq/.mindatlas/config/` |
 | Domain Config | `./config/domain.yaml` |
@@ -103,7 +103,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 |----------|--------|
 | **Documents** | pdf, pdf-form-filler, docx, pptx, pptx-to-pdf, xlsx, book-to-markdown, ch-accounts-to-markdown, report-to-markdown, note-to-pdf, note-to-word, export-images |
 | **Research** | article-reflection, source-digest, linkedin, twitter |
-| **Finance** | xero, xero-ap-invoice, rent-invoice, rent-invoice-approve, hmrc, tinytax, tumai-management-payroll-close, invoice-pdf, vat-invoice-request, fportal-prompt, n8n-ap-registry, edgematics-invoice, edgematics-agreement, cleaning-bill-ref |
+| **Finance** | xero, xero-ap-invoice, rent-invoice, rent-invoice-approve, hmrc, tinytax, assembly-ledger, tumai-management-payroll-close, invoice-pdf, vat-invoice-request, fportal-prompt, n8n-ap-registry, edgematics-invoice, edgematics-agreement, cleaning-bill-ref |
 | **Airtable** | airtable |
 | **Atlassian** | jira, atlassian-discovery, atlassian-goals, atlassian-projects |
 | **Confluence** | confluence-sync, confluence-scan, confluence-summarise, confluence-publisher, confluence-manager, confluence-pull, confluence-email-scan |
@@ -115,7 +115,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | **Design** | diagram-generator, figma-design, figma-to-code, frontend-design |
 | **Companies House** | companies-house, companies-house-cs-preflight, companies-house-cs-postfiling, companies-house-status |
 | **Comms** | email-send |
-| **Utilities** | skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, repo-init, integrate-repo, check-integrations, enrich-twin, session-close, hub-session-close, webapp-creator, submission-reset, snagit, watlas, cityfibre-bitbucket-refresh, mept-fixtures-prep, pc-logs, pc-host-canary |
+| **Utilities** | skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, repo-init, integrate-repo, check-integrations, enrich-twin, session-close, hub-session-close, webapp-creator, submission-reset, snagit, watlas, corpus, mailatlas, cityfibre-bitbucket-refresh, mept-fixtures-prep, pc-logs, pc-host-canary |
 | **Banking** | barclays-inbox |
 | **Booking** | acuity |
 | **External** | respond-io-ingest, respond-io-media-capture, web-capture-site, hubspot-academy-extract |
@@ -135,7 +135,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | Repository | Purpose |
 |------------|---------|
 | `mind-atlas` | This repo - HEAD, research, MIND Jira planning home |
-| `skills` | Shared AI skills (122) |
+| `skills` | Shared AI skills (125) |
 | `business-hub` | Business operations |
 | `family-hub` | Personal/family life management |
 | `beauty-hub` | Kseniia's beauty business |
@@ -166,6 +166,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `front-desk` | Front Desk (internal name) - agent-first multi-channel product: one AI agent per business on every channel, people behind the desk who supervise and take over; Oblique Beauty first tenant (Jira: FDESK) |
 | `media-studio` | Media Studio - web UI over media-forge jobs: review keyframes and guide steps on a timeline, caption, export guides plus screens for Claude Code; third of the media family (Jira: MSTUDIO) |
 | `mail-atlas-desktop` | MailAtlas Desktop - the Windows 11 edition of MailAtlas: the Gmail mirror on the machine with a local Postgres shipped with the Host and the Go engine driven as a CLI child, an on-premises twin and S3 backups behind it, an AI station through Tumai.Harness; .NET, WPF, DevExpress 26.1 (Jira: MATLAS, DEC-013) |
+| `device-capture` | Device Capture - stills, clips, live mirror and control from Android and iOS devices and emulators on Windows 11: adb, scrcpy and pymobiledevice3 as pinned child processes, the Host owning adb port 5037, Screen Capture as the filing layer; .NET 9, WPF, DevExpress 26.1 (Jira: DCAP, DEC-001) |
 
 ### Programme Tier (tumai-programmes)
 
@@ -217,6 +218,8 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `kseniia-business-website` | kseniia.business launch site - Nuxt 4 static + Tailwind, Docker on bcl-website-10 (Jira: KBA) |
 | `tumai-com-hk` | tumai.com.hk - Tumai Procurement Service Asia Limited corporate site rebuilt off Tilda: Nuxt 4 static site in website/, content verbatim, design recreated in Paper, deployed on BCL (Jira: TUMHK) |
 | `surefibre-com` | surefibre.com - Coming Soon holding page (Nuxt static, BCL bcl-website-10), off WordPress and Tilda; Tilda rescue archive in _source/ (Jira: INTEG-116, DEC-INTEG-011) |
+| `tumai-fintech` | Tumai Fintech HEAD repo - the fintech venture on the core: research in programme/, the lab of market-data API and MCP probes in lab/; wealth management and brokerage firms; Tumai Capital Ltd as wrapper (Jira: TUMFIN) |
+| `tumaicapital-com` | tumaicapital.com - the Tumai Fintech service website on Tumai Capital Ltd: Nuxt 4 static in website/, Docker on bcl-website-10 (Jira: TUMFIN, DEC-002) |
 
 ### Integrations Tier (tumai-integrations)
 
@@ -228,6 +231,7 @@ Runnable integration workloads - `<vendor>-sandbox` prototypes per vendor and `<
 | `argo-cd-sandbox` | Tumai twin platform - Argo CD, ApplicationSet, Gateway API, ESO, admission policy, kind config (Jira: INTEG-43) |
 | `argo-cd-tenant` | Tumai twin platform - Argo CD registrations apps/<app>/<env>/<tenant>/config.yaml (Jira: INTEG-43) |
 | `argo-cd-sandbox-espresso` | Tumai twin platform - espresso sample app, our copy of CityFibre's cf-k8s-espresso-deployment shape (Jira: INTEG-43) |
+| `apex-fintech-sandbox` | Apex Fintech Solutions sandbox - the ADK wired into Claude Code and SDK proofs of concept against the AscendOS sandbox for the Tumai Fintech venture; may rot and be archived (Jira: TUMFIN; vendor on INTEG apex-fintech) |
 
 ### Tumai CF Platform (tumai-cf-platform)
 
@@ -249,6 +253,7 @@ Build-and-run engineering - our own development tooling, Kubernetes platforms, A
 | `assembly` | Assembly - the Windows desktop app where coding sessions are produced at scale: many sessions across the orgs started, watched, messaged and closed from one place; drives the genuine Claude Code CLI over stream-json, subscription never API; .NET 9, WPF, DevExpress 26.1 (Jira: ASM) |
 | `assembly-mobile` | Assembly Mobile - the phone edition of Assembly: the floor read from a phone over the twin the Host feeds, Android first (Kotlin, Compose), iOS later; model-neutral (Jira: ASM, Epic ASM-249) |
 | `corpus` | Corpus - the Windows desktop app that knows every file across every source: one catalog over local disks, shares, the NAS and the clouds, verified moves, viewers and an AI station on a selection through the harness kit; FSYNC retired into it (Jira: CORP) |
+| `store-release` | Store Release - the build, sign and upload pipeline for every Tumai mobile app to Google Play and the Apple App Store under the Tumai Management Ltd publisher; account settings stay on INTEG, app listings on each app's key (Jira: STREL) |
 
 ### Legacy (pre-Claude Code workflow)
 
