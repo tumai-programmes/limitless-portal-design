@@ -1,4 +1,4 @@
-*Last updated: 2026-10-18 13:33 (UK)*
+*Last updated: 2026-10-23 00:17 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -167,6 +167,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `media-studio` | Media Studio - web UI over media-forge jobs: review keyframes and guide steps on a timeline, caption, export guides plus screens for Claude Code; third of the media family (Jira: MSTUDIO) |
 | `mail-atlas-desktop` | MailAtlas Desktop - the Windows 11 edition of MailAtlas: the Gmail mirror on the machine with a local Postgres shipped with the Host and the Go engine driven as a CLI child, an on-premises twin and S3 backups behind it, an AI station through Tumai.Harness; .NET, WPF, DevExpress 26.1 (Jira: MATLAS, DEC-013) |
 | `device-capture` | Device Capture - stills, clips, live mirror and control from Android and iOS devices and emulators on Windows 11: adb, scrcpy and pymobiledevice3 as pinned child processes, the Host owning adb port 5037, Screen Capture as the filing layer; .NET 9, WPF, DevExpress 26.1 (Jira: DCAP, DEC-001) |
+| `diary` | Diary - the booking engine behind the Tumai products: a headless Go service with its own API, events and an embeddable widget; the Kseniia Portal and the practitioner phone app as its admin; Kseniia Brow Art the first tenant; Acuity replaced by a provider switch, acuity mode first and native mode at P4 (Jira: DIARY, DEC-001) |
 
 ### Programme Tier (tumai-programmes)
 
@@ -254,6 +255,7 @@ Build-and-run engineering - our own development tooling, Kubernetes platforms, A
 | `assembly-mobile` | Assembly Mobile - the phone edition of Assembly: the floor read from a phone over the twin the Host feeds, Android first (Kotlin, Compose), iOS later; model-neutral (Jira: ASM, Epic ASM-249) |
 | `corpus` | Corpus - the Windows desktop app that knows every file across every source: one catalog over local disks, shares, the NAS and the clouds, verified moves, viewers and an AI station on a selection through the harness kit; FSYNC retired into it (Jira: CORP) |
 | `store-release` | Store Release - the build, sign and upload pipeline for every Tumai mobile app to Google Play and the Apple App Store under the Tumai Management Ltd publisher; account settings stay on INTEG, app listings on each app's key (Jira: STREL) |
+| `corpus-mobile` | Corpus Mobile - the phone edition of Corpus: the jobs the Host runs in phase 1, the sources in phase 2, never a folder or a file, over Corpus Relay the Host feeds; Android first (Kotlin, Compose), iOS later; CORPAPP when it has its own cadence (Jira: CORP, DEC-008) |
 
 ### Legacy (pre-Claude Code workflow)
 
