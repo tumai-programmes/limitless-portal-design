@@ -1,4 +1,4 @@
-*Last updated: 2026-10-23 00:17 (UK)*
+*Last updated: 2026-10-27 16:25 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -233,6 +233,7 @@ Runnable integration workloads - `<vendor>-sandbox` prototypes per vendor and `<
 | `argo-cd-tenant` | Tumai twin platform - Argo CD registrations apps/<app>/<env>/<tenant>/config.yaml (Jira: INTEG-43) |
 | `argo-cd-sandbox-espresso` | Tumai twin platform - espresso sample app, our copy of CityFibre's cf-k8s-espresso-deployment shape (Jira: INTEG-43) |
 | `apex-fintech-sandbox` | Apex Fintech Solutions sandbox - the ADK wired into Claude Code and SDK proofs of concept against the AscendOS sandbox for the Tumai Fintech venture; may rot and be archived (Jira: TUMFIN; vendor on INTEG apex-fintech) |
+| `drivewealth-sandbox` | DriveWealth sandbox - a UAT replica built from the mirrored OpenAPI definitions, a thin client, proofs of concept and our own MCP server for the Tumai Fintech venture; may rot and be archived (Jira: TUMFIN E7; vendor on INTEG drivewealth) |
 
 ### Tumai CF Platform (tumai-cf-platform)
 
@@ -256,6 +257,7 @@ Build-and-run engineering - our own development tooling, Kubernetes platforms, A
 | `corpus` | Corpus - the Windows desktop app that knows every file across every source: one catalog over local disks, shares, the NAS and the clouds, verified moves, viewers and an AI station on a selection through the harness kit; FSYNC retired into it (Jira: CORP) |
 | `store-release` | Store Release - the build, sign and upload pipeline for every Tumai mobile app to Google Play and the Apple App Store under the Tumai Management Ltd publisher; account settings stay on INTEG, app listings on each app's key (Jira: STREL) |
 | `corpus-mobile` | Corpus Mobile - the phone edition of Corpus: the jobs the Host runs in phase 1, the sources in phase 2, never a folder or a file, over Corpus Relay the Host feeds; Android first (Kotlin, Compose), iOS later; CORPAPP when it has its own cadence (Jira: CORP, DEC-008) |
+| `vitals` | Vitals - the Windows desktop app that watches and keeps workstation health through long runs: kernel pools and pool tags, the token count and its rate, process churn by parent, the WSL VM, a local history, alerts and guarded actions on Fedor's word; never spawns a process to take a sample; .NET 9, WPF, DevExpress 26.1 (Jira: VITALS, DEC-001) |
 
 ### Legacy (pre-Claude Code workflow)
 
