@@ -1,4 +1,4 @@
-*Last updated: 2026-10-27 16:25 (UK)*
+*Last updated: 2026-11-04 23:21 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -32,7 +32,7 @@ The Limitless Modus portal is developed across three dedicated repositories, eac
 
 | Resource | Location |
 |----------|----------|
-| Skills (125) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (128) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/repos/tumai-hq/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/repos/tumai-hq/.mindatlas/config/` |
 | Domain Config | `./config/domain.yaml` |
@@ -115,10 +115,10 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | **Design** | diagram-generator, figma-design, figma-to-code, frontend-design |
 | **Companies House** | companies-house, companies-house-cs-preflight, companies-house-cs-postfiling, companies-house-status |
 | **Comms** | email-send |
-| **Utilities** | skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, repo-init, integrate-repo, check-integrations, enrich-twin, session-close, hub-session-close, webapp-creator, submission-reset, snagit, watlas, corpus, mailatlas, cityfibre-bitbucket-refresh, mept-fixtures-prep, pc-logs, pc-host-canary |
+| **Utilities** | skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, repo-init, integrate-repo, check-integrations, enrich-twin, session-close, hub-session-close, webapp-creator, submission-reset, snagit, watlas, corpus, mailatlas, vitals, fportal, cityfibre-bitbucket-refresh, mept-fixtures-prep, pc-logs, pc-host-canary |
 | **Banking** | barclays-inbox |
 | **Booking** | acuity |
-| **External** | respond-io-ingest, respond-io-media-capture, web-capture-site, hubspot-academy-extract |
+| **External** | respond-io-ingest, respond-io-media-capture, web-capture-site, hubspot-academy-extract, talent-works-portal |
 | **UK** | uk-vehicles |
 
 ## Development Conventions
@@ -135,7 +135,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | Repository | Purpose |
 |------------|---------|
 | `mind-atlas` | This repo - HEAD, research, MIND Jira planning home |
-| `skills` | Shared AI skills (125) |
+| `skills` | Shared AI skills (128) |
 | `business-hub` | Business operations |
 | `family-hub` | Personal/family life management |
 | `beauty-hub` | Kseniia's beauty business |
@@ -168,6 +168,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `mail-atlas-desktop` | MailAtlas Desktop - the Windows 11 edition of MailAtlas: the Gmail mirror on the machine with a local Postgres shipped with the Host and the Go engine driven as a CLI child, an on-premises twin and S3 backups behind it, an AI station through Tumai.Harness; .NET, WPF, DevExpress 26.1 (Jira: MATLAS, DEC-013) |
 | `device-capture` | Device Capture - stills, clips, live mirror and control from Android and iOS devices and emulators on Windows 11: adb, scrcpy and pymobiledevice3 as pinned child processes, the Host owning adb port 5037, Screen Capture as the filing layer; .NET 9, WPF, DevExpress 26.1 (Jira: DCAP, DEC-001) |
 | `diary` | Diary - the booking engine behind the Tumai products: a headless Go service with its own API, events and an embeddable widget; the Kseniia Portal and the practitioner phone app as its admin; Kseniia Brow Art the first tenant; Acuity replaced by a provider switch, acuity mode first and native mode at P4 (Jira: DIARY, DEC-001) |
+| `data-atlas` | Data Atlas - the ontology over datasets and their files: a model per workspace laid over Postgres (a datlas schema beside untouched data), facts and an overlay, one filter vocabulary on the Windows app, the web, the API and the CLI, files resolved through the NAS, S3 and Corpus; BuildSmart the first workspace; .NET 9, WPF, DevExpress 26.1 (Jira: DATLAS, DEC-001) |
 
 ### Programme Tier (tumai-programmes)
 
@@ -221,6 +222,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `surefibre-com` | surefibre.com - Coming Soon holding page (Nuxt static, BCL bcl-website-10), off WordPress and Tilda; Tilda rescue archive in _source/ (Jira: INTEG-116, DEC-INTEG-011) |
 | `tumai-fintech` | Tumai Fintech HEAD repo - the fintech venture on the core: research in programme/, the lab of market-data API and MCP probes in lab/; wealth management and brokerage firms; Tumai Capital Ltd as wrapper (Jira: TUMFIN) |
 | `tumaicapital-com` | tumaicapital.com - the Tumai Fintech service website on Tumai Capital Ltd: Nuxt 4 static in website/, Docker on bcl-website-10 (Jira: TUMFIN, DEC-002) |
+| `qoobo-co-uk` | qoobo.co.uk - a one-page holding site off WordPress: Nuxt 4 static, Docker on bcl-website-10 (Jira: QOOBOUK) |
 
 ### Integrations Tier (tumai-integrations)
 
