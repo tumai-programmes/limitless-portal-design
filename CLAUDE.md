@@ -1,4 +1,4 @@
-*Last updated: 2026-11-04 23:21 (UK)*
+*Last updated: 2026-11-05 13:33 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -32,7 +32,7 @@ The Limitless Modus portal is developed across three dedicated repositories, eac
 
 | Resource | Location |
 |----------|----------|
-| Skills (128) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (129) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/repos/tumai-hq/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/repos/tumai-hq/.mindatlas/config/` |
 | Domain Config | `./config/domain.yaml` |
@@ -103,7 +103,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 |----------|--------|
 | **Documents** | pdf, pdf-form-filler, docx, pptx, pptx-to-pdf, xlsx, book-to-markdown, ch-accounts-to-markdown, report-to-markdown, note-to-pdf, note-to-word, export-images |
 | **Research** | article-reflection, source-digest, linkedin, twitter |
-| **Finance** | xero, xero-ap-invoice, rent-invoice, rent-invoice-approve, hmrc, tinytax, assembly-ledger, tumai-management-payroll-close, invoice-pdf, vat-invoice-request, fportal-prompt, n8n-ap-registry, edgematics-invoice, edgematics-agreement, cleaning-bill-ref |
+| **Finance** | xero, xero-ap-invoice, rent-invoice, rent-invoice-approve, hmrc, tinytax, assembly-ledger, tumai-management-payroll-close, invoice-pdf, vat-invoice-request, fportal-prompt, n8n-ap-registry, edgematics-invoice, edgematics-agreement, cleaning-bill-ref, dfs-instalment |
 | **Airtable** | airtable |
 | **Atlassian** | jira, atlassian-discovery, atlassian-goals, atlassian-projects |
 | **Confluence** | confluence-sync, confluence-scan, confluence-summarise, confluence-publisher, confluence-manager, confluence-pull, confluence-email-scan |
@@ -135,7 +135,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | Repository | Purpose |
 |------------|---------|
 | `mind-atlas` | This repo - HEAD, research, MIND Jira planning home |
-| `skills` | Shared AI skills (128) |
+| `skills` | Shared AI skills (129) |
 | `business-hub` | Business operations |
 | `family-hub` | Personal/family life management |
 | `beauty-hub` | Kseniia's beauty business |
@@ -260,6 +260,7 @@ Build-and-run engineering - our own development tooling, Kubernetes platforms, A
 | `store-release` | Store Release - the build, sign and upload pipeline for every Tumai mobile app to Google Play and the Apple App Store under the Tumai Management Ltd publisher; account settings stay on INTEG, app listings on each app's key (Jira: STREL) |
 | `corpus-mobile` | Corpus Mobile - the phone edition of Corpus: the jobs the Host runs in phase 1, the sources in phase 2, never a folder or a file, over Corpus Relay the Host feeds; Android first (Kotlin, Compose), iOS later; CORPAPP when it has its own cadence (Jira: CORP, DEC-008) |
 | `vitals` | Vitals - the Windows desktop app that watches and keeps workstation health through long runs: kernel pools and pool tags, the token count and its rate, process churn by parent, the WSL VM, a local history, alerts and guarded actions on Fedor's word; never spawns a process to take a sample; .NET 9, WPF, DevExpress 26.1 (Jira: VITALS, DEC-001) |
+| `tumai-direct` | Tumai Direct - the install, update and removal channel for the Tumai Windows estate: the catalogue of our own desktop apps, CLIs, services and pinned binaries on every machine, GitHub Releases as the feed and never a build, installs on Fedor's word, winget last; the Windows sibling of Store Release; .NET 9, WPF, DevExpress 26.1 (Jira: DIRECT, DEC-001) |
 
 ### Legacy (pre-Claude Code workflow)
 
