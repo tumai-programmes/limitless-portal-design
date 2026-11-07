@@ -1,4 +1,4 @@
-*Last updated: 2026-11-05 13:33 (UK)*
+*Last updated: 2026-11-07 16:53 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -32,7 +32,7 @@ The Limitless Modus portal is developed across three dedicated repositories, eac
 
 | Resource | Location |
 |----------|----------|
-| Skills (129) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (130) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/repos/tumai-hq/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/repos/tumai-hq/.mindatlas/config/` |
 | Domain Config | `./config/domain.yaml` |
@@ -115,7 +115,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | **Design** | diagram-generator, figma-design, figma-to-code, frontend-design |
 | **Companies House** | companies-house, companies-house-cs-preflight, companies-house-cs-postfiling, companies-house-status |
 | **Comms** | email-send |
-| **Utilities** | skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, repo-init, integrate-repo, check-integrations, enrich-twin, session-close, hub-session-close, webapp-creator, submission-reset, snagit, watlas, corpus, mailatlas, vitals, fportal, cityfibre-bitbucket-refresh, mept-fixtures-prep, pc-logs, pc-host-canary |
+| **Utilities** | skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, repo-init, integrate-repo, check-integrations, enrich-twin, session-close, hub-session-close, webapp-creator, submission-reset, snagit, watlas, corpus, mailatlas, vitals, direct, fportal, cityfibre-bitbucket-refresh, mept-fixtures-prep, pc-logs, pc-host-canary |
 | **Banking** | barclays-inbox |
 | **Booking** | acuity |
 | **External** | respond-io-ingest, respond-io-media-capture, web-capture-site, hubspot-academy-extract, talent-works-portal |
@@ -135,7 +135,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | Repository | Purpose |
 |------------|---------|
 | `mind-atlas` | This repo - HEAD, research, MIND Jira planning home |
-| `skills` | Shared AI skills (129) |
+| `skills` | Shared AI skills (130) |
 | `business-hub` | Business operations |
 | `family-hub` | Personal/family life management |
 | `beauty-hub` | Kseniia's beauty business |
@@ -190,9 +190,6 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `limitless-website` | Limitless public website (Nuxt SSG) |
 | `stationroadclinic-co-uk` | Station Road Clinic programme |
 | `stationroadclinic-co-uk-portal` | Clinic patient portal |
-| `stationroadclinic-co-uk-website` | Clinic public website |
-| `vasilyev-co-uk-website` | vasilyev.co.uk website |
-| `tumai-co-uk` | tumai.co.uk website (Tumai Management Ltd corporate site - Tilda to Nuxt migration, Jira: TUMUK) |
 | `tumaifibre` | Tumai Fibre programme + tumaifibre.co.uk website (single-repo monorepo, Jira: TFIBRE) |
 | `ftth-acquisition-dd-framework` | Tumai Fibre Scope of Work framework (vendor-neutral, mined from CF/Cheetah portfolio; TFIBRE workstream) |
 | `cf-condor-migration` | CityFibre Condor FTTH migration |
@@ -218,11 +215,9 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `kseniia-library` | Kseniia content library - L0 captured sources (HITCH 4.0, HITCH 6.0) and L1 bilingual knowledge nodes shared by Kseniia Academy, Kseniia Business and Kseniia Brow Art (KBA DEC-004) |
 | `kseniia-business` | Kseniia Business programme - module outline, lesson content, launch-site brief, offer and pricing (Jira: KBA) |
 | `kseniia-business-website` | kseniia.business launch site - Nuxt 4 static + Tailwind, Docker on bcl-website-10 (Jira: KBA) |
-| `tumai-com-hk` | tumai.com.hk - Tumai Procurement Service Asia Limited corporate site rebuilt off Tilda: Nuxt 4 static site in website/, content verbatim, design recreated in Paper, deployed on BCL (Jira: TUMHK) |
-| `surefibre-com` | surefibre.com - Coming Soon holding page (Nuxt static, BCL bcl-website-10), off WordPress and Tilda; Tilda rescue archive in _source/ (Jira: INTEG-116, DEC-INTEG-011) |
 | `tumai-fintech` | Tumai Fintech HEAD repo - the fintech venture on the core: research in programme/, the lab of market-data API and MCP probes in lab/; wealth management and brokerage firms; Tumai Capital Ltd as wrapper (Jira: TUMFIN) |
 | `tumaicapital-com` | tumaicapital.com - the Tumai Fintech service website on Tumai Capital Ltd: Nuxt 4 static in website/, Docker on bcl-website-10 (Jira: TUMFIN, DEC-002) |
-| `qoobo-co-uk` | qoobo.co.uk - a one-page holding site off WordPress: Nuxt 4 static, Docker on bcl-website-10 (Jira: QOOBOUK) |
+| `kseniia-portal-desktop` | Kseniia Portal Desktop - the Windows 11 edition of the practitioner portal: WPF, DevExpress 26.1, Assembly's floor (the dock, documents and panes, named layouts) over the Go api as the only data path; two layers Core and Windows, no Host until the station; sign-in by the six-digit code through the api (Jira: KPDESK, KPORTAL DEC-033) |
 
 ### Integrations Tier (tumai-integrations)
 
@@ -261,6 +256,28 @@ Build-and-run engineering - our own development tooling, Kubernetes platforms, A
 | `corpus-mobile` | Corpus Mobile - the phone edition of Corpus: the jobs the Host runs in phase 1, the sources in phase 2, never a folder or a file, over Corpus Relay the Host feeds; Android first (Kotlin, Compose), iOS later; CORPAPP when it has its own cadence (Jira: CORP, DEC-008) |
 | `vitals` | Vitals - the Windows desktop app that watches and keeps workstation health through long runs: kernel pools and pool tags, the token count and its rate, process churn by parent, the WSL VM, a local history, alerts and guarded actions on Fedor's word; never spawns a process to take a sample; .NET 9, WPF, DevExpress 26.1 (Jira: VITALS, DEC-001) |
 | `tumai-direct` | Tumai Direct - the install, update and removal channel for the Tumai Windows estate: the catalogue of our own desktop apps, CLIs, services and pinned binaries on every machine, GitHub Releases as the feed and never a build, installs on Fedor's word, winget last; the Windows sibling of Store Release; .NET 9, WPF, DevExpress 26.1 (Jira: DIRECT, DEC-001) |
+
+### Websites Tier (tumai-websites)
+
+Standalone web presences - one repo per site, a static Nuxt 4 site served from `bcl-website-10` behind `bcl-haproxy-20` with its own certificate under Cloudflare Full (strict) (org created 2026-11-07 00:02 UK on the Team plan, one seat; registered MIND-153). A site that is part of a programme's product stays with its programme (Kseniia, Limitless, TUMFIN). Repo type `website`, named `<domain-with-dashes>-website`; one Jira key per site. First repos: the three sites of MIND-151 (`anaba-nl-website`, `stationroadclinic-co-uk-website` and `vasilyev-co-uk-website`, the last two transferred from tumai-programmes).
+
+| Repository | Purpose |
+|------------|---------|
+| `stationroadclinic-co-uk-website` | stationroadclinic.co.uk - Station Road Clinic public website, transferred from tumai-programmes 2026-11-07 (Jira: SRCUK) |
+| `vasilyev-co-uk-website` | vasilyev.co.uk website, transferred from tumai-programmes 2026-11-07 (Jira: VASUK) |
+| `fedor-cloud-website` | fedor.cloud - a one-page holder, static Nuxt on bcl-website-10 (Jira: FEDCLOUD) |
+| `fedor-expert-website` | fedor.expert - a one-page holder, static Nuxt on bcl-website-10 (Jira: FEDEXPERT) |
+| `tumai-cloud-website` | tumai.cloud - a one-page holder, static Nuxt on bcl-website-10 (Jira: TUMCLOUD) |
+| `beautyinberkshire-co-uk-website` | beautyinberkshire.co.uk - a one-page holder, static Nuxt on bcl-website-10 (Jira: BEAUBERKS) |
+| `beautyinbucks-co-uk-website` | beautyinbucks.co.uk - a one-page holder, static Nuxt on bcl-website-10 (Jira: BEAUBUCKS) |
+| `credo-group-co-uk-website` | credo-group.co.uk - a one-page holder, static Nuxt on bcl-website-10 (Jira: CREDOUK) |
+| `engecosystems-com-website` | engecosystems.com - a one-page holder, static Nuxt on bcl-website-10 (Jira: ENGECO) |
+| `net15-nl-website` | net15.nl - a one-page holder, static Nuxt on bcl-website-10 (Jira: NET15NL) |
+| `anaba-nl-website` | anaba.nl - a one-page holder, static Nuxt on bcl-website-10 (Jira: ANABANL) |
+| `tumai-co-uk` | tumai.co.uk - Tumai Management Ltd corporate site, off Tilda: Nuxt static in website/, Docker on bcl-website-10, transferred from tumai-programmes 2026-11-07 (Jira: TUMUK) |
+| `tumai-com-hk` | tumai.com.hk - Tumai Procurement Service Asia Limited corporate site, off Tilda: Nuxt 4 static in website/, Docker on bcl-website-10, transferred from tumai-programmes 2026-11-07 (Jira: TUMHK) |
+| `qoobo-co-uk` | qoobo.co.uk - a one-page holding site off WordPress: Nuxt 4 static, Docker on bcl-website-10, transferred from tumai-programmes 2026-11-07 (Jira: QOOBOUK) |
+| `surefibre-com` | surefibre.com - Coming Soon holding page off WordPress and Tilda, Tilda rescue archive in _source/: Nuxt static, Docker on bcl-website-10, transferred from tumai-programmes 2026-11-07 (Jira: INTEG-116, DEC-INTEG-011) |
 
 ### Legacy (pre-Claude Code workflow)
 
