@@ -1,4 +1,4 @@
-*Last updated: 2026-11-07 16:53 (UK)*
+*Last updated: 2026-11-20 21:13 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -218,6 +218,8 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `tumai-fintech` | Tumai Fintech HEAD repo - the fintech venture on the core: research in programme/, the lab of market-data API and MCP probes in lab/; wealth management and brokerage firms; Tumai Capital Ltd as wrapper (Jira: TUMFIN) |
 | `tumaicapital-com` | tumaicapital.com - the Tumai Fintech service website on Tumai Capital Ltd: Nuxt 4 static in website/, Docker on bcl-website-10 (Jira: TUMFIN, DEC-002) |
 | `kseniia-portal-desktop` | Kseniia Portal Desktop - the Windows 11 edition of the practitioner portal: WPF, DevExpress 26.1, Assembly's floor (the dock, documents and panes, named layouts) over the Go api as the only data path; two layers Core and Windows, no Host until the station; sign-in by the six-digit code through the api (Jira: KPDESK, KPORTAL DEC-033) |
+| `kseniia-academy-app` | Kseniia Academy App - native iOS and Android phone app for enrolled Academy students: sign-in, My courses, catalogue, lessons with handouts and audio; iPhone first (Jira: KACMOB, KAC DEC-003) |
+| `kseniia-academy-app-design` | Kseniia Academy App design assets - Figma exports, design notes, source screenshots (Jira: KACMOB) |
 
 ### Integrations Tier (tumai-integrations)
 
