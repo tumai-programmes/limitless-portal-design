@@ -1,4 +1,4 @@
-*Last updated: 2026-11-20 21:13 (UK)*
+*Last updated: 2026-11-22 19:50 (UK)*
 
 # CLAUDE.md — Limitless Portal Design
 
@@ -258,6 +258,7 @@ Build-and-run engineering - our own development tooling, Kubernetes platforms, A
 | `corpus-mobile` | Corpus Mobile - the phone edition of Corpus: the jobs the Host runs in phase 1, the sources in phase 2, never a folder or a file, over Corpus Relay the Host feeds; Android first (Kotlin, Compose), iOS later; CORPAPP when it has its own cadence (Jira: CORP, DEC-008) |
 | `vitals` | Vitals - the Windows desktop app that watches and keeps workstation health through long runs: kernel pools and pool tags, the token count and its rate, process churn by parent, the WSL VM, a local history, alerts and guarded actions on Fedor's word; never spawns a process to take a sample; .NET 9, WPF, DevExpress 26.1 (Jira: VITALS, DEC-001) |
 | `tumai-direct` | Tumai Direct - the install, update and removal channel for the Tumai Windows estate: the catalogue of our own desktop apps, CLIs, services and pinned binaries on every machine, GitHub Releases as the feed and never a build, installs on Fedor's word, winget last; the Windows sibling of Store Release; .NET 9, WPF, DevExpress 26.1 (Jira: DIRECT, DEC-001) |
+| `waves` | Waves - the run record of grouped Assembly runs (the branch runs: one folder per wave with its manifest, state and logs) and the home of the tool WAVES that will show the waves' readiness and status; main for code and docs, no code yet; planning in mind-atlas/jira/WAVE (Jira: WAVE, DEC-003) |
 
 ### Websites Tier (tumai-websites)
 
